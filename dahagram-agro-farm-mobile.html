@@ -1,0 +1,2590 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dahagram Agro Farm Ltd. | দহগ্রাম এগ্রোফার্ম লিঃ — One Stop Agricultural &amp; Nursery Solution</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+:root {
+  --brand-green: #38a124;
+  --brand-green-dark: #257317;
+  --brand-green-light: #eaf7e6;
+  --brand-sage: #dcebe3;
+  --accent-amber: #f59e0b;
+  --danger-red: #e11d48;
+  --text-dark: #1f2937;
+  --text-muted: #6b7280;
+  --border-color: #e5e7eb;
+  --bg-light: #f8faf7;
+  --white: #ffffff;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --container-max: 1280px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', 'Hind Siliguri', system-ui, -apple-system, sans-serif;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ==================== HEADER ==================== */
+.header-area {
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  z-index: 100;
+}
+
+.header-top {
+  border-bottom: 1px solid var(--border-color);
+  font-size: 13px;
+  color: var(--text-muted);
+  padding: 8px 0;
+}
+
+.header-top-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.header-top-left,
+.header-top-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.header-top-center {
+  font-weight: 600;
+  color: var(--brand-green-dark);
+  text-align: center;
+}
+
+.header-top a:hover {
+  color: var(--brand-green);
+}
+
+.header-middle {
+  padding: 14px 0;
+}
+
+.header-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.brand-logo-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand-green), var(--brand-green-dark));
+  color: var(--white);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.brand-logo-text strong {
+  display: block;
+  font-size: 18px;
+  color: var(--text-dark);
+  line-height: 1.15;
+}
+
+.brand-logo-text span {
+  font-size: 12px;
+  color: var(--brand-green-dark);
+  font-weight: 600;
+}
+
+.search-form {
+  flex: 1;
+  max-width: 560px;
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--brand-green);
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--white);
+}
+
+.search-form input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.search-form button {
+  background: var(--brand-green-light);
+  color: var(--brand-green-dark);
+  padding: 10px 20px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.search-form button:hover {
+  background: var(--brand-green);
+  color: var(--white);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s;
+}
+
+.action-btn:hover {
+  background: var(--brand-green-light);
+}
+
+.badge-count {
+  background: var(--brand-green);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 700;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  display: inline-grid;
+  place-items: center;
+  padding: 0 6px;
+}
+
+.btn-outline-sm {
+  border: 1px solid var(--brand-green);
+  color: var(--brand-green-dark);
+  padding: 7px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.btn-outline-sm:hover {
+  background: var(--brand-green);
+  color: var(--white);
+}
+
+/* Sticky Green Category Nav */
+.header-bottom {
+  background: var(--brand-green);
+  color: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.nav-scroll {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-scroll a,
+.nav-scroll button {
+  display: block;
+  white-space: nowrap;
+  padding: 12px 14px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--white);
+  transition: background 0.2s;
+}
+
+.nav-scroll a:hover,
+.nav-scroll button:hover,
+.nav-scroll button.active {
+  background: var(--brand-green-dark);
+}
+
+.mobile-menu-toggle {
+  display: none;
+  color: var(--white);
+  font-size: 22px;
+  padding: 8px;
+}
+
+/* ==================== HERO SLIDER ==================== */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  background: #143d10;
+}
+
+.hero-slider {
+  position: relative;
+}
+
+.hero-slide {
+  display: none;
+  min-height: 360px;
+  padding: 48px 0;
+  color: var(--white);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-slide.active {
+  display: flex;
+  align-items: center;
+}
+
+.hero-slide--1 {
+  background: linear-gradient(115deg, #123b12 0%, #246c1c 60%, #3aa326 100%);
+}
+
+.hero-slide--2 {
+  background: linear-gradient(115deg, #0f3a2f 0%, #176b50 60%, #299c6f 100%);
+}
+
+.hero-slide--3 {
+  background: linear-gradient(115deg, #33270d 0%, #5e4816 55%, #2e7d1d 100%);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  align-items: center;
+  gap: 32px;
+}
+
+.hero-pill {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.hero-slide h1 {
+  font-size: clamp(26px, 3.4vw, 42px);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.hero-slide p {
+  font-size: 15.5px;
+  opacity: 0.92;
+  margin-bottom: 22px;
+  max-width: 580px;
+}
+
+.hero-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn-primary {
+  background: var(--accent-amber);
+  color: #111827;
+  font-weight: 800;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.15s, filter 0.15s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.btn-glass {
+  background: rgba(255, 255, 255, 0.16);
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  font-weight: 700;
+  padding: 12px 22px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+}
+
+.btn-glass:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.hero-card-preview {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+}
+
+.hero-card-preview h3 {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.hero-card-preview ul {
+  list-style: none;
+  font-size: 14px;
+  display: grid;
+  gap: 8px;
+}
+
+.hero-dots {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.hero-dot {
+  width: 26px;
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.4);
+  transition: background 0.2s, width 0.2s;
+}
+
+.hero-dot.active {
+  background: var(--white);
+  width: 38px;
+}
+
+/* ==================== SECTIONS & HEADINGS ==================== */
+.section-block {
+  padding: 36px 0;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 800;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.section-title span {
+  color: var(--brand-green);
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 64px;
+  height: 3px;
+  background: var(--brand-green);
+  border-radius: 999px;
+}
+
+.view-all-link {
+  color: var(--brand-green-dark);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.view-all-link:hover {
+  text-decoration: underline;
+}
+
+/* ==================== POPULAR CATEGORIES (6x2 GRID) ==================== */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+}
+
+.category-card {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px 12px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s, border-color 0.2s;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--brand-green);
+}
+
+.category-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  background: var(--brand-green-light);
+  display: grid;
+  place-items: center;
+  font-size: 26px;
+}
+
+.category-card h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-dark);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.category-card small {
+  font-size: 11.5px;
+  color: var(--text-muted);
+}
+
+/* ==================== 4-COLUMN PROMO BANNERS ==================== */
+.promo-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.promo-card {
+  border-radius: var(--radius-md);
+  padding: 22px 18px;
+  background: linear-gradient(145deg, #e7f6e4, #d2efd0);
+  border: 1px solid #c2e5bf;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 175px;
+}
+
+.promo-card h3 {
+  font-size: 16px;
+  font-weight: 800;
+  color: #144612;
+  margin-bottom: 6px;
+}
+
+.promo-card p {
+  font-size: 13px;
+  color: #2f5c2d;
+  margin-bottom: 14px;
+}
+
+.promo-card .promo-btn {
+  align-self: flex-start;
+  background: var(--brand-green);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 800;
+  padding: 7px 14px;
+  border-radius: 6px;
+}
+
+/* ==================== COD STRIP ==================== */
+.cod-banner {
+  background: linear-gradient(90deg, #1c5e19, #38a124);
+  color: var(--white);
+  border-radius: var(--radius-md);
+  padding: 18px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cod-banner strong {
+  font-size: 18px;
+}
+
+.cod-banner span {
+  font-size: 14px;
+  opacity: 0.92;
+}
+
+/* ==================== TABS & PRODUCT GRID ==================== */
+.tabs-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 700;
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  color: var(--text-dark);
+  transition: all 0.2s;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+  background: var(--brand-green);
+  color: var(--white);
+  border-color: var(--brand-green);
+}
+
+.product-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.product-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.product-card {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.product-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.product-badge-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 6px;
+}
+
+.badge-discount {
+  background: #ffe4e6;
+  color: var(--danger-red);
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+
+.badge-playlist {
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+
+.product-thumb {
+  height: 150px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, #f3faf1, #e1f3dd);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 12px;
+  overflow: hidden;
+  padding: 10px;
+  text-align: center;
+}
+
+.product-thumb-emoji {
+  font-size: 46px;
+  margin-bottom: 4px;
+}
+
+.product-thumb-code {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.quick-view-btn {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: var(--white);
+  color: var(--text-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  padding: 5px 10px;
+  font-size: 11.5px;
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+}
+
+.quick-view-btn:hover {
+  background: var(--brand-green);
+  color: var(--white);
+}
+
+.product-cat {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.product-title {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 42px;
+}
+
+.product-sku {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.product-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.price-now {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--brand-green-dark);
+}
+
+.price-old {
+  font-size: 13px;
+  color: var(--danger-red);
+  text-decoration: line-through;
+}
+
+.product-actions {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px;
+}
+
+.btn-cart {
+  background: var(--brand-green);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 13px;
+  padding: 9px 12px;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s;
+}
+
+.btn-cart:hover {
+  background: var(--brand-green-dark);
+}
+
+.btn-yt {
+  background: #fee2e2;
+  color: #b91c1c;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 9px 10px;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-yt:hover {
+  background: #dc2626;
+  color: var(--white);
+}
+
+/* ==================== DUAL HALF BANNERS & SPLIT GRID ==================== */
+.dual-banners {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.half-banner {
+  border-radius: var(--radius-md);
+  padding: 26px;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 160px;
+}
+
+.half-banner--left {
+  background: linear-gradient(120deg, #1b4d1b, #38a124);
+}
+
+.half-banner--right {
+  background: linear-gradient(120deg, #1e3a5f, #2563eb);
+}
+
+.half-banner h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.half-banner p {
+  font-size: 13.5px;
+  opacity: 0.92;
+  margin-bottom: 14px;
+}
+
+.split-category-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.split-poster {
+  background: linear-gradient(160deg, #164e15, #2e8b22);
+  color: var(--white);
+  border-radius: var(--radius-md);
+  padding: 26px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.split-poster h3 {
+  font-size: 22px;
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+
+.split-poster p {
+  font-size: 13.5px;
+  opacity: 0.9;
+}
+
+/* ==================== SERVICE HIGHLIGHTS ==================== */
+.services-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+
+.service-item {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 18px 12px;
+  text-align: center;
+}
+
+.service-badge {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 10px;
+  border-radius: 16px 4px 16px 4px;
+  background: var(--brand-green-light);
+  color: var(--brand-green-dark);
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+}
+
+.service-item h4 {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--brand-green-dark);
+}
+
+/* ==================== BLOG / PLAYLIST GUIDES ==================== */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.blog-card {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-thumb {
+  height: 150px;
+  background: linear-gradient(135deg, #d7f2d2, #bce5b6);
+  display: grid;
+  place-items: center;
+  font-size: 42px;
+}
+
+.blog-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.blog-meta {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.blog-body h4 {
+  font-size: 15.5px;
+  font-weight: 700;
+}
+
+.blog-body a {
+  margin-top: auto;
+  color: var(--brand-green-dark);
+  font-weight: 700;
+  font-size: 13.5px;
+}
+
+/* ==================== FOOTER ==================== */
+.newsletter-bar {
+  background: var(--brand-sage);
+  padding: 24px 0;
+  margin-top: 24px;
+}
+
+.newsletter-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.newsletter-form {
+  display: flex;
+  max-width: 460px;
+  width: 100%;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--white);
+}
+
+.newsletter-form input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 11px 14px;
+  font-size: 14px;
+}
+
+.newsletter-form button {
+  background: #1f2937;
+  color: var(--white);
+  padding: 11px 20px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.footer-mid {
+  background: var(--white);
+  padding: 40px 0 28px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+.footer-col h4 {
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.footer-col ul {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  font-size: 13.5px;
+  color: var(--text-muted);
+}
+
+.footer-col a:hover {
+  color: var(--brand-green);
+}
+
+.footer-bottom {
+  background: var(--white);
+  padding: 16px 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.footer-bottom-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ==================== MODALS & DRAWERS ==================== */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 16px;
+}
+
+.modal-backdrop.open {
+  display: flex;
+}
+
+.modal-box {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  max-width: 720px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 24px;
+  position: relative;
+  box-shadow: var(--shadow-md);
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #f3f4f6;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: flex-end;
+  z-index: 1000;
+}
+
+.drawer-backdrop.open {
+  display: flex;
+}
+
+.drawer-panel {
+  background: var(--white);
+  width: 100%;
+  max-width: 420px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.form-field {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+.form-field label {
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 9px 11px;
+  font-family: inherit;
+  font-size: 13.5px;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1024px) {
+  .categories-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .promo-grid-4,
+  .product-grid-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .split-category-layout {
+    grid-template-columns: 1fr;
+  }
+  .services-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .header-top,
+  .header-middle {
+    display: none;
+  }
+  .mobile-menu-toggle {
+    display: inline-block;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .categories-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .promo-grid-4,
+  .product-grid-4,
+  .product-grid-3,
+  .dual-banners,
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .services-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .categories-grid,
+  .promo-grid-4,
+  .product-grid-4,
+  .product-grid-3,
+  .dual-banners,
+  .blog-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+</style>
+</head>
+<body>
+
+  <!-- 0. INITIAL PROMO MODAL (Dismissible) -->
+  <div id="promoModal" class="modal-backdrop">
+    <div class="modal-box" style="max-width:480px; text-align:center; border:2px solid var(--brand-green);">
+      <button type="button" id="closePromoBtn" class="modal-close" aria-label="Close">×</button>
+      <span class="badge-playlist" style="margin-bottom:10px; display:inline-block;">দহগ্রাম এগ্রোফার্ম লিঃ • সরাসরি খামার থেকে</span>
+      <h2 style="font-size:22px; margin-bottom:8px;">ইউটিউব প্লেলিস্ট থেকেই অর্ডার করুন আপনার পছন্দের চারা ও কৃষি পণ্য!</h2>
+      <p style="font-size:14px; color:var(--text-muted); margin-bottom:18px;">
+        স্টেভিয়া, ইনসুলিন গাছ, জি-৯ কলার টিস্যু কালচার, রক্ত চন্দন, জাফরান ও বিদেশী ফলের চারা — সারা বাংলাদেশে ক্যাশ অন ডেলিভারি।
+      </p>
+      <a href="#showcaseSection" class="btn-primary" onclick="document.getElementById('promoModal').classList.remove('open')">
+        পণ্য ও প্লেলিস্ট দেখুন →
+      </a>
+    </div>
+  </div>
+
+  <!-- 1. 3-TIER HEADER -->
+  <header class="header-area">
+    <!-- Tier 1: Top Utility Bar -->
+    <div class="header-top">
+      <div class="container header-top-inner">
+        <div class="header-top-left">
+          <a href="tel:+8801765235517">📞 +880 1765-235517</a>
+          <a href="#footerLocation">📍 Dahagram, Patgram, Lalmonirhat</a>
+        </div>
+        <div class="header-top-center">
+          🌿 বিজ্ঞান ভিত্তিক কৃষি, বয়ে আনবে সমৃদ্ধি — সারা বাংলাদেশে কুরিয়ার ডেলিভারি
+        </div>
+        <div class="header-top-right">
+          <a href="https://www.youtube.com/@dahagram_agro_farm" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://www.facebook.com/YakubAli434964" target="_blank" rel="noopener">Facebook</a>
+          <button type="button" id="openAdminModalBtn" class="btn-outline-sm">+ Add Product / Playlist</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tier 2: Logo, Search & Actions -->
+    <div class="header-middle">
+      <div class="container header-wrap">
+        <a href="#" class="brand-logo">
+          <div class="brand-logo-badge">DA</div>
+          <div class="brand-logo-text">
+            <strong>দহগ্রাম এগ্রোফার্ম লিঃ</strong>
+            <span>Dahagram Agro Farm Ltd.</span>
+          </div>
+        </a>
+
+        <form id="globalSearchForm" class="search-form" role="search">
+          <input id="globalSearchInput" type="search" placeholder="চারা, বীজ, সার বা প্লেলিস্ট খুঁজুন (যেমন: Stevia, G9, Cumin)..." />
+          <button type="submit">Search</button>
+        </form>
+
+        <div class="header-actions">
+          <a href="https://wa.me/8801765235517" target="_blank" rel="noopener" class="action-btn">
+            💬 WhatsApp
+          </a>
+          <button type="button" class="action-btn" onclick="document.getElementById('showcaseSection').scrollIntoView({behavior:'smooth'})">
+            ♡ Wishlist <span class="badge-count" data-wishlist-count>0</span>
+          </button>
+          <button type="button" id="openCartBtn" class="action-btn">
+            🛒 Cart <span class="badge-count" data-cart-count>0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tier 3: Sticky Green Category Navigation -->
+    <nav class="header-bottom" aria-label="Primary Categories">
+      <div class="container" style="display:flex; align-items:center; gap:8px;">
+        <button type="button" id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Scroll Menu">☰</button>
+        <ul id="primaryNavList" class="nav-scroll">
+          <li><a href="#">Home</a></li>
+          <li><button type="button" data-select-category="exotic-fruits">Exotic Fruits</button></li>
+          <li><button type="button" data-select-category="medicinal">Medicinal &amp; Herbs</button></li>
+          <li><button type="button" data-select-category="tissue-culture">Tissue Culture</button></li>
+          <li><button type="button" data-select-category="spices-seeds">Spices &amp; Seeds</button></li>
+          <li><button type="button" data-select-category="timber">Sandalwood &amp; Timber</button></li>
+          <li><button type="button" data-select-category="vegetables">Papaya &amp; Vegetables</button></li>
+          <li><button type="button" data-select-category="fertilizer">Fertilizer &amp; Humic</button></li>
+          <li><button type="button" data-select-category="bulbs">Saffron &amp; Bulbs</button></li>
+          <li><a href="#guidesSection">Video Playlists</a></li>
+          <li><a href="#footerLocation">Contact Farm</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 2. MAIN CONTENT -->
+  <main>
+
+    <!-- Section 1: Hero Banner Carousel -->
+    <section class="hero-section">
+      <div class="hero-slider">
+        <div class="hero-slide hero-slide--1 active">
+          <div class="container hero-grid">
+            <div>
+              <span class="hero-pill">দহগ্রাম-আঙ্গরপোতা, পাটগ্রাম, লালমনিরহাট • ১১.৫K+ ইউটিউব পরিবার</span>
+              <h1>বিজ্ঞান ভিত্তিক আধুনিক কৃষি ও দুর্লভ চারার বিশ্বস্ত ঠিকানা</h1>
+              <p>
+                আমাদের প্রতিটি ইউটিউব প্লেলিস্টই এক একটি পরীক্ষিত কৃষি পণ্য ও চাষাবাদ গাইড। সরাসরি খামার থেকে সংগ্রহ করুন স্টেভিয়া, জি-৯ কলা, অ্যাভোকাডো, সৌদি খেজুর, জিরা ও কালো আদা।
+              </p>
+              <div class="hero-cta-group">
+                <a href="#showcaseSection" class="btn-primary">সব পণ্য ও প্লেলিস্ট দেখুন</a>
+                <a href="https://www.youtube.com/@dahagram_agro_farm" target="_blank" rel="noopener" class="btn-glass">▶ @dahagram_agro_farm</a>
+              </div>
+            </div>
+            <div class="hero-card-preview">
+              <h3>জনপ্রিয় প্লেলিস্ট ও পণ্য</h3>
+              <ul>
+                <li>🌿 স্টেভিয়া (চিনির বিকল্প) — ৯টি ভিডিও</li>
+                <li>🍌 জি-৯ টিস্যু কালচার কলা — ১৬টি ভিডিও</li>
+                <li>🍃 ইনসুলিন গাছ (ডায়াবেটিস) — ১১টি ভিডিও</li>
+                <li>🥑 অ্যাভোকাডো ও রাম্বুটান — ১০টি ভিডিও</li>
+                <li>🌴 সৌদি খেজুরের সাকার চারা — ৩টি ভিডিও</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-slide hero-slide--2">
+          <div class="container hero-grid">
+            <div>
+              <span class="hero-pill">Dahagram Agro Farm Ltd. • ভেষজ ও ছাদবাগান</span>
+              <h1>সুস্থ ও চিনিমুক্ত জীবনের জন্য স্টেভিয়া ও ভেষজ বাগান</h1>
+              <p>
+                ডায়াবেটিস সচেতনতা ও প্রাকৃতিক ভেষজ চাষাবাদে আমাদের বিশেষ কালেকশন: স্টেভিয়া, ইনসুলিন গাছ, করোসল, রোজমেরী এবং অ্যালোভেরা।
+              </p>
+              <div class="hero-cta-group">
+                <button type="button" class="btn-primary" data-select-category="medicinal">ভেষজ চারা দেখুন</button>
+                <a href="https://www.youtube.com/@dahagram_agro_farm/videos" target="_blank" rel="noopener" class="btn-glass">▶ Watch Our Videos</a>
+              </div>
+            </div>
+            <div class="hero-card-preview">
+              <h3>কেন আমাদের ভেষজ চারা সেরা?</h3>
+              <ul>
+                <li>✅ খামারে পরীক্ষিত ও রোগমুক্ত চারা</li>
+                <li>✅ প্রতিটি চারার সাথে ভিডিও পরিচর্যা গাইড</li>
+                <li>✅ ছাদবাগান ও বাণিজ্যিক চাষ উভয়ের উপযোগী</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-slide hero-slide--3">
+          <div class="container hero-grid">
+            <div>
+              <span class="hero-pill">বাণিজ্যিক কৃষি ও উচ্চমূল্যের মসলা ফসল</span>
+              <h1>রক্ত চন্দন, জাফরান, জিরা ও টিস্যু কালচার প্রজেক্ট</h1>
+              <p>
+                তরুণ কৃষি উদ্যোক্তাদের জন্য লাভজনক ও উচ্চমূল্যের ফসল — জিরা বীজ, কালো আদা, কাশ্মীরি জাফরান বাল্ব, ওডিসি-৩ সজিনা এবং হিউমিক অ্যাসিড।
+              </p>
+              <div class="hero-cta-group">
+                <button type="button" class="btn-primary" data-select-category="spices-seeds">মসলা ও বীজ দেখুন</button>
+                <a href="https://wa.me/8801765235517" target="_blank" rel="noopener" class="btn-glass">📞 পাইকারি পরামর্শ নিন</a>
+              </div>
+            </div>
+            <div class="hero-card-preview">
+              <h3>সরাসরি যোগাযোগ</h3>
+              <ul>
+                <li>📞 কল / হোয়াটসঅ্যাপ: +880 1765-235517</li>
+                <li>📍 দহগ্রাম, পাটগ্রাম, লালমনিরহাট</li>
+                <li>📧 dahagramagrofarm@gmail.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-dots" aria-label="Hero Slide Pagination">
+        <button type="button" class="hero-dot active" aria-label="Slide 1"></button>
+        <button type="button" class="hero-dot" aria-label="Slide 2"></button>
+        <button type="button" class="hero-dot" aria-label="Slide 3"></button>
+      </div>
+    </section>
+
+    <!-- Section 2: Popular Categories (6x2 Grid) -->
+    <section class="section-block">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Popular <span>Categories &amp; Playlists</span></h2>
+          <a href="#showcaseSection" class="view-all-link">Explore All →</a>
+        </div>
+        <div id="popularCategoriesGrid" class="categories-grid"></div>
+      </div>
+    </section>
+
+    <!-- Section 3: 4-Column Promo Cards -->
+    <section class="section-block" style="padding-top:0;">
+      <div class="container">
+        <div class="promo-grid-4">
+          <div class="promo-card">
+            <div>
+              <h3>স্টিভিয়া ও ডায়াবেটিক প্ল্যান্ট</h3>
+              <p>চিনির প্রাকৃতিক বিকল্প স্টিভিয়া ও ইনসুলিন গাছের চারা।</p>
+            </div>
+            <button type="button" class="promo-btn" data-select-category="medicinal">ORDER NOW</button>
+          </div>
+          <div class="promo-card">
+            <div>
+              <h3>জি-৯ টিস্যু কালচার কলা</h3>
+              <p>অধিক ফলনশীল রোগমুক্ত বাণিজ্যিক কলার চারা।</p>
+            </div>
+            <button type="button" class="promo-btn" data-select-category="tissue-culture">ORDER NOW</button>
+          </div>
+          <div class="promo-card">
+            <div>
+              <h3>বিদেশী ফল ও কলম চারা</h3>
+              <p>অ্যাভোকাডো, রাম্বুটান, আপেল (HRMN99) ও আঙ্গুর।</p>
+            </div>
+            <button type="button" class="promo-btn" data-select-category="exotic-fruits">ORDER NOW</button>
+          </div>
+          <div class="promo-card">
+            <div>
+              <h3>উচ্চমূল্যের মসলা ও বীজ</h3>
+              <p>বাংলাদেশে জিরা চাষ, কালো আদা ও জাফরান বাল্ব।</p>
+            </div>
+            <button type="button" class="promo-btn" data-select-category="spices-seeds">ORDER NOW</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Cash on Delivery Nationwide Strip -->
+    <section class="section-block" style="padding-top:0;">
+      <div class="container">
+        <div class="cod-banner">
+          <div>
+            <strong>🚚 সারা বাংলাদেশে কুরিয়ার ও ক্যাশ অন ডেলিভারি</strong>
+            <div><span>দহগ্রাম, পাটগ্রাম, লালমনিরহাট থেকে নিরাপদ প্যাকেজিংয়ে চারা ও কৃষি পণ্য পৌঁছে দেওয়া হয়।</span></div>
+          </div>
+          <a href="https://wa.me/8801765235517" target="_blank" rel="noopener" class="btn-primary">হোয়াটসঅ্যাপে অর্ডার করুন</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Tabbed Product & Playlist Showcase -->
+    <section id="showcaseSection" class="section-block">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Playlist <span>Products &amp; Agro Store</span></h2>
+          <span style="font-size:13px; color:var(--text-muted);">প্রতিটি পণ্যে ক্লিক করে প্লেলিস্টের ভিডিও দেখুন ও অর্ডার করুন</span>
+        </div>
+        <div id="showcaseTabsBar" class="tabs-bar"></div>
+        <div id="showcaseProductsGrid" class="product-grid-4"></div>
+      </div>
+    </section>
+
+    <!-- Section 6: Dual Half-Width Promo Banners -->
+    <section class="section-block" style="padding-top:0;">
+      <div class="container">
+        <div class="dual-banners">
+          <div class="half-banner half-banner--left">
+            <h3>বাণিজ্যিক বাগান ও পাইকারি নার্সারি অর্ডার</h3>
+            <p>সৌদি খেজুরের সাকার, জি-৯ কলা, রক্ত চন্দন ও পেঁপে বাগানের জন্য বিশেষ পাইকারি মূল্য ও কারিগরি পরামর্শ।</p>
+            <a href="tel:+8801765235517" class="btn-primary" style="align-self:flex-start;">কল করুন: 01765-235517</a>
+          </div>
+          <div class="half-banner half-banner--right">
+            <h3>ছাদবাগান ও স্বাস্থ্যকর ভেষজ চাষ</h3>
+            <p>আমাদের কৃষি ও ভেষজ ভিডিও গাইড দেখুন এবং আপনার বাগান শুরু করুন।</p>
+            <a href="https://www.youtube.com/@dahagram_agro_farm/videos" target="_blank" rel="noopener" class="btn-glass" style="align-self:flex-start;">▶ সব ভিডিও দেখুন</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Commercial & Tissue Culture Split Grid -->
+    <section class="section-block">
+      <div class="container">
+        <div class="split-category-layout">
+          <aside class="split-poster">
+            <div>
+              <span class="hero-pill">Commercial Farming</span>
+              <h3>বাণিজ্যিক কৃষি ও টিস্যু কালচার প্রজেক্ট</h3>
+              <p>তরুণ কৃষি উদ্যোক্তাদের জন্য লাভজনক ফসল: জি-৯ কলা, সৌদি খেজুর, রক্ত চন্দন, ওডিসি-৩ সজিনা, টপ লেডি পেঁপে এবং হিউমিক অ্যাসিড।</p>
+            </div>
+            <button type="button" class="btn-primary" data-select-category="tissue-culture">সব বাণিজ্যিক চারা →</button>
+          </aside>
+          <div id="commercialSplitGrid" class="product-grid-3"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: Category-Wise Sections -->
+    <section class="section-block">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Exotic Fruit <span>Saplings</span></h2>
+          <button type="button" class="view-all-link" data-select-category="exotic-fruits">View All →</button>
+        </div>
+        <div id="exoticFruitsGrid" class="product-grid-4"></div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Medicinal &amp; <span>Diabetic-Friendly Plants</span></h2>
+          <button type="button" class="view-all-link" data-select-category="medicinal">View All →</button>
+        </div>
+        <div id="medicinalPlantsGrid" class="product-grid-4"></div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">High-Value <span>Spices &amp; Seeds</span></h2>
+          <button type="button" class="view-all-link" data-select-category="spices-seeds">View All →</button>
+        </div>
+        <div id="spicesSeedsGrid" class="product-grid-4"></div>
+      </div>
+    </section>
+
+    <!-- Section 9: Value Propositions -->
+    <section class="section-block">
+      <div class="container">
+        <div class="section-header" style="justify-content:center;">
+          <h2 class="section-title">WHY SHOP WITH <span>DAHAGRAM AGRO FARM</span></h2>
+        </div>
+        <div class="services-row">
+          <div class="service-item">
+            <div class="service-badge">💵</div>
+            <h4>Cash On Delivery</h4>
+          </div>
+          <div class="service-item">
+            <div class="service-badge">🧬</div>
+            <h4>Tissue Culture Quality</h4>
+          </div>
+          <div class="service-item">
+            <div class="service-badge">🎥</div>
+            <h4>YouTube Video Guides</h4>
+          </div>
+          <div class="service-item">
+            <div class="service-badge">🚚</div>
+            <h4>Nationwide Courier</h4>
+          </div>
+          <div class="service-item">
+            <div class="service-badge">🌱</div>
+            <h4>Direct Nursery Price</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 10: Video Playlists & Farming Guides -->
+    <section id="guidesSection" class="section-block">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">FROM OUR <span>YOUTUBE PLAYLISTS</span></h2>
+          <a href="https://www.youtube.com/@dahagram_agro_farm/videos" target="_blank" rel="noopener" class="view-all-link">View All Videos &amp; Guides →</a>
+        </div>
+        <div id="farmingGuidesGrid" class="blog-grid"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 3. FOOTER -->
+  <footer>
+    <section class="newsletter-bar">
+      <div class="container newsletter-inner">
+        <div>
+          <strong style="font-size:17px;">📩 Sign up for New Agro Products &amp; Farming Videos</strong>
+          <div id="newsletterStatus" style="font-size:13px; color:var(--brand-green-dark); font-weight:600;"></div>
+        </div>
+        <form id="newsletterForm" class="newsletter-form">
+          <input type="email" required placeholder="আপনার ইমেইল লিখুন (Enter your email)" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="footerLocation" class="footer-mid">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <h4>দহগ্রাম এগ্রোফার্ম লিঃ (Dahagram Agro Farm)</h4>
+          <ul>
+            <li><strong>Address:</strong> House#266, Ward:7, Post: Dahagram (5540), Patgram, Lalmonirhat, Bangladesh</li>
+            <li><strong>Phone / WhatsApp:</strong> +880 1765-235517</li>
+            <li><strong>Email:</strong> dahagramagrofarm@gmail.com</li>
+            <li><strong>Hours:</strong> 09:00 AM – 08:00 PM (Sat – Thu)</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Product Lines</h4>
+          <ul>
+            <li><a href="#showcaseSection">Exotic Fruit Saplings</a></li>
+            <li><a href="#showcaseSection">Stevia &amp; Insulin Plants</a></li>
+            <li><a href="#showcaseSection">G-9 Tissue Culture Banana</a></li>
+            <li><a href="#showcaseSection">Cumin &amp; Black Ginger</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Future Agro Store</h4>
+          <ul>
+            <li><a href="#showcaseSection">Hybrid Vegetable Seeds</a></li>
+            <li><a href="#showcaseSection">Fertilizers &amp; Humic Acid</a></li>
+            <li><a href="#showcaseSection">Grafting &amp; Garden Tools</a></li>
+            <li><a href="#showcaseSection">Organic Potting Mix</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>YouTube Channel</h4>
+          <ul>
+            <li><a href="https://www.youtube.com/@dahagram_agro_farm" target="_blank" rel="noopener">@dahagram_agro_farm</a></li>
+            <li><a href="https://www.youtube.com/@dahagram_agro_farm/videos" target="_blank" rel="noopener">Videos &amp; Guides</a></li>
+            <li><a href="https://www.youtube.com/@dahagram_agro_farm/shorts" target="_blank" rel="noopener">Shorts &amp; Farm Visits</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://www.facebook.com/YakubAli434964" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://wa.me/8801765235517" target="_blank" rel="noopener">WhatsApp Order</a></li>
+            <li><a href="tel:+8801765235517">Call: 01765-235517</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>© 2026 Dahagram Agro Farm Ltd. — বিজ্ঞান ভিত্তিক কৃষি, বয়ে আনবে সমৃদ্ধি</span>
+        <span>Extensible Playlist-to-Product Architecture</span>
+      </div>
+    </section>
+  </footer>
+
+  <!-- QUICK VIEW & YOUTUBE PLAYLIST MODAL -->
+  <div id="quickViewModal" class="modal-backdrop">
+    <div class="modal-box">
+      <button type="button" id="closeQuickViewBtn" class="modal-close" aria-label="Close">×</button>
+      <div id="quickViewBody"></div>
+    </div>
+  </div>
+
+  <!-- SLIDE-OVER CART & COD CHECKOUT DRAWER -->
+  <div id="cartDrawer" class="drawer-backdrop">
+    <div class="drawer-panel">
+      <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-color); padding-bottom:12px;">
+        <h3 style="font-size:18px;">🛒 Your Agro Cart</h3>
+        <button type="button" id="closeCartBtn" class="btn-outline-sm">Close ×</button>
+      </div>
+      <div id="cartItemsList" style="flex:1; overflow-y:auto;"></div>
+      <div style="border-top:1px solid var(--border-color); padding-top:14px; margin-top:12px;">
+        <div style="display:flex; justify-content:space-between; font-size:16px; font-weight:800; margin-bottom:14px;">
+          <span>Total (Cash on Delivery):</span>
+          <span id="cartTotalAmount">৳0</span>
+        </div>
+        <form id="checkoutForm">
+          <div class="form-field">
+            <label for="custName">Your Name / আপনার নাম</label>
+            <input id="custName" type="text" required placeholder="e.g. Md. Yakub Ali" />
+          </div>
+          <div class="form-field">
+            <label for="custPhone">Mobile Number / মোবাইল নম্বর</label>
+            <input id="custPhone" type="tel" required placeholder="017XXXXXXXX" />
+          </div>
+          <div class="form-field">
+            <label for="custAddress">Delivery Address / ঠিকানা</label>
+            <textarea id="custAddress" rows="2" required placeholder="Village/House, Upazila, District"></textarea>
+          </div>
+          <button type="submit" class="btn-cart" style="width:100%; padding:12px;">
+            Confirm Order via WhatsApp →
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- FUTURE-READY: ADD PRODUCT / YOUTUBE PLAYLIST MODAL -->
+  <div id="adminProductModal" class="modal-backdrop">
+    <div class="modal-box">
+      <button type="button" id="closeAdminModalBtn" class="modal-close" aria-label="Close">×</button>
+      <h2 style="font-size:20px; margin-bottom:6px;">+ Add Future Agricultural Product / Playlist</h2>
+      <p style="font-size:13px; color:var(--text-muted); margin-bottom:14px;">
+        Test adding new products or YouTube playlists live. It saves to your browser immediately and generates the JSON entry for <code>data/catalog.js</code>.
+      </p>
+      <form id="addProductForm">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+          <div class="form-field">
+            <label for="newProdTitle">English Product Name</label>
+            <input id="newProdTitle" type="text" required placeholder="e.g. Organic Vermicompost" />
+          </div>
+          <div class="form-field">
+            <label for="newProdBnTitle">Bengali Title</label>
+            <input id="newProdBnTitle" type="text" required placeholder="e.g. কেঁচো সার (ভার্মি কম্পোস্ট)" />
+          </div>
+          <div class="form-field">
+            <label for="newProdCat">Category</label>
+            <select id="newProdCat">
+              <option value="exotic-fruits">Exotic Fruits</option>
+              <option value="medicinal">Medicinal &amp; Herbs</option>
+              <option value="tissue-culture">Tissue Culture</option>
+              <option value="spices-seeds">Spices &amp; Seeds</option>
+              <option value="timber">Timber &amp; Sandalwood</option>
+              <option value="vegetables">Papaya &amp; Vegetables</option>
+              <option value="fertilizer">Fertilizer &amp; Humic</option>
+              <option value="agro-tools">Garden Tools</option>
+              <option value="potting-mix">Soil &amp; Potting Mix</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="newProdUnit">Unit</label>
+            <input id="newProdUnit" type="text" value="Per Sapling" />
+          </div>
+          <div class="form-field">
+            <label for="newProdPrice">Price (৳)</label>
+            <input id="newProdPrice" type="number" required value="250" />
+          </div>
+          <div class="form-field">
+            <label for="newProdOldPrice">Old Price (৳, optional)</label>
+            <input id="newProdOldPrice" type="number" value="300" />
+          </div>
+          <div class="form-field">
+            <label for="newProdPlaylist">YouTube Playlist URL or ID</label>
+            <input id="newProdPlaylist" type="text" placeholder="https://www.youtube.com/playlist?list=..." />
+          </div>
+          <div class="form-field">
+            <label for="newProdVideos">Video Count</label>
+            <input id="newProdVideos" type="number" value="1" />
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="newProdEmoji">Icon / Emoji</label>
+          <input id="newProdEmoji" type="text" value="🌱" />
+        </div>
+        <div class="form-field">
+          <label for="newProdDesc">Description</label>
+          <textarea id="newProdDesc" rows="2" placeholder="Short product &amp; farming details..."></textarea>
+        </div>
+        <button type="submit" class="btn-cart" style="width:100%;">Add to Live Storefront &amp; Generate JSON</button>
+      </form>
+      <div class="form-field" style="margin-top:14px;">
+        <label for="newProdJsonPreview">Generated JSON for <code>data/catalog.js</code>:</label>
+        <textarea id="newProdJsonPreview" rows="5" readonly placeholder="Submit the form above to generate the catalog JSON entry..."></textarea>
+      </div>
+    </div>
+  </div>
+
+  <script>
+/**
+ * Dahagram Agro Farm Ltd. — Extensible Product & YouTube Playlist Catalog
+ *
+ * Developer Note:
+ * Every YouTube playlist or future agricultural product (seeds, fertilizers,
+ * tools, nursery saplings, pesticides, etc.) is defined here as a standard object.
+ * Add a new object to `CATALOG_DATA.products` (or use the built-in "+ Add Product / Playlist"
+ * manager in the UI) and the storefront updates automatically.
+ */
+
+window.CATALOG_DATA = {
+  farm: {
+    name: 'Dahagram Agro Farm Ltd.',
+    bnName: 'দহগ্রাম এগ্রোফার্ম লিঃ',
+    tagline: 'বিজ্ঞান ভিত্তিক কৃষি, বয়ে আনবে সমৃদ্ধি',
+    phone: '01765-235517',
+    whatsapp: '8801765235517',
+    email: 'dahagramagrofarm@gmail.com',
+    address: 'House#266, Ward:7, Post: Dahagram (5540), Patgram, Lalmonirhat, Bangladesh',
+    hours: '09:00 AM - 08:00 PM (Sat - Thu)',
+    youtubeMain: 'https://www.youtube.com/@dahagram_agro_farm',
+    facebook: 'https://www.facebook.com/YakubAli434964',
+  },
+
+  categories: [
+    { id: 'exotic-fruits', name: 'Exotic Fruits', bnName: 'বিদেশী ফল চারা', icon: '🥑' },
+    { id: 'medicinal', name: 'Medicinal & Herbs', bnName: 'ভেষজ ও ডায়াবেটিক', icon: '🌿' },
+    { id: 'tissue-culture', name: 'Tissue Culture', bnName: 'টিস্যু কালচার', icon: '🍌' },
+    { id: 'spices-seeds', name: 'Spices & Seeds', bnName: 'মসলা ও বীজ', icon: '🌶️' },
+    { id: 'timber', name: 'Timber & Sandalwood', bnName: 'চন্দন ও বাণিজ্যিক', icon: '🌳' },
+    { id: 'bulbs', name: 'Saffron & Flower Bulbs', bnName: 'জাফরান ও টিউলিপ', icon: '🌷' },
+    { id: 'vegetables', name: 'Papaya & Vegetables', bnName: 'পেঁপে ও সবজি', icon: '🥬' },
+    { id: 'fertilizer', name: 'Fertilizer & Humic', bnName: 'সার ও হিউমিক', icon: '🧪' },
+    { id: 'grafting', name: 'Grafting & Nursery', bnName: 'কলম ও নার্সারি', icon: '🌱' },
+    { id: 'agro-tools', name: 'Garden Tools', bnName: 'বাগান সরঞ্জাম', icon: '✂️' },
+    { id: 'potting-mix', name: 'Soil & Potting Mix', bnName: 'মাটি ও পটিং মিক্স', icon: '🪴' },
+    { id: 'combo', name: 'Farm Combo Packs', bnName: 'সাশ্রয়ী কম্বো', icon: '📦' },
+  ],
+
+  products: [
+    {
+      id: 'daf-stevia-01',
+      sku: 'DAF-MED-001',
+      title: 'Stevia Plant (Zero-Calorie Sweet Leaf)',
+      bnTitle: 'চিনির বিকল্প স্টিভিয়া চারা (মিষ্টি তুলসি)',
+      category: 'medicinal',
+      categoryLabel: 'Medicinal & Herbs',
+      price: 180,
+      oldPrice: 220,
+      unit: 'Per Sapling',
+      emoji: '🌿',
+      playlistId: 'PLN2c1hNNV8rhmh3St-sphp5eTA8dsZdK9',
+      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rhmh3St-sphp5eTA8dsZdK9',
+      videoCount: 9,
+      featuredCommercial: false,
+      description: 'Natural sugar-free Stevia (মিষ্টি তুলসি) live saplings & dried leaves for diabetic-friendly living and commercial cultivation.',
+    },
+    {
+      id: 'daf-insulin-02',
+      sku: 'DAF-MED-002',
+      title: 'Insulin Plant (Costus Igneus)',
+      bnTitle: 'ইনসুলিন গাছের চারা (ডায়াবেটিস সহায়ক)',
+      category: 'medicinal',
+      categoryLabel: 'Medicinal & Herbs',
+      price: 150,
+      oldPrice: 190,
+      unit: 'Per Sapling',
+      emoji: '🍃',
+      playlistId: 'PLN2c1hNNV8rj727Ybg7wVLQEGs_7tGyLN',
+      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rj727Ybg7wVLQEGs_7tGyLN',
+      videoCount: 11,
+      featuredCommercial: false,
+      description: 'Healthy rooted Insulin Plant saplings grown in Dahagram nursery, ideal for rooftop & homestead medicinal gardens.',
+    },
+    {
+      id: 'daf-g9-03',
+      sku: 'DAF-TC-003',
+      title: 'G-9 Tissue Culture Banana Plant',
+      bnTitle: 'জি-৯ টিস্যু কালচার কলার চারা',
+      category: 'tissue-culture',
+      categoryLabel: 'Tissue Culture',
+      price: 65,
+      oldPrice: 80,
+      unit: 'Per Plantlet',
+      emoji: '🍌',
+      playlistId: 'PLN2c1hNNV8riZjVraHw1U1ot-nv7WP0rx',
+      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8riZjVraHw1U1ot-nv7WP0rx',
+      videoCount: 16,
+      featuredCommercial: true,
+      description: 'High-yield disease-free Grand Naine (G-9) tissue culture banana plantlets with full commercial farming support.',
+    },
+    {
+      id: 'daf-avocado-04',
+      sku: 'DAF-FRT-004',
+      title: 'Avocado Grafted & Seed Sapling',
+      bnTitle: 'অ্যাভোকাডো কলম ও বীজের চারা',
+      category: 'exotic-fruits',
+      categoryLabel: 'Exotic Fruits',
+      price: 550,
+      oldPrice: 680,
+      unit: 'Per Sapling',
+      emoji: '🥑',
+      playlistId: 'PLN2c1hNNV8rgSMwLq_pLUCTgmeaha3dqZ',
+      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rgSMwLq_pLUCTgmeaha3dqZ',
+      videoCount: 4,
+      featuredCommercial: false,
+      description: 'Climate-adapted grafted and healthy seed-grown Avocado saplings ready for Bangladesh soil.',
+    },
+    {
+      id: 'daf-rambutan-05',
+      sku: 'DAF-FRT-005',
+      title: 'Thai Rambutan Grafted Sapling',
+      bnTitle: 'রাম্বুটানের কলম ও টানা চারা',
+      category: 'exotic-fruits',
+      categoryLabel: 'Exotic Fruits',
+      price: 450,
+      oldPrice: 550,
+      unit: 'Per Sapling',
+      emoji: '🍓',
+      playlistId: 'PLN2c1hNNV8rgDGnqa1_DjJqcEo6JVj8m9',
+      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rgDGnqa1_DjJqcEo6JVj8m9',
+      videoCount: 6,
+      featuredCommercial: false,
+      description: 'Sweet exotic Rambutan saplings with proven fruiting track record in northern Bangladesh.',
+    },
+    {
+      id: 'daf-apple-06',
+      sku: 'DAF-FRT-006',
+      title: 'Hot-Climate Apple (HRMN-99 / Anna)',
+      bnTitle: 'গরম আবহাওয়ার আপেল চারা (HRMN99)',
+      category: 'exotic-fruits',
+      categoryLabel: 'Exotic Fruits',
+      price: 480,
+      oldPrice: 600,
+      unit: 'Per Sapling',
+      emoji: '🍎',
+      playlistId: 'PLN2c1hNNV8rjwdHpsMhHC92JClTvjSBZb',
+      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rjwdHpsMhHC92JClTvjSBZb',
+      videoCount: 2,
+      featuredCommercial: false,
+      description: 'Low-chill hot-climate Apple varieties (HRMN99, Anna, Dorset Golden) suited for Bangladesh.',
+    },
+    {
+      id: 'daf-datepalm-07',
+      sku: 'DAF-TC-007',
+      title: 'Saudi Date Palm Offshoot (Sakar)',
+      bnTitle: 'সৌদি খেজুরের সাকার ও টিস্যু চারা',
+      category: 'tissue-culture',
+      categoryLabel: 'Tissue Culture',
+      price: 2500,
+      oldPrice: 3000,
+      unit: 'Per Offshoot',
+      emoji: '🌴',
+      playlistId: 'PLN2c1hNNV8riVanlfVoAilftu-RmK_nkg',
+      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8riVanlfVoAilftu-RmK_nkg',
+      videoCount: 3,
+      featuredCommercial: true,
+      description: 'Authentic Saudi Arabian Date Palm offshoots & tissue culture plants sourced for commercial orchards.',
+    },
+    {
+      id: 'daf-grapes-08',
+      sku: 'DAF-FRT-008',
+      title: 'Sweet Seedless Grapes (Super Sonaka)',
+      bnTitle: 'মিষ্টি কালো ও লাল আঙ্গুরের চারা',
+      category: 'exotic-fruits',
+      categoryLabel: 'Exotic Fruits',
+      price: 320,
+      oldPrice: 390,
+      unit: 'Per Vine',
+      emoji: '🍇',
+      playlistId: 'PLN2c1hNNV8riFtkY5IO2Pp2Nu1cgYH3sq',
+      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8riFtkY5IO2Pp2Nu1cgYH3sq',
+      videoCount: 4,
+      featuredCommercial: false,
+      description: 'Sweet black, red, and Super Sonaka long seedless grape vines for rooftop & trellis farming.',
+    },
+    {
+      id: 'daf-corossol-09',
+      sku: 'DAF-MED-009',
+      title: 'Corossol / Soursop Medicinal Plant',
+      bnTitle: 'করসল / টক আতা চারা (Corossol)',
+      category: 'medicinal',
+      categoryLabel: 'Medicinal & Herbs',
+      price: 350,
+      oldPrice: 420,
+      unit: 'Per Sapling',
+      emoji: '🍈',
+      playlistId: 'PLN2c1hNNV8rhIdN-g4vtjiO46Q_Uyukf8',
+      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rhIdN-g4vtjiO46Q_Uyukf8',
+      videoCount: 2,
+      featuredCommercial: false,
+      description: 'Antioxidant-rich Corossol (Soursop) saplings propagated carefully at Dahagram Agro Farm.',
+    },
+    {
+      id: 'daf-rosemary-10',
+      sku: 'DAF-MED-010',
+      title: 'Fresh Culinary & Medicinal Rosemary',
+      bnTitle: 'রোজমেরী গাছের চারা (Rosemary)',
+      category: 'medicinal',
+      categoryLabel: 'Medicinal & Herbs',
+      price: 220,
+      oldPrice: 270,
+      unit: 'Per Pot',
+      emoji: '🌱',
+      playlistId: 'PLN2c1hNNV8rhQnA_2wcvEs9WcRD204aZM',
+      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rhQnA_2wcvEs9WcRD204aZM',
+      videoCount: 2,
+      featuredCommercial: false,
+      description: 'Aromatic Mediterranean Rosemary herb plants ideal for balcony pots, tea, and culinary use.',
+    },
+    {
+      id: 'daf-cumin-11',
+      sku: 'DAF-SPC-011',
+      title: 'High-Yield Cumin Seeds (Dinkar / Avani)',
+      bnTitle: 'উন্নত জাতের জিরা বীজ',
+      category: 'spices-seeds',
+      categoryLabel: 'Spices & Seeds',
+      price: 280,
+      oldPrice: 340,
+      unit: '100g Pack',
+      emoji: '🌾',
+      playlistId: 'PLN2c1hNNV8rhe6Ft52VY9Kr29-R28mPXd',
+      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rhe6Ft52VY9Kr29-R28mPXd',
+      videoCount: 2,
+      featuredCommercial: false,
+      description: 'Tested high-germination Cumin seeds with complete winter cultivation guidance for Bangladesh.',
+    },
+    {
+      id: 'daf-blackginger-12',
+      sku: 'DAF-SPC-012',
+      title: 'Black Ginger Rhizomes (Kaempferia)',
+      bnTitle: 'দুর্লভ কালো আদার বীজ ও চারা',
+      category: 'spices-seeds',
+      categoryLabel: 'Spices & Seeds',
+      price: 490,
+      oldPrice: 600,
+      unit: '250g Rhizome',
+      emoji: '🫚',
+      playlistId: 'PLN2c1hNNV8rhGWWE2kGjXiI7T9yA9yWRW',
+      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rhGWWE2kGjXiI7T9yA9yWRW',
+      videoCount: 1,
+      featuredCommercial: false,
+      description: 'High-value medicinal Black Ginger (কালো আদা) planting rhizomes for organic spice cultivation.',
+    },
+    {
+      id: 'daf-sandalwood-13',
+      sku: 'DAF-TMB-013',
+      title: 'Red & White Sandalwood Saplings',
+      bnTitle: 'রক্ত চন্দন ও সাদা চন্দন চারা',
+      category: 'timber',
+      categoryLabel: 'Timber & Sandalwood',
+      price: 380,
+      oldPrice: 460,
+      unit: 'Per Sapling',
+      emoji: '🌳',
+      playlistId: 'PLN2c1hNNV8rivqNCvtsKgVWbGTHjxnI8Z',
+      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rivqNCvtsKgVWbGTHjxnI8Z',
+      videoCount: 2,
+      featuredCommercial: true,
+      description: 'Long-term high-value Red Sandalwood (রক্ত চন্দন) and White Sandalwood saplings with host plant advice.',
+    },
+    {
+      id: 'daf-moringa-14',
+      sku: 'DAF-VEG-014',
+      title: 'ODC-3 Year-Round Moringa Seeds',
+      bnTitle: 'ওডিসি-৩ বারমাসি সজিনা বীজ ও চারা',
+      category: 'vegetables',
+      categoryLabel: 'Papaya & Vegetables',
+      price: 160,
+      oldPrice: 200,
+      unit: '50 Seeds / Sapling',
+      emoji: '🫛',
+      playlistId: 'PLN2c1hNNV8rieaw3EYZu74MEWjmf7TnkP',
+      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rieaw3EYZu74MEWjmf7TnkP',
+      videoCount: 3,
+      featuredCommercial: true,
+      description: 'Fast-fruiting Indian ODC-3 perennial Moringa variety producing drumsticks within 6–8 months.',
+    },
+    {
+      id: 'daf-papaya-15',
+      sku: 'DAF-VEG-015',
+      title: 'Top Lady Hybrid Papaya Seedlings',
+      bnTitle: 'টপ লেডি হাইব্রিড পেঁপে চারা',
+      category: 'vegetables',
+      categoryLabel: 'Papaya & Vegetables',
+      price: 45,
+      oldPrice: 60,
+      unit: 'Per Seedling',
+      emoji: '🥭',
+      playlistId: 'PLA2mECJvbjY0',
+      playlistUrl: 'https://www.youtube.com/playlist?list=PLA2mECJvbjY0',
+      videoCount: 7,
+      featuredCommercial: true,
+      description: 'Commercial Top Lady papaya seedlings with full pest-control & land preparation playlist.',
+    },
+    {
+      id: 'daf-saffron-16',
+      sku: 'DAF-BLB-016',
+      title: 'Kashmiri Saffron & Tulip Bulbs',
+      bnTitle: 'জাফরান ও টিউলিপ ফুলের কন্দ (Bulbs)',
+      category: 'bulbs',
+      categoryLabel: 'Saffron & Flower Bulbs',
+      price: 650,
+      oldPrice: 800,
+      unit: 'Pack of 5 Bulbs',
+      emoji: '🌷',
+      playlistId: 'PLN2c1hNNV8rjIJassonuEcGvOPRoEgkxR',
+      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rjIJassonuEcGvOPRoEgkxR',
+      videoCount: 32,
+      featuredCommercial: false,
+      description: 'Imported Kashmiri Saffron corms and Tulip/Lilium/Daffodil winter flower bulbs.',
+    },
+    {
+      id: 'daf-humic-17',
+      sku: 'DAF-FRZ-017',
+      title: 'Potassium Humate (Humic Acid 98%)',
+      bnTitle: 'হিউমিক অ্যাসিড (মাটির উর্বরতা বৃদ্ধিকারক)',
+      category: 'fertilizer',
+      categoryLabel: 'Fertilizer & Humic',
+      price: 240,
+      oldPrice: 290,
+      unit: '500g Pack',
+      emoji: '🧪',
+      playlistId: 'PLN2c1hNNV8rgtaxpaWVRyUMgzX2ViCUxc',
+      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rgtaxpaWVRyUMgzX2ViCUxc',
+      videoCount: 3,
+      featuredCommercial: true,
+      description: 'Soluble Humic Acid soil conditioner to boost root growth, nutrient uptake, and crop yield.',
+    },
+    {
+      id: 'daf-sarpan-18',
+      sku: 'DAF-SPC-018',
+      title: 'Sarpan-16 Dwarf Bush Bean Seeds',
+      bnTitle: 'সারপান-১৬ খাটো ও মাচাবিহীন শিম বীজ',
+      category: 'spices-seeds',
+      categoryLabel: 'Spices & Seeds',
+      price: 120,
+      oldPrice: 150,
+      unit: '50g Pack',
+      emoji: '🫘',
+      playlistId: 'PLN2c1hNNV8ridvMVq6KWwGxjlSTnA-gfw',
+      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8ridvMVq6KWwGxjlSTnA-gfw',
+      videoCount: 1,
+      featuredCommercial: false,
+      description: 'Kerala Dolichos-16 bush bean seeds that grow without bamboo trellises (মাচাবিহীন শিম).',
+    },
+  ],
+
+  guides: [
+    {
+      title: 'Stevia Cultivation & Zero-Calorie Sugar Alternative in Bangladesh',
+      bnTitle: 'চিনির বিকল্প স্টিভিয়া চাষ ও ব্যবহার পদ্ধতি',
+      meta: 'Playlist • 9 Videos • Dahagram Agro Farm',
+      emoji: '🌿',
+      url: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rhmh3St-sphp5eTA8dsZdK9',
+    },
+    {
+      title: 'G-9 Tissue Culture Banana Farming: Land Prep to Harvest',
+      bnTitle: 'জি-৯ টিস্যু কালচার কলা চাষে লাভজনক কৃষি',
+      meta: 'Playlist • 16 Videos • Commercial Farming',
+      emoji: '🍌',
+      url: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8riZjVraHw1U1ot-nv7WP0rx',
+    },
+    {
+      title: 'Properties of Humic Acid & Proper Potash Fertilizer Usage',
+      bnTitle: 'হিউমিক অ্যাসিড ও পটাশ সার ব্যবহারের সঠিক নিয়ম',
+      meta: 'Playlist • Soil & Nutrient Care',
+      emoji: '🧪',
+      url: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rgtaxpaWVRyUMgzX2ViCUxc',
+    },
+  ],
+};
+
+</script>
+  <script>
+(() => {
+  const STORAGE_CART_KEY = 'daf_cart_v1';
+  const STORAGE_CUSTOM_PRODUCTS_KEY = 'daf_custom_products_v1';
+  const STORAGE_WISHLIST_KEY = 'daf_wishlist_v1';
+
+  const baseData = window.CATALOG_DATA;
+  let customProducts = JSON.parse(localStorage.getItem(STORAGE_CUSTOM_PRODUCTS_KEY) || '[]');
+  let cart = JSON.parse(localStorage.getItem(STORAGE_CART_KEY) || '[]');
+  let wishlist = JSON.parse(localStorage.getItem(STORAGE_WISHLIST_KEY) || '[]');
+  let activeTab = 'all';
+  let searchQuery = '';
+  let currentSlide = 0;
+
+  const getAllProducts = () => [...customProducts, ...baseData.products];
+
+  const formatBDT = (amount) => `৳${Number(amount).toLocaleString('en-BD')}`;
+
+  function saveState() {
+    localStorage.setItem(STORAGE_CART_KEY, JSON.stringify(cart));
+    localStorage.setItem(STORAGE_WISHLIST_KEY, JSON.stringify(wishlist));
+    localStorage.setItem(STORAGE_CUSTOM_PRODUCTS_KEY, JSON.stringify(customProducts));
+    updateHeaderBadges();
+  }
+
+  function updateHeaderBadges() {
+    const cartCount = cart.reduce((sum, item) => sum + item.qty, 0);
+    document.querySelectorAll('[data-cart-count]').forEach((el) => {
+      el.textContent = cartCount;
+    });
+    document.querySelectorAll('[data-wishlist-count]').forEach((el) => {
+      el.textContent = wishlist.length;
+    });
+  }
+
+  function renderProductCard(product) {
+    const discount =
+      product.oldPrice && product.oldPrice > product.price
+        ? product.oldPrice - product.price
+        : 0;
+    const isWished = wishlist.includes(product.id);
+
+    return `
+      <article class="product-card" data-product-id="${product.id}">
+        <div>
+          <div class="product-badge-row">
+            ${discount > 0 ? `<span class="badge-discount">- ${formatBDT(discount)}</span>` : '<span></span>'}
+            <span class="badge-playlist">${product.videoCount ? `${product.videoCount} Videos` : 'Agro Product'}</span>
+          </div>
+          <div class="product-thumb">
+            <span class="product-thumb-emoji">${product.emoji || '🌱'}</span>
+            <span class="product-thumb-code">${product.unit || 'Unit'}</span>
+            <button type="button" class="quick-view-btn" data-quick-view="${product.id}">
+              ▶ Watch &amp; View
+            </button>
+          </div>
+          <div class="product-cat">${product.categoryLabel}</div>
+          <h3 class="product-title" title="${product.title}">${product.bnTitle || product.title}</h3>
+          <div class="product-sku">${product.title} • ${product.sku}</div>
+        </div>
+        <div>
+          <div class="product-price-row">
+            <span class="price-now">${formatBDT(product.price)}</span>
+            ${product.oldPrice ? `<span class="price-old">${formatBDT(product.oldPrice)}</span>` : ''}
+          </div>
+          <div class="product-actions">
+            <button type="button" class="btn-cart" data-add-cart="${product.id}">Add To Cart</button>
+            <button type="button" class="btn-yt" title="Save to Wishlist" data-toggle-wish="${product.id}">
+              ${isWished ? '♥' : '♡'}
+            </button>
+          </div>
+        </div>
+      </article>
+    `;
+  }
+
+  function renderCategories() {
+    const grid = document.getElementById('popularCategoriesGrid');
+    if (!grid) return;
+    grid.innerHTML = baseData.categories
+      .map(
+        (cat) => `
+      <div class="category-card" data-select-category="${cat.id}">
+        <div class="category-icon">${cat.icon}</div>
+        <h4>${cat.name}</h4>
+        <small>${cat.bnName}</small>
+      </div>
+    `
+      )
+      .join('');
+  }
+
+  function renderTabs() {
+    const tabsBar = document.getElementById('showcaseTabsBar');
+    if (!tabsBar) return;
+    const tabs = [
+      { id: 'all', name: 'All Playlists & Products' },
+      ...baseData.categories.slice(0, 7),
+    ];
+    tabsBar.innerHTML = tabs
+      .map(
+        (tab) => `
+      <button type="button" class="tab-btn ${activeTab === tab.id ? 'active' : ''}" data-tab="${tab.id}">
+        ${tab.name}
+      </button>
+    `
+      )
+      .join('');
+  }
+
+  function renderShowcaseProducts() {
+    const container = document.getElementById('showcaseProductsGrid');
+    if (!container) return;
+
+    const q = searchQuery.trim().toLowerCase();
+    const filtered = getAllProducts().filter((p) => {
+      const matchesTab = activeTab === 'all' || p.category === activeTab;
+      const matchesQuery =
+        !q ||
+        p.title.toLowerCase().includes(q) ||
+        (p.bnTitle && p.bnTitle.toLowerCase().includes(q)) ||
+        p.categoryLabel.toLowerCase().includes(q) ||
+        p.sku.toLowerCase().includes(q);
+      return matchesTab && matchesQuery;
+    });
+
+    if (filtered.length === 0) {
+      container.innerHTML = `
+        <div style="grid-column: 1 / -1; background: #fff; padding: 36px; text-align: center; border-radius: 12px; border: 1px dashed #cbd5e1;">
+          <p style="font-weight: 700; margin-bottom: 8px;">No matching plants or products found.</p>
+          <button type="button" class="btn-outline-sm" id="resetFilterBtn">Reset Filters</button>
+        </div>
+      `;
+      document.getElementById('resetFilterBtn')?.addEventListener('click', () => {
+        activeTab = 'all';
+        searchQuery = '';
+        const searchInput = document.getElementById('globalSearchInput');
+        if (searchInput) searchInput.value = '';
+        renderTabs();
+        renderShowcaseProducts();
+      });
+      return;
+    }
+
+    container.innerHTML = filtered.slice(0, 12).map(renderProductCard).join('');
+  }
+
+  function renderCommercialSplit() {
+    const container = document.getElementById('commercialSplitGrid');
+    if (!container) return;
+    const items = getAllProducts().filter((p) => p.featuredCommercial).slice(0, 6);
+    container.innerHTML = items.map(renderProductCard).join('');
+  }
+
+  function renderCategorySection(categoryId, elementId) {
+    const container = document.getElementById(elementId);
+    if (!container) return;
+    const items = getAllProducts().filter((p) => p.category === categoryId).slice(0, 4);
+    container.innerHTML = items.map(renderProductCard).join('');
+  }
+
+  function renderGuides() {
+    const container = document.getElementById('farmingGuidesGrid');
+    if (!container) return;
+    container.innerHTML = baseData.guides
+      .map(
+        (g) => `
+      <article class="blog-card">
+        <div class="blog-thumb">${g.emoji}</div>
+        <div class="blog-body">
+          <div class="blog-meta">${g.meta}</div>
+          <h4>${g.bnTitle}</h4>
+          <p style="font-size: 13px; color: var(--text-muted);">${g.title}</p>
+          <a href="${g.url}" target="_blank" rel="noopener">Watch Playlist on YouTube →</a>
+        </div>
+      </article>
+    `
+      )
+      .join('');
+  }
+
+  function openQuickView(productId) {
+    const product = getAllProducts().find((p) => p.id === productId);
+    if (!product) return;
+
+    const modal = document.getElementById('quickViewModal');
+    const body = document.getElementById('quickViewBody');
+    const embedHtml = product.playlistId
+      ? `<div style="margin: 14px 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--border-color);">
+           <iframe width="100%" height="260"
+             src="https://www.youtube.com/embed/videoseries?list=${encodeURIComponent(product.playlistId)}"
+             title="${product.title}"
+             frameborder="0"
+             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+             allowfullscreen></iframe>
+         </div>`
+      : '';
+
+    body.innerHTML = `
+      <div style="display:flex; gap:12px; align-items:center; margin-bottom:10px;">
+        <span style="font-size:36px;">${product.emoji || '🌱'}</span>
+        <div>
+          <span class="badge-playlist">${product.categoryLabel}</span>
+          <h2 style="font-size:20px; margin-top:4px;">${product.bnTitle || product.title}</h2>
+          <p style="font-size:13px; color:var(--text-muted);">${product.title} • SKU: ${product.sku}</p>
+        </div>
+      </div>
+      <p style="font-size:14px; color:var(--text-dark); margin-bottom:10px;">${product.description || ''}</p>
+      <div class="product-price-row">
+        <span class="price-now">${formatBDT(product.price)}</span>
+        ${product.oldPrice ? `<span class="price-old">${formatBDT(product.oldPrice)}</span>` : ''}
+        <span style="font-size:12.5px; color:var(--text-muted);">(${product.unit || 'Unit'})</span>
+      </div>
+      ${embedHtml}
+      <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:14px;">
+        <button type="button" class="btn-cart" style="flex:1;" data-add-cart="${product.id}">
+          Add To Cart — ${formatBDT(product.price)}
+        </button>
+        ${
+          product.playlistUrl
+            ? `<a href="${product.playlistUrl}" target="_blank" rel="noopener" class="btn-outline-sm" style="display:inline-flex;align-items:center;">Open YouTube Playlist ↗</a>`
+            : ''
+        }
+      </div>
+    `;
+    modal.classList.add('open');
+  }
+
+  function addToCart(productId) {
+    const product = getAllProducts().find((p) => p.id === productId);
+    if (!product) return;
+    const existing = cart.find((c) => c.id === productId);
+    if (existing) {
+      existing.qty += 1;
+    } else {
+      cart.push({ id: product.id, qty: 1 });
+    }
+    saveState();
+    renderCartDrawer();
+    openCartDrawer();
+  }
+
+  function toggleWishlist(productId) {
+    if (wishlist.includes(productId)) {
+      wishlist = wishlist.filter((id) => id !== productId);
+    } else {
+      wishlist.push(productId);
+    }
+    saveState();
+    renderAllProductViews();
+  }
+
+  function renderCartDrawer() {
+    const listEl = document.getElementById('cartItemsList');
+    const totalEl = document.getElementById('cartTotalAmount');
+    if (!listEl || !totalEl) return;
+
+    const all = getAllProducts();
+    let total = 0;
+
+    if (cart.length === 0) {
+      listEl.innerHTML = `<p style="color:var(--text-muted); font-size:14px; padding:20px 0;">Your cart is empty. Add saplings, seeds, or agro inputs to order.</p>`;
+      totalEl.textContent = formatBDT(0);
+      return;
+    }
+
+    listEl.innerHTML = cart
+      .map((item) => {
+        const p = all.find((x) => x.id === item.id);
+        if (!p) return '';
+        total += p.price * item.qty;
+        return `
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; padding:10px 0; border-bottom:1px solid var(--border-color);">
+          <div>
+            <strong style="font-size:13.5px; display:block;">${p.emoji || '🌱'} ${p.bnTitle || p.title}</strong>
+            <span style="font-size:12px; color:var(--text-muted);">${formatBDT(p.price)} × ${item.qty}</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:6px;">
+            <button type="button" class="btn-outline-sm" data-cart-dec="${p.id}">-</button>
+            <span style="font-size:13px; font-weight:700;">${item.qty}</span>
+            <button type="button" class="btn-outline-sm" data-cart-inc="${p.id}">+</button>
+          </div>
+        </div>
+      `;
+      })
+      .join('');
+
+    totalEl.textContent = formatBDT(total);
+  }
+
+  function openCartDrawer() {
+    renderCartDrawer();
+    document.getElementById('cartDrawer')?.classList.add('open');
+  }
+
+  function renderAllProductViews() {
+    renderShowcaseProducts();
+    renderCommercialSplit();
+    renderCategorySection('exotic-fruits', 'exoticFruitsGrid');
+    renderCategorySection('medicinal', 'medicinalPlantsGrid');
+    renderCategorySection('spices-seeds', 'spicesSeedsGrid');
+  }
+
+  function initHeroSlider() {
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.hero-dot');
+    if (!slides.length) return;
+
+    const showSlide = (idx) => {
+      currentSlide = (idx + slides.length) % slides.length;
+      slides.forEach((s, i) => s.classList.toggle('active', i === currentSlide));
+      dots.forEach((d, i) => d.classList.toggle('active', i === currentSlide));
+    };
+
+    dots.forEach((dot, idx) => {
+      dot.addEventListener('click', () => showSlide(idx));
+    });
+
+    setInterval(() => showSlide(currentSlide + 1), 6000);
+  }
+
+  function initEvents() {
+    document.body.addEventListener('click', (e) => {
+      const tabBtn = e.target.closest('[data-tab]');
+      if (tabBtn) {
+        activeTab = tabBtn.dataset.tab;
+        renderTabs();
+        renderShowcaseProducts();
+        return;
+      }
+
+      const catCard = e.target.closest('[data-select-category]');
+      if (catCard) {
+        activeTab = catCard.dataset.selectCategory;
+        renderTabs();
+        renderShowcaseProducts();
+        document.getElementById('showcaseSection')?.scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+
+      const quickBtn = e.target.closest('[data-quick-view]');
+      if (quickBtn) {
+        openQuickView(quickBtn.dataset.quickView);
+        return;
+      }
+
+      const addBtn = e.target.closest('[data-add-cart]');
+      if (addBtn) {
+        addToCart(addBtn.dataset.addCart);
+        return;
+      }
+
+      const wishBtn = e.target.closest('[data-toggle-wish]');
+      if (wishBtn) {
+        toggleWishlist(wishBtn.dataset.toggleWish);
+        return;
+      }
+
+      const incBtn = e.target.closest('[data-cart-inc]');
+      if (incBtn) {
+        const item = cart.find((c) => c.id === incBtn.dataset.cartInc);
+        if (item) item.qty += 1;
+        saveState();
+        renderCartDrawer();
+        return;
+      }
+
+      const decBtn = e.target.closest('[data-cart-dec]');
+      if (decBtn) {
+        const idx = cart.findIndex((c) => c.id === decBtn.dataset.cartDec);
+        if (idx > -1) {
+          if (cart[idx].qty > 1) cart[idx].qty -= 1;
+          else cart.splice(idx, 1);
+          saveState();
+          renderCartDrawer();
+        }
+        return;
+      }
+    });
+
+    // Global Search
+    const searchForm = document.getElementById('globalSearchForm');
+    const searchInput = document.getElementById('globalSearchInput');
+    searchForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      searchQuery = searchInput.value || '';
+      activeTab = 'all';
+      renderTabs();
+      renderShowcaseProducts();
+      document.getElementById('showcaseSection')?.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Modals & Drawers
+    document.getElementById('openCartBtn')?.addEventListener('click', openCartDrawer);
+    document.getElementById('closeCartBtn')?.addEventListener('click', () => {
+      document.getElementById('cartDrawer')?.classList.remove('open');
+    });
+    document.getElementById('closeQuickViewBtn')?.addEventListener('click', () => {
+      document.getElementById('quickViewModal')?.classList.remove('open');
+    });
+    document.getElementById('closePromoBtn')?.addEventListener('click', () => {
+      document.getElementById('promoModal')?.classList.remove('open');
+    });
+
+    // Mobile Nav Toggle
+    document.getElementById('mobileMenuToggle')?.addEventListener('click', () => {
+      const nav = document.getElementById('primaryNavList');
+      nav?.scrollIntoView({ behavior: 'smooth', inline: 'start' });
+    });
+
+    // Checkout -> WhatsApp Order
+    document.getElementById('checkoutForm')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (cart.length === 0) {
+        alert('Please add at least one product to your cart first.');
+        return;
+      }
+      const name = document.getElementById('custName').value.trim();
+      const phone = document.getElementById('custPhone').value.trim();
+      const address = document.getElementById('custAddress').value.trim();
+      const all = getAllProducts();
+      let total = 0;
+      const lines = cart.map((item) => {
+        const p = all.find((x) => x.id === item.id);
+        const sub = p ? p.price * item.qty : 0;
+        total += sub;
+        return `- ${p ? p.bnTitle || p.title : item.id} x${item.qty} = ৳${sub}`;
+      });
+      const message = encodeURIComponent(
+        `নতুন অর্ডার — Dahagram Agro Farm\nনাম: ${name}\nমোবাইল: ${phone}\nঠিকানা: ${address}\n\nপণ্যসমূহ:\n${lines.join('\n')}\n\nমোট: ৳${total} (Cash on Delivery)`
+      );
+      window.open(`https://wa.me/${baseData.farm.whatsapp}?text=${message}`, '_blank');
+    });
+
+    // Newsletter
+    document.getElementById('newsletterForm')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const msg = document.getElementById('newsletterStatus');
+      if (msg) msg.textContent = 'ধন্যবাদ! নতুন কৃষি ভিডিও ও পণ্যের আপডেট আপনার ইমেইলে পাঠানো হবে।';
+      e.target.reset();
+    });
+
+    // Future Product / Playlist Manager Modal
+    const adminModal = document.getElementById('adminProductModal');
+    document.getElementById('openAdminModalBtn')?.addEventListener('click', () => {
+      adminModal?.classList.add('open');
+    });
+    document.getElementById('closeAdminModalBtn')?.addEventListener('click', () => {
+      adminModal?.classList.remove('open');
+    });
+    document.getElementById('addProductForm')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const catId = document.getElementById('newProdCat').value;
+      const catObj = baseData.categories.find((c) => c.id === catId);
+      const playlistRaw = document.getElementById('newProdPlaylist').value.trim();
+      let playlistId = '';
+      if (playlistRaw.includes('list=')) {
+        playlistId = new URLSearchParams(playlistRaw.split('?')[1]).get('list') || '';
+      } else {
+        playlistId = playlistRaw;
+      }
+
+      const newProduct = {
+        id: `custom-${Date.now()}`,
+        sku: `DAF-NEW-${Math.floor(100 + Math.random() * 900)}`,
+        title: document.getElementById('newProdTitle').value.trim(),
+        bnTitle: document.getElementById('newProdBnTitle').value.trim(),
+        category: catId,
+        categoryLabel: catObj ? catObj.name : 'Agro Product',
+        price: Number(document.getElementById('newProdPrice').value) || 100,
+        oldPrice: Number(document.getElementById('newProdOldPrice').value) || null,
+        unit: document.getElementById('newProdUnit').value.trim() || 'Per Unit',
+        emoji: document.getElementById('newProdEmoji').value.trim() || '🌱',
+        playlistId,
+        playlistUrl: playlistId ? `https://www.youtube.com/playlist?list=${playlistId}` : baseData.farm.youtubeMain,
+        videoCount: Number(document.getElementById('newProdVideos').value) || 0,
+        featuredCommercial: false,
+        description: document.getElementById('newProdDesc').value.trim(),
+      };
+
+      customProducts.unshift(newProduct);
+      saveState();
+      renderAllProductViews();
+      document.getElementById('newProdJsonPreview').value = JSON.stringify(newProduct, null, 2);
+      e.target.reset();
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    renderCategories();
+    renderTabs();
+    renderAllProductViews();
+    renderGuides();
+    updateHeaderBadges();
+    initHeroSlider();
+    initEvents();
+  });
+})();
+
+</script>
+</body>
+</html>
