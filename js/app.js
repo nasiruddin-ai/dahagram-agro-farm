@@ -47,7 +47,11 @@
             <span class="badge-playlist">${product.videoCount ? `${product.videoCount} Videos` : 'Agro Product'}</span>
           </div>
           <div class="product-thumb">
-            <span class="product-thumb-emoji">${product.emoji || '🌱'}</span>
+            ${
+              product.image
+                ? `<img src="${product.image}" alt="${product.title}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" /><span class="product-thumb-emoji" style="display:none;">${product.emoji || '🌱'}</span>`
+                : `<span class="product-thumb-emoji">${product.emoji || '🌱'}</span>`
+            }
             <span class="product-thumb-code">${product.unit || 'Unit'}</span>
             <button type="button" class="quick-view-btn" data-quick-view="${product.id}">
               ▶ Watch &amp; View
@@ -165,7 +169,9 @@
       .map(
         (g) => `
       <article class="blog-card">
-        <div class="blog-thumb">${g.emoji}</div>
+        <div class="blog-thumb">
+          ${g.image ? `<img src="${g.image}" alt="${g.title}" loading="lazy" />` : g.emoji}
+        </div>
         <div class="blog-body">
           <div class="blog-meta">${g.meta}</div>
           <h4>${g.bnTitle}</h4>
@@ -196,8 +202,12 @@
       : '';
 
     body.innerHTML = `
-      <div style="display:flex; gap:12px; align-items:center; margin-bottom:10px;">
-        <span style="font-size:36px;">${product.emoji || '🌱'}</span>
+      <div style="display:flex; gap:14px; align-items:center; margin-bottom:10px;">
+        ${
+          product.image
+            ? `<img src="${product.image}" alt="${product.title}" style="width:72px;height:72px;object-fit:cover;border-radius:10px;border:1px solid var(--border-color);flex-shrink:0;" />`
+            : `<span style="font-size:36px;">${product.emoji || '🌱'}</span>`
+        }
         <div>
           <span class="badge-playlist">${product.categoryLabel}</span>
           <h2 style="font-size:20px; margin-top:4px;">${product.bnTitle || product.title}</h2>
@@ -426,7 +436,7 @@
         return `- ${p ? p.bnTitle || p.title : item.id} x${item.qty} = ৳${sub}`;
       });
       const message = encodeURIComponent(
-        `নতুন অর্ডার — Dahagram Agro Farm\nনাম: ${name}\nমোবাইল: ${phone}\nঠিকানা: ${address}\n\nপণ্যসমূহ:\n${lines.join('\n')}\n\nমোট: ৳${total} (Cash on Delivery)`
+        `নতুন অর্ডার — DAHAGRAM AGRO FIRM AND NURSARY\nনাম: ${name}\nমোবাইল: ${phone}\nঠিকানা: ${address}\n\nপণ্যসমূহ:\n${lines.join('\n')}\n\nমোট: ৳${total} (Cash on Delivery)`
       );
       window.open(`https://wa.me/${baseData.farm.whatsapp}?text=${message}`, '_blank');
     });
@@ -470,6 +480,7 @@
         oldPrice: Number(document.getElementById('newProdOldPrice').value) || null,
         unit: document.getElementById('newProdUnit').value.trim() || 'Per Unit',
         emoji: document.getElementById('newProdEmoji').value.trim() || '🌱',
+        image: (document.getElementById('newProdImage')?.value || '').trim(),
         playlistId,
         playlistUrl: playlistId ? `https://www.youtube.com/playlist?list=${playlistId}` : baseData.farm.youtubeMain,
         videoCount: Number(document.getElementById('newProdVideos').value) || 0,

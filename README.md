@@ -1,6 +1,6 @@
-# Dahagram Agro Farm Ltd. (`দহগ্রাম এগ্রোফার্ম লিঃ`) — Ready-Made Agricultural Storefront
+# DAHAGRAM AGRO FIRM AND NURSARY (`দহগ্রাম এগ্রো ফার্ম অ্যান্ড নার্সারি`) — Ready-Made Agricultural Storefront
 
-A ready-to-deploy, extensible agricultural e-commerce & YouTube playlist-backed website built for **Dahagram Agro Farm Ltd.** (`@dahagram_agro_farm`), located in **Dahagram, Patgram, Lalmonirhat, Bangladesh**.
+A ready-to-deploy, extensible agricultural e-commerce & YouTube playlist-backed website built for **DAHAGRAM AGRO FIRM AND NURSARY** (`@dahagram_agro_farm`), located in **Dahagram, Patgram, Lalmonirhat, Bangladesh**.
 
 ## Key Features
 - **Playlist-as-Product Architecture:** Each product card is linked to its real YouTube playlist (Stevia, Insulin Plant, G-9 Tissue Culture Banana, Avocado, Rambutan, Hot-Climate Apple, Saudi Date Palm, Cumin, Black Ginger, Red & White Sandalwood, ODC-3 Moringa, Top Lady Papaya, Kashmiri Saffron, Humic Acid, Sarpan-16 Bean, etc.).

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dahagram Agro Farm Ltd. | দহগ্রাম এগ্রোফার্ম লিঃ — One Stop Agricultural &amp; Nursery Solution</title>
+  <title>DAHAGRAM AGRO FIRM AND NURSARY | দহগ্রাম এগ্রো ফার্ম অ্যান্ড নার্সারি — One Stop Agricultural &amp; Nursery Solution</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
@@ -669,7 +669,7 @@ img {
 }
 
 .product-thumb {
-  height: 150px;
+  height: 195px;
   border-radius: var(--radius-sm);
   background: linear-gradient(135deg, #f3faf1, #e1f3dd);
   display: flex;
@@ -679,8 +679,18 @@ img {
   position: relative;
   margin-bottom: 12px;
   overflow: hidden;
-  padding: 10px;
   text-align: center;
+}
+
+.product-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-thumb img {
+  transform: scale(1.05);
 }
 
 .product-thumb-emoji {
@@ -689,9 +699,16 @@ img {
 }
 
 .product-thumb-code {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--text-dark);
   font-size: 11px;
-  color: var(--text-muted);
   font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
 }
 
 .quick-view-btn {
@@ -908,11 +925,18 @@ img {
 }
 
 .blog-thumb {
-  height: 150px;
+  height: 185px;
   background: linear-gradient(135deg, #d7f2d2, #bce5b6);
   display: grid;
   place-items: center;
   font-size: 42px;
+  overflow: hidden;
+}
+
+.blog-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .blog-body {
@@ -1176,7 +1200,7 @@ img {
   <div id="promoModal" class="modal-backdrop">
     <div class="modal-box" style="max-width:480px; text-align:center; border:2px solid var(--brand-green);">
       <button type="button" id="closePromoBtn" class="modal-close" aria-label="Close">×</button>
-      <span class="badge-playlist" style="margin-bottom:10px; display:inline-block;">দহগ্রাম এগ্রোফার্ম লিঃ • সরাসরি খামার থেকে</span>
+      <span class="badge-playlist" style="margin-bottom:10px; display:inline-block;">DAHAGRAM AGRO FIRM AND NURSARY • সরাসরি খামার থেকে</span>
       <h2 style="font-size:22px; margin-bottom:8px;">ইউটিউব প্লেলিস্ট থেকেই অর্ডার করুন আপনার পছন্দের চারা ও কৃষি পণ্য!</h2>
       <p style="font-size:14px; color:var(--text-muted); margin-bottom:18px;">
         স্টেভিয়া, ইনসুলিন গাছ, জি-৯ কলার টিস্যু কালচার, রক্ত চন্দন, জাফরান ও বিদেশী ফলের চারা — সারা বাংলাদেশে ক্যাশ অন ডেলিভারি।
@@ -1213,8 +1237,8 @@ img {
         <a href="#" class="brand-logo">
           <div class="brand-logo-badge">DA</div>
           <div class="brand-logo-text">
-            <strong>দহগ্রাম এগ্রোফার্ম লিঃ</strong>
-            <span>Dahagram Agro Farm Ltd.</span>
+            <strong>DAHAGRAM AGRO FIRM AND NURSARY</strong>
+            <span>দহগ্রাম এগ্রো ফার্ম অ্যান্ড নার্সারি</span>
           </div>
         </a>
 
@@ -1293,7 +1317,7 @@ img {
         <div class="hero-slide hero-slide--2">
           <div class="container hero-grid">
             <div>
-              <span class="hero-pill">Dahagram Agro Farm Ltd. • ভেষজ ও ছাদবাগান</span>
+              <span class="hero-pill">DAHAGRAM AGRO FIRM AND NURSARY • ভেষজ ও ছাদবাগান</span>
               <h1>সুস্থ ও চিনিমুক্ত জীবনের জন্য স্টেভিয়া ও ভেষজ বাগান</h1>
               <p>
                 ডায়াবেটিস সচেতনতা ও প্রাকৃতিক ভেষজ চাষাবাদে আমাদের বিশেষ কালেকশন: স্টেভিয়া, ইনসুলিন গাছ, করোসল, রোজমেরী এবং অ্যালোভেরা।
@@ -1488,7 +1512,7 @@ img {
     <section class="section-block">
       <div class="container">
         <div class="section-header" style="justify-content:center;">
-          <h2 class="section-title">WHY SHOP WITH <span>DAHAGRAM AGRO FARM</span></h2>
+          <h2 class="section-title">WHY SHOP WITH <span>DAHAGRAM AGRO FIRM AND NURSARY</span></h2>
         </div>
         <div class="services-row">
           <div class="service-item">
@@ -1546,7 +1570,7 @@ img {
     <section id="footerLocation" class="footer-mid">
       <div class="container footer-grid">
         <div class="footer-col">
-          <h4>দহগ্রাম এগ্রোফার্ম লিঃ (Dahagram Agro Farm)</h4>
+          <h4>DAHAGRAM AGRO FIRM AND NURSARY</h4>
           <ul>
             <li><strong>Address:</strong> House#266, Ward:7, Post: Dahagram (5540), Patgram, Lalmonirhat, Bangladesh</li>
             <li><strong>Phone / WhatsApp:</strong> +880 1765-235517</li>
@@ -1593,7 +1617,7 @@ img {
 
     <section class="footer-bottom">
       <div class="container footer-bottom-inner">
-        <span>© 2026 Dahagram Agro Farm Ltd. — বিজ্ঞান ভিত্তিক কৃষি, বয়ে আনবে সমৃদ্ধি</span>
+        <span>© 2026 DAHAGRAM AGRO FIRM AND NURSARY — বিজ্ঞান ভিত্তিক কৃষি, বয়ে আনবে সমৃদ্ধি</span>
         <span>Extensible Playlist-to-Product Architecture</span>
       </div>
     </section>
@@ -1694,9 +1718,15 @@ img {
             <input id="newProdVideos" type="number" value="1" />
           </div>
         </div>
-        <div class="form-field">
-          <label for="newProdEmoji">Icon / Emoji</label>
-          <input id="newProdEmoji" type="text" value="🌱" />
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+          <div class="form-field">
+            <label for="newProdImage">Product Photo URL (optional)</label>
+            <input id="newProdImage" type="url" placeholder="https://5.imimg.com/..." />
+          </div>
+          <div class="form-field">
+            <label for="newProdEmoji">Fallback Icon / Emoji</label>
+            <input id="newProdEmoji" type="text" value="🌱" />
+          </div>
         </div>
         <div class="form-field">
           <label for="newProdDesc">Description</label>
@@ -1713,7 +1743,7 @@ img {
 
   <script>
 /**
- * Dahagram Agro Farm Ltd. — Extensible Product & YouTube Playlist Catalog
+ * DAHAGRAM AGRO FIRM AND NURSARY — Extensible Product & YouTube Playlist Catalog
  *
  * Developer Note:
  * Every YouTube playlist or future agricultural product (seeds, fertilizers,
@@ -1724,8 +1754,8 @@ img {
 
 window.CATALOG_DATA = {
   farm: {
-    name: 'Dahagram Agro Farm Ltd.',
-    bnName: 'দহগ্রাম এগ্রোফার্ম লিঃ',
+    name: 'DAHAGRAM AGRO FIRM AND NURSARY',
+    bnName: 'দহগ্রাম এগ্রো ফার্ম অ্যান্ড নার্সারি',
     tagline: 'বিজ্ঞান ভিত্তিক কৃষি, বয়ে আনবে সমৃদ্ধি',
     phone: '01765-235517',
     whatsapp: '8801765235517',
@@ -1763,6 +1793,7 @@ window.CATALOG_DATA = {
       oldPrice: 220,
       unit: 'Per Sapling',
       emoji: '🌿',
+      image: 'https://5.imimg.com/data5/SELLER/Default/2023/8/334311356/AA/FV/CH/59556000/stevia-medicinal-plant-1000x1000.jpg',
       playlistId: 'PLN2c1hNNV8rhmh3St-sphp5eTA8dsZdK9',
       playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rhmh3St-sphp5eTA8dsZdK9',
       videoCount: 9,
@@ -1780,6 +1811,7 @@ window.CATALOG_DATA = {
       oldPrice: 190,
       unit: 'Per Sapling',
       emoji: '🍃',
+      image: 'https://5.imimg.com/data5/SELLER/Default/2024/12/476302751/OZ/MO/PX/40893092/puspita-nursery-insulin-leaf-plant-herbal-remedy-for-diabetes-1000x1000.jpg',
       playlistId: 'PLN2c1hNNV8rj727Ybg7wVLQEGs_7tGyLN',
       playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rj727Ybg7wVLQEGs_7tGyLN',
       videoCount: 11,
@@ -1797,6 +1829,7 @@ window.CATALOG_DATA = {
       oldPrice: 80,
       unit: 'Per Plantlet',
       emoji: '🍌',
+      image: 'https://5.imimg.com/data5/SELLER/Default/2026/3/591730271/RS/DZ/DS/16365438/tissue-culture-plants-g9-banana-1000x1000.jpeg',
       playlistId: 'PLN2c1hNNV8riZjVraHw1U1ot-nv7WP0rx',
       playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8riZjVraHw1U1ot-nv7WP0rx',
       videoCount: 16,
@@ -1814,6 +1847,7 @@ window.CATALOG_DATA = {
       oldPrice: 680,
       unit: 'Per Sapling',
       emoji: '🥑',
+      image: 'https://5.imimg.com/data5/SELLER/Default/2021/9/VP/TP/QW/110424049/avocado-grafted-plant-1000x1000.jpeg',
       playlistId: 'PLN2c1hNNV8rgSMwLq_pLUCTgmeaha3dqZ',
       playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rgSMwLq_pLUCTgmeaha3dqZ',
       videoCount: 4,
@@ -1831,6 +1865,7 @@ window.CATALOG_DATA = {
       oldPrice: 550,
       unit: 'Per Sapling',
       emoji: '🍓',
+      image: 'https://5.imimg.com/data5/SELLER/Default/2024/2/390619917/UD/NI/CK/91637823/rambutan-grafted-plant-1000x1000.jpg',
       playlistId: 'PLN2c1hNNV8rgDGnqa1_DjJqcEo6JVj8m9',
       playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rgDGnqa1_DjJqcEo6JVj8m9',
       videoCount: 6,
@@ -1848,6 +1883,7 @@ window.CATALOG_DATA = {
       oldPrice: 600,
       unit: 'Per Sapling',
       emoji: '🍎',
+      image: 'https://5.imimg.com/data5/SELLER/Default/2024/9/451671368/TY/LE/IG/151548506/hm99-apple-plants-1000x1000.jpg',
       playlistId: 'PLN2c1hNNV8rjwdHpsMhHC92JClTvjSBZb',
       playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rjwdHpsMhHC92JClTvjSBZb',
       videoCount: 2,
@@ -1865,6 +1901,7 @@ window.CATALOG_DATA = {
       oldPrice: 3000,
       unit: 'Per Offshoot',
       emoji: '🌴',
+      image: 'https://5.imimg.com/data5/SELLER/Default/2026/3/591828394/FU/BT/LY/16365438/barhee-dates-tissue-culture-plants-1000x1000.jpg',
       playlistId: 'PLN2c1hNNV8riVanlfVoAilftu-RmK_nkg',
       playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8riVanlfVoAilftu-RmK_nkg',
       videoCount: 3,
@@ -1882,6 +1919,7 @@ window.CATALOG_DATA = {
       oldPrice: 390,
       unit: 'Per Vine',
       emoji: '🍇',
+      image: 'https://5.imimg.com/data5/SELLER/Default/2022/12/RX/DM/XP/164273021/green-grapes-plant-1000x1000.jpg',
       playlistId: 'PLN2c1hNNV8riFtkY5IO2Pp2Nu1cgYH3sq',
       playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8riFtkY5IO2Pp2Nu1cgYH3sq',
       videoCount: 4,
@@ -1899,11 +1937,12 @@ window.CATALOG_DATA = {
       oldPrice: 420,
       unit: 'Per Sapling',
       emoji: '🍈',
+      image: 'https://5.imimg.com/data5/IOS/Default/2023/8/332150656/DH/BD/EH/63677441/product-jpeg-1000x1000.png',
       playlistId: 'PLN2c1hNNV8rhIdN-g4vtjiO46Q_Uyukf8',
       playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rhIdN-g4vtjiO46Q_Uyukf8',
       videoCount: 2,
       featuredCommercial: false,
-      description: 'Antioxidant-rich Corossol (Soursop) saplings propagated carefully at Dahagram Agro Farm.',
+      description: 'Antioxidant-rich Corossol (Soursop) saplings propagated carefully at DAHAGRAM AGRO FIRM AND NURSARY.',
     },
     {
       id: 'daf-rosemary-10',
@@ -1916,6 +1955,7 @@ window.CATALOG_DATA = {
       oldPrice: 270,
       unit: 'Per Pot',
       emoji: '🌱',
+      image: 'https://5.imimg.com/data5/SELLER/Default/2021/2/DP/FL/NQ/7539265/natural-rosemary-plant-1000x1000.jpg',
       playlistId: 'PLN2c1hNNV8rhQnA_2wcvEs9WcRD204aZM',
       playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rhQnA_2wcvEs9WcRD204aZM',
       videoCount: 2,
@@ -1933,6 +1973,7 @@ window.CATALOG_DATA = {
       oldPrice: 340,
       unit: '100g Pack',
       emoji: '🌾',
+      image: 'https://5.imimg.com/data5/SELLER/Default/2026/2/580906694/RE/HH/QW/243865944/cumin-seed-jeera-1000x1000.jpg',
       playlistId: 'PLN2c1hNNV8rhe6Ft52VY9Kr29-R28mPXd',
       playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rhe6Ft52VY9Kr29-R28mPXd',
       videoCount: 2,
@@ -1950,6 +1991,7 @@ window.CATALOG_DATA = {
       oldPrice: 600,
       unit: '250g Rhizome',
       emoji: '🫚',
+      image: 'https://5.imimg.com/data5/SELLER/Default/2026/1/575724781/BR/LZ/DA/250095665/black-ginger-1000x1000.jpg',
       playlistId: 'PLN2c1hNNV8rhGWWE2kGjXiI7T9yA9yWRW',
       playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rhGWWE2kGjXiI7T9yA9yWRW',
       videoCount: 1,
@@ -1967,6 +2009,7 @@ window.CATALOG_DATA = {
       oldPrice: 460,
       unit: 'Per Sapling',
       emoji: '🌳',
+      image: 'https://5.imimg.com/data5/SELLER/Default/2024/9/451664006/GS/VC/CQ/151548506/red-sandalwood-plant-1000x1000.jpg',
       playlistId: 'PLN2c1hNNV8rivqNCvtsKgVWbGTHjxnI8Z',
       playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rivqNCvtsKgVWbGTHjxnI8Z',
       videoCount: 2,
@@ -1984,6 +2027,7 @@ window.CATALOG_DATA = {
       oldPrice: 200,
       unit: '50 Seeds / Sapling',
       emoji: '🫛',
+      image: 'https://5.imimg.com/data5/IOS/Default/2026/7/630145245/MG/RW/ZE/18960835/product-jpeg-1000x1000.jpeg',
       playlistId: 'PLN2c1hNNV8rieaw3EYZu74MEWjmf7TnkP',
       playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rieaw3EYZu74MEWjmf7TnkP',
       videoCount: 3,
@@ -2001,6 +2045,7 @@ window.CATALOG_DATA = {
       oldPrice: 60,
       unit: 'Per Seedling',
       emoji: '🥭',
+      image: 'https://5.imimg.com/data5/SELLER/Default/2025/8/535884782/DU/AZ/YV/1692904/red-lady-papaya-plant-1000x1000.jpg',
       playlistId: 'PLA2mECJvbjY0',
       playlistUrl: 'https://www.youtube.com/playlist?list=PLA2mECJvbjY0',
       videoCount: 7,
@@ -2018,6 +2063,7 @@ window.CATALOG_DATA = {
       oldPrice: 800,
       unit: 'Pack of 5 Bulbs',
       emoji: '🌷',
+      image: 'https://5.imimg.com/data5/SELLER/Default/2022/1/TF/GU/IA/23818588/natural-saffron-bulbs-seed-1000x1000.jpg',
       playlistId: 'PLN2c1hNNV8rjIJassonuEcGvOPRoEgkxR',
       playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rjIJassonuEcGvOPRoEgkxR',
       videoCount: 32,
@@ -2035,6 +2081,7 @@ window.CATALOG_DATA = {
       oldPrice: 290,
       unit: '500g Pack',
       emoji: '🧪',
+      image: 'https://5.imimg.com/data5/SELLER/Default/2023/5/310534076/EM/AV/UY/8407666/potassium-humate-shiny-flakes-98-humic-acid-and-fulvic-acid-1000x1000.jpg',
       playlistId: 'PLN2c1hNNV8rgtaxpaWVRyUMgzX2ViCUxc',
       playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rgtaxpaWVRyUMgzX2ViCUxc',
       videoCount: 3,
@@ -2052,6 +2099,7 @@ window.CATALOG_DATA = {
       oldPrice: 150,
       unit: '50g Pack',
       emoji: '🫘',
+      image: 'https://5.imimg.com/data5/SELLER/Default/2024/8/441030034/GF/FD/DM/142206794/kasari-long-research-seeds-1000x1000.jpg',
       playlistId: 'PLN2c1hNNV8ridvMVq6KWwGxjlSTnA-gfw',
       playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8ridvMVq6KWwGxjlSTnA-gfw',
       videoCount: 1,
@@ -2064,8 +2112,9 @@ window.CATALOG_DATA = {
     {
       title: 'Stevia Cultivation & Zero-Calorie Sugar Alternative in Bangladesh',
       bnTitle: 'চিনির বিকল্প স্টিভিয়া চাষ ও ব্যবহার পদ্ধতি',
-      meta: 'Playlist • 9 Videos • Dahagram Agro Farm',
+      meta: 'Playlist • 9 Videos • DAHAGRAM AGRO FIRM AND NURSARY',
       emoji: '🌿',
+      image: 'https://5.imimg.com/data5/SELLER/Default/2023/8/334311356/AA/FV/CH/59556000/stevia-medicinal-plant-1000x1000.jpg',
       url: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rhmh3St-sphp5eTA8dsZdK9',
     },
     {
@@ -2073,6 +2122,7 @@ window.CATALOG_DATA = {
       bnTitle: 'জি-৯ টিস্যু কালচার কলা চাষে লাভজনক কৃষি',
       meta: 'Playlist • 16 Videos • Commercial Farming',
       emoji: '🍌',
+      image: 'https://5.imimg.com/data5/SELLER/Default/2026/3/591730271/RS/DZ/DS/16365438/tissue-culture-plants-g9-banana-1000x1000.jpeg',
       url: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8riZjVraHw1U1ot-nv7WP0rx',
     },
     {
@@ -2080,6 +2130,7 @@ window.CATALOG_DATA = {
       bnTitle: 'হিউমিক অ্যাসিড ও পটাশ সার ব্যবহারের সঠিক নিয়ম',
       meta: 'Playlist • Soil & Nutrient Care',
       emoji: '🧪',
+      image: 'https://5.imimg.com/data5/SELLER/Default/2023/5/310534076/EM/AV/UY/8407666/potassium-humate-shiny-flakes-98-humic-acid-and-fulvic-acid-1000x1000.jpg',
       url: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rgtaxpaWVRyUMgzX2ViCUxc',
     },
   ],
@@ -2136,7 +2187,11 @@ window.CATALOG_DATA = {
             <span class="badge-playlist">${product.videoCount ? `${product.videoCount} Videos` : 'Agro Product'}</span>
           </div>
           <div class="product-thumb">
-            <span class="product-thumb-emoji">${product.emoji || '🌱'}</span>
+            ${
+              product.image
+                ? `<img src="${product.image}" alt="${product.title}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" /><span class="product-thumb-emoji" style="display:none;">${product.emoji || '🌱'}</span>`
+                : `<span class="product-thumb-emoji">${product.emoji || '🌱'}</span>`
+            }
             <span class="product-thumb-code">${product.unit || 'Unit'}</span>
             <button type="button" class="quick-view-btn" data-quick-view="${product.id}">
               ▶ Watch &amp; View
@@ -2254,7 +2309,9 @@ window.CATALOG_DATA = {
       .map(
         (g) => `
       <article class="blog-card">
-        <div class="blog-thumb">${g.emoji}</div>
+        <div class="blog-thumb">
+          ${g.image ? `<img src="${g.image}" alt="${g.title}" loading="lazy" />` : g.emoji}
+        </div>
         <div class="blog-body">
           <div class="blog-meta">${g.meta}</div>
           <h4>${g.bnTitle}</h4>
@@ -2285,8 +2342,12 @@ window.CATALOG_DATA = {
       : '';
 
     body.innerHTML = `
-      <div style="display:flex; gap:12px; align-items:center; margin-bottom:10px;">
-        <span style="font-size:36px;">${product.emoji || '🌱'}</span>
+      <div style="display:flex; gap:14px; align-items:center; margin-bottom:10px;">
+        ${
+          product.image
+            ? `<img src="${product.image}" alt="${product.title}" style="width:72px;height:72px;object-fit:cover;border-radius:10px;border:1px solid var(--border-color);flex-shrink:0;" />`
+            : `<span style="font-size:36px;">${product.emoji || '🌱'}</span>`
+        }
         <div>
           <span class="badge-playlist">${product.categoryLabel}</span>
           <h2 style="font-size:20px; margin-top:4px;">${product.bnTitle || product.title}</h2>
@@ -2515,7 +2576,7 @@ window.CATALOG_DATA = {
         return `- ${p ? p.bnTitle || p.title : item.id} x${item.qty} = ৳${sub}`;
       });
       const message = encodeURIComponent(
-        `নতুন অর্ডার — Dahagram Agro Farm\nনাম: ${name}\nমোবাইল: ${phone}\nঠিকানা: ${address}\n\nপণ্যসমূহ:\n${lines.join('\n')}\n\nমোট: ৳${total} (Cash on Delivery)`
+        `নতুন অর্ডার — DAHAGRAM AGRO FIRM AND NURSARY\nনাম: ${name}\nমোবাইল: ${phone}\nঠিকানা: ${address}\n\nপণ্যসমূহ:\n${lines.join('\n')}\n\nমোট: ৳${total} (Cash on Delivery)`
       );
       window.open(`https://wa.me/${baseData.farm.whatsapp}?text=${message}`, '_blank');
     });
@@ -2559,6 +2620,7 @@ window.CATALOG_DATA = {
         oldPrice: Number(document.getElementById('newProdOldPrice').value) || null,
         unit: document.getElementById('newProdUnit').value.trim() || 'Per Unit',
         emoji: document.getElementById('newProdEmoji').value.trim() || '🌱',
+        image: (document.getElementById('newProdImage')?.value || '').trim(),
         playlistId,
         playlistUrl: playlistId ? `https://www.youtube.com/playlist?list=${playlistId}` : baseData.farm.youtubeMain,
         videoCount: Number(document.getElementById('newProdVideos').value) || 0,
