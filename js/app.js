@@ -32,6 +32,11 @@
     });
   }
 
+  function formatVideoBadge(count) {
+    if (!count) return 'Agro Product';
+    return count === 1 ? '1 Video' : `${count} Videos`;
+  }
+
   function renderProductCard(product) {
     const discount =
       product.oldPrice && product.oldPrice > product.price
@@ -44,12 +49,12 @@
         <div>
           <div class="product-badge-row">
             ${discount > 0 ? `<span class="badge-discount">- ${formatBDT(discount)}</span>` : '<span></span>'}
-            <span class="badge-playlist">${product.videoCount ? `${product.videoCount} Videos` : 'Agro Product'}</span>
+            <span class="badge-playlist">${formatVideoBadge(product.videoCount)}</span>
           </div>
-          <div class="product-thumb">
+          <div class="product-thumb" data-quick-view="${product.id}">
             ${
               product.image
-                ? `<img src="${product.image}" alt="${product.title}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" /><span class="product-thumb-emoji" style="display:none;">${product.emoji || '🌱'}</span>`
+                ? `<img src="${product.image}" alt="${product.title}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" /><span class="product-thumb-emoji" style="display:none;">${product.emoji || '🌱'}</span>`
                 : `<span class="product-thumb-emoji">${product.emoji || '🌱'}</span>`
             }
             <span class="product-thumb-code">${product.unit || 'Unit'}</span>
@@ -68,7 +73,7 @@
           </div>
           <div class="product-actions">
             <button type="button" class="btn-cart" data-add-cart="${product.id}">Add To Cart</button>
-            <button type="button" class="btn-yt" title="Save to Wishlist" data-toggle-wish="${product.id}">
+            <button type="button" class="btn-yt ${isWished ? 'wished' : ''}" title="Save to Wishlist" data-toggle-wish="${product.id}">
               ${isWished ? '♥' : '♡'}
             </button>
           </div>
@@ -97,8 +102,9 @@
     const tabsBar = document.getElementById('showcaseTabsBar');
     if (!tabsBar) return;
     const tabs = [
-      { id: 'all', name: 'All Playlists & Products' },
-      ...baseData.categories.slice(0, 7),
+      { id: 'all', name: 'All Products' },
+      ...baseData.categories.slice(0, 8),
+      { id: 'wishlist', name: `♥ Saved (${wishlist.length})` },
     ];
     tabsBar.innerHTML = tabs
       .map(
@@ -117,7 +123,12 @@
 
     const q = searchQuery.trim().toLowerCase();
     const filtered = getAllProducts().filter((p) => {
-      const matchesTab = activeTab === 'all' || p.category === activeTab;
+      const matchesTab =
+        activeTab === 'all'
+          ? true
+          : activeTab === 'wishlist'
+          ? wishlist.includes(p.id)
+          : p.category === activeTab;
       const matchesQuery =
         !q ||
         p.title.toLowerCase().includes(q) ||
@@ -128,10 +139,14 @@
     });
 
     if (filtered.length === 0) {
+      const emptyMsg =
+        activeTab === 'wishlist'
+          ? 'Your wishlist is empty. Tap the ♡ icon on any plant or seed card to save it here.'
+          : 'No matching plants or agricultural products found.';
       container.innerHTML = `
         <div style="grid-column: 1 / -1; background: #fff; padding: 36px; text-align: center; border-radius: 12px; border: 1px dashed #cbd5e1;">
-          <p style="font-weight: 700; margin-bottom: 8px;">No matching plants or products found.</p>
-          <button type="button" class="btn-outline-sm" id="resetFilterBtn">Reset Filters</button>
+          <p style="font-weight: 700; margin-bottom: 10px;">${emptyMsg}</p>
+          <button type="button" class="btn-outline-sm" id="resetFilterBtn">Show All Products</button>
         </div>
       `;
       document.getElementById('resetFilterBtn')?.addEventListener('click', () => {
@@ -170,13 +185,13 @@
         (g) => `
       <article class="blog-card">
         <div class="blog-thumb">
-          ${g.image ? `<img src="${g.image}" alt="${g.title}" loading="lazy" />` : g.emoji}
+          ${g.image ? `<img src="${g.image}" alt="${g.title}" loading="lazy" />` : `<div style="display:grid;place-items:center;height:100%;font-size:42px;">${g.emoji}</div>`}
         </div>
         <div class="blog-body">
           <div class="blog-meta">${g.meta}</div>
           <h4>${g.bnTitle}</h4>
           <p style="font-size: 13px; color: var(--text-muted);">${g.title}</p>
-          <a href="${g.url}" target="_blank" rel="noopener">Watch Playlist on YouTube →</a>
+          <a href="${g.url}" target="_blank" rel="noopener">Watch Videos on YouTube →</a>
         </div>
       </article>
     `
@@ -190,49 +205,54 @@
 
     const modal = document.getElementById('quickViewModal');
     const body = document.getElementById('quickViewBody');
-    const embedHtml = product.playlistId
-      ? `<div style="margin: 14px 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--border-color);">
-           <iframe width="100%" height="260"
-             src="https://www.youtube.com/embed/videoseries?list=${encodeURIComponent(product.playlistId)}"
-             title="${product.title}"
-             frameborder="0"
-             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-             allowfullscreen></iframe>
-         </div>`
-      : '';
+    const videoLink = product.playlistUrl || baseData.farm.youtubeMain;
 
     body.innerHTML = `
-      <div style="display:flex; gap:14px; align-items:center; margin-bottom:10px;">
-        ${
-          product.image
-            ? `<img src="${product.image}" alt="${product.title}" style="width:72px;height:72px;object-fit:cover;border-radius:10px;border:1px solid var(--border-color);flex-shrink:0;" />`
-            : `<span style="font-size:36px;">${product.emoji || '🌱'}</span>`
-        }
-        <div>
-          <span class="badge-playlist">${product.categoryLabel}</span>
-          <h2 style="font-size:20px; margin-top:4px;">${product.bnTitle || product.title}</h2>
-          <p style="font-size:13px; color:var(--text-muted);">${product.title} • SKU: ${product.sku}</p>
+      <div class="qv-grid">
+        <div class="qv-photo">
+          ${
+            product.image
+              ? `<img src="${product.image}" alt="${product.title}" />`
+              : `<div style="display:grid;place-items:center;height:100%;font-size:64px;">${product.emoji || '🌱'}</div>`
+          }
         </div>
-      </div>
-      <p style="font-size:14px; color:var(--text-dark); margin-bottom:10px;">${product.description || ''}</p>
-      <div class="product-price-row">
-        <span class="price-now">${formatBDT(product.price)}</span>
-        ${product.oldPrice ? `<span class="price-old">${formatBDT(product.oldPrice)}</span>` : ''}
-        <span style="font-size:12.5px; color:var(--text-muted);">(${product.unit || 'Unit'})</span>
-      </div>
-      ${embedHtml}
-      <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:14px;">
-        <button type="button" class="btn-cart" style="flex:1;" data-add-cart="${product.id}">
-          Add To Cart — ${formatBDT(product.price)}
-        </button>
-        ${
-          product.playlistUrl
-            ? `<a href="${product.playlistUrl}" target="_blank" rel="noopener" class="btn-outline-sm" style="display:inline-flex;align-items:center;">Open YouTube Playlist ↗</a>`
-            : ''
-        }
+        <div>
+          <span class="badge-playlist">${product.categoryLabel} • ${formatVideoBadge(product.videoCount)}</span>
+          <h2 style="font-size:20px; margin-top:8px; line-height:1.3;">${product.bnTitle || product.title}</h2>
+          <p style="font-size:13px; color:var(--text-muted); margin-bottom:10px;">${product.title} • SKU: ${product.sku}</p>
+          <p style="font-size:14px; color:var(--text-dark); margin-bottom:12px;">${product.description || ''}</p>
+          <div class="product-price-row">
+            <span class="price-now" style="font-size:22px;">${formatBDT(product.price)}</span>
+            ${product.oldPrice ? `<span class="price-old">${formatBDT(product.oldPrice)}</span>` : ''}
+            <span style="font-size:12.5px; color:var(--text-muted);">(${product.unit || 'Unit'})</span>
+          </div>
+          <a href="${videoLink}" target="_blank" rel="noopener" class="qv-video-banner">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <span class="qv-play-circle">▶</span>
+              <div>
+                <strong style="display:block; font-size:13.5px; color:#991b1b;">Watch Cultivation &amp; Care Videos</strong>
+                <span style="font-size:12px; color:#b91c1c;">@dahagram_agro_farm on YouTube ↗</span>
+              </div>
+            </div>
+          </a>
+          <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:14px;">
+            <button type="button" class="btn-cart" style="flex:1; padding:12px 16px; font-size:14px;" data-add-cart="${product.id}">
+              Add To Cart — ${formatBDT(product.price)}
+            </button>
+            <a href="https://wa.me/${baseData.farm.whatsapp}?text=${encodeURIComponent(`আমি এই পণ্যটি নিতে চাই: ${product.bnTitle || product.title} (${formatBDT(product.price)})`)}" target="_blank" rel="noopener" class="btn-outline-sm" style="display:inline-flex;align-items:center;">
+              WhatsApp Inquiry
+            </a>
+          </div>
+        </div>
       </div>
     `;
     modal.classList.add('open');
+  }
+
+  function closeAllOverlays() {
+    document.querySelectorAll('.modal-backdrop.open, .drawer-backdrop.open').forEach((el) => {
+      el.classList.remove('open');
+    });
   }
 
   function addToCart(productId) {
@@ -245,6 +265,7 @@
       cart.push({ id: product.id, qty: 1 });
     }
     saveState();
+    document.getElementById('quickViewModal')?.classList.remove('open');
     renderCartDrawer();
     openCartDrawer();
   }
@@ -256,6 +277,7 @@
       wishlist.push(productId);
     }
     saveState();
+    renderTabs();
     renderAllProductViews();
   }
 
@@ -268,7 +290,7 @@
     let total = 0;
 
     if (cart.length === 0) {
-      listEl.innerHTML = `<p style="color:var(--text-muted); font-size:14px; padding:20px 0;">Your cart is empty. Add saplings, seeds, or agro inputs to order.</p>`;
+      listEl.innerHTML = `<p style="color:var(--text-muted); font-size:14px; padding:18px 0;">Your cart is empty. Add saplings, seeds, or agro inputs to place a Cash-on-Delivery order.</p>`;
       totalEl.textContent = formatBDT(0);
       return;
     }
@@ -280,14 +302,17 @@
         total += p.price * item.qty;
         return `
         <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; padding:10px 0; border-bottom:1px solid var(--border-color);">
-          <div>
-            <strong style="font-size:13.5px; display:block;">${p.emoji || '🌱'} ${p.bnTitle || p.title}</strong>
-            <span style="font-size:12px; color:var(--text-muted);">${formatBDT(p.price)} × ${item.qty}</span>
+          <div style="display:flex; align-items:center; gap:10px; min-width:0;">
+            ${p.image ? `<img src="${p.image}" alt="" style="width:42px;height:42px;border-radius:6px;object-fit:cover;flex-shrink:0;" />` : ''}
+            <div style="min-width:0;">
+              <strong style="font-size:13px; display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${p.bnTitle || p.title}</strong>
+              <span style="font-size:12px; color:var(--text-muted);">${formatBDT(p.price)} × ${item.qty}</span>
+            </div>
           </div>
-          <div style="display:flex; align-items:center; gap:6px;">
-            <button type="button" class="btn-outline-sm" data-cart-dec="${p.id}">-</button>
-            <span style="font-size:13px; font-weight:700;">${item.qty}</span>
-            <button type="button" class="btn-outline-sm" data-cart-inc="${p.id}">+</button>
+          <div style="display:flex; align-items:center; gap:6px; flex-shrink:0;">
+            <button type="button" class="btn-outline-sm" style="padding:4px 9px;" data-cart-dec="${p.id}">-</button>
+            <span style="font-size:13px; font-weight:700; min-width:16px; text-align:center;">${item.qty}</span>
+            <button type="button" class="btn-outline-sm" style="padding:4px 9px;" data-cart-inc="${p.id}">+</button>
           </div>
         </div>
       `;
@@ -330,6 +355,15 @@
 
   function initEvents() {
     document.body.addEventListener('click', (e) => {
+      // Close when clicking directly on backdrop
+      if (
+        e.target.classList.contains('modal-backdrop') ||
+        e.target.classList.contains('drawer-backdrop')
+      ) {
+        e.target.classList.remove('open');
+        return;
+      }
+
       const tabBtn = e.target.closest('[data-tab]');
       if (tabBtn) {
         activeTab = tabBtn.dataset.tab;
@@ -341,15 +375,16 @@
       const catCard = e.target.closest('[data-select-category]');
       if (catCard) {
         activeTab = catCard.dataset.selectCategory;
+        document.getElementById('mobileNavDrawer')?.classList.remove('open');
         renderTabs();
         renderShowcaseProducts();
         document.getElementById('showcaseSection')?.scrollIntoView({ behavior: 'smooth' });
         return;
       }
 
-      const quickBtn = e.target.closest('[data-quick-view]');
-      if (quickBtn) {
-        openQuickView(quickBtn.dataset.quickView);
+      const wishBtn = e.target.closest('[data-toggle-wish]');
+      if (wishBtn) {
+        toggleWishlist(wishBtn.dataset.toggleWish);
         return;
       }
 
@@ -359,9 +394,9 @@
         return;
       }
 
-      const wishBtn = e.target.closest('[data-toggle-wish]');
-      if (wishBtn) {
-        toggleWishlist(wishBtn.dataset.toggleWish);
+      const quickBtn = e.target.closest('[data-quick-view]');
+      if (quickBtn) {
+        openQuickView(quickBtn.dataset.quickView);
         return;
       }
 
@@ -385,6 +420,19 @@
         }
         return;
       }
+    });
+
+    // Escape key closes modals & drawers
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeAllOverlays();
+    });
+
+    // Header Wishlist Button -> Filter to Saved Wishlist tab
+    document.getElementById('openWishlistBtn')?.addEventListener('click', () => {
+      activeTab = 'wishlist';
+      renderTabs();
+      renderShowcaseProducts();
+      document.getElementById('showcaseSection')?.scrollIntoView({ behavior: 'smooth' });
     });
 
     // Global Search
@@ -411,10 +459,12 @@
       document.getElementById('promoModal')?.classList.remove('open');
     });
 
-    // Mobile Nav Toggle
+    // Mobile Nav Drawer
     document.getElementById('mobileMenuToggle')?.addEventListener('click', () => {
-      const nav = document.getElementById('primaryNavList');
-      nav?.scrollIntoView({ behavior: 'smooth', inline: 'start' });
+      document.getElementById('mobileNavDrawer')?.classList.add('open');
+    });
+    document.getElementById('closeMobileNavBtn')?.addEventListener('click', () => {
+      document.getElementById('mobileNavDrawer')?.classList.remove('open');
     });
 
     // Checkout -> WhatsApp Order
@@ -449,7 +499,7 @@
       e.target.reset();
     });
 
-    // Future Product / Playlist Manager Modal
+    // Catalog Manager Modal (accessible from subtle footer link)
     const adminModal = document.getElementById('adminProductModal');
     document.getElementById('openAdminModalBtn')?.addEventListener('click', () => {
       adminModal?.classList.add('open');
@@ -462,12 +512,6 @@
       const catId = document.getElementById('newProdCat').value;
       const catObj = baseData.categories.find((c) => c.id === catId);
       const playlistRaw = document.getElementById('newProdPlaylist').value.trim();
-      let playlistId = '';
-      if (playlistRaw.includes('list=')) {
-        playlistId = new URLSearchParams(playlistRaw.split('?')[1]).get('list') || '';
-      } else {
-        playlistId = playlistRaw;
-      }
 
       const newProduct = {
         id: `custom-${Date.now()}`,
@@ -481,8 +525,7 @@
         unit: document.getElementById('newProdUnit').value.trim() || 'Per Unit',
         emoji: document.getElementById('newProdEmoji').value.trim() || '🌱',
         image: (document.getElementById('newProdImage')?.value || '').trim(),
-        playlistId,
-        playlistUrl: playlistId ? `https://www.youtube.com/playlist?list=${playlistId}` : baseData.farm.youtubeMain,
+        playlistUrl: playlistRaw || baseData.farm.youtubeMain,
         videoCount: Number(document.getElementById('newProdVideos').value) || 0,
         featuredCommercial: false,
         description: document.getElementById('newProdDesc').value.trim(),

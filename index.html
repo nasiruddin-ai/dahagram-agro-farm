@@ -16,19 +16,19 @@
     <div class="modal-box" style="max-width:480px; text-align:center; border:2px solid var(--brand-green);">
       <button type="button" id="closePromoBtn" class="modal-close" aria-label="Close">×</button>
       <span class="badge-playlist" style="margin-bottom:10px; display:inline-block;">DAHAGRAM AGRO FIRM AND NURSARY • সরাসরি খামার থেকে</span>
-      <h2 style="font-size:22px; margin-bottom:8px;">ইউটিউব প্লেলিস্ট থেকেই অর্ডার করুন আপনার পছন্দের চারা ও কৃষি পণ্য!</h2>
+      <h2 style="font-size:22px; margin-bottom:8px;">ইউটিউব ভিডিও দেখেই অর্ডার করুন আপনার পছন্দের চারা ও কৃষি পণ্য!</h2>
       <p style="font-size:14px; color:var(--text-muted); margin-bottom:18px;">
         স্টেভিয়া, ইনসুলিন গাছ, জি-৯ কলার টিস্যু কালচার, রক্ত চন্দন, জাফরান ও বিদেশী ফলের চারা — সারা বাংলাদেশে ক্যাশ অন ডেলিভারি।
       </p>
       <a href="#showcaseSection" class="btn-primary" onclick="document.getElementById('promoModal').classList.remove('open')">
-        পণ্য ও প্লেলিস্ট দেখুন →
+        পণ্যসমূহ দেখুন →
       </a>
     </div>
   </div>
 
-  <!-- 1. 3-TIER HEADER -->
+  <!-- 1. 3-TIER HEADER (Fully Responsive on Desktop, Tablet & Mobile) -->
   <header class="header-area">
-    <!-- Tier 1: Top Utility Bar -->
+    <!-- Tier 1: Top Utility Bar (Desktop) -->
     <div class="header-top">
       <div class="container header-top-inner">
         <div class="header-top-left">
@@ -39,38 +39,40 @@
           🌿 বিজ্ঞান ভিত্তিক কৃষি, বয়ে আনবে সমৃদ্ধি — সারা বাংলাদেশে কুরিয়ার ডেলিভারি
         </div>
         <div class="header-top-right">
-          <a href="https://www.youtube.com/@dahagram_agro_farm" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://www.youtube.com/@dahagram_agro_farm" target="_blank" rel="noopener">▶ YouTube</a>
           <a href="https://www.facebook.com/YakubAli434964" target="_blank" rel="noopener">Facebook</a>
-          <button type="button" id="openAdminModalBtn" class="btn-outline-sm">+ Add Product / Playlist</button>
         </div>
       </div>
     </div>
 
-    <!-- Tier 2: Logo, Search & Actions -->
+    <!-- Tier 2: Logo, Search & Actions (Visible on ALL Screen Sizes) -->
     <div class="header-middle">
       <div class="container header-wrap">
-        <a href="#" class="brand-logo">
-          <div class="brand-logo-badge">DA</div>
-          <div class="brand-logo-text">
-            <strong>DAHAGRAM AGRO FIRM AND NURSARY</strong>
-            <span>দহগ্রাম এগ্রো ফার্ম অ্যান্ড নার্সারি</span>
-          </div>
-        </a>
+        <div class="header-left-group">
+          <button type="button" id="mobileMenuToggle" class="mobile-drawer-btn" aria-label="Open Navigation Menu">☰</button>
+          <a href="#" class="brand-logo">
+            <div class="brand-logo-badge">DA</div>
+            <div class="brand-logo-text">
+              <strong>DAHAGRAM AGRO FIRM AND NURSARY</strong>
+              <span>দহগ্রাম এগ্রো ফার্ম অ্যান্ড নার্সারি</span>
+            </div>
+          </a>
+        </div>
 
         <form id="globalSearchForm" class="search-form" role="search">
-          <input id="globalSearchInput" type="search" placeholder="চারা, বীজ, সার বা প্লেলিস্ট খুঁজুন (যেমন: Stevia, G9, Cumin)..." />
+          <input id="globalSearchInput" type="search" placeholder="চারা, বীজ বা সার খুঁজুন (Stevia, G9, Cumin)..." />
           <button type="submit">Search</button>
         </form>
 
         <div class="header-actions">
-          <a href="https://wa.me/8801765235517" target="_blank" rel="noopener" class="action-btn">
-            💬 WhatsApp
+          <a href="https://wa.me/8801765235517" target="_blank" rel="noopener" class="action-btn header-whatsapp-btn">
+            💬 <span class="action-label-desktop">WhatsApp</span>
           </a>
-          <button type="button" class="action-btn" onclick="document.getElementById('showcaseSection').scrollIntoView({behavior:'smooth'})">
-            ♡ Wishlist <span class="badge-count" data-wishlist-count>0</span>
+          <button type="button" id="openWishlistBtn" class="action-btn" aria-label="View Saved Wishlist">
+            ♡ <span class="action-label-desktop">Wishlist</span> <span class="badge-count" data-wishlist-count>0</span>
           </button>
-          <button type="button" id="openCartBtn" class="action-btn">
-            🛒 Cart <span class="badge-count" data-cart-count>0</span>
+          <button type="button" id="openCartBtn" class="action-btn" aria-label="Open Shopping Cart">
+            🛒 <span class="action-label-desktop">Cart</span> <span class="badge-count" data-cart-count>0</span>
           </button>
         </div>
       </div>
@@ -78,8 +80,7 @@
 
     <!-- Tier 3: Sticky Green Category Navigation -->
     <nav class="header-bottom" aria-label="Primary Categories">
-      <div class="container" style="display:flex; align-items:center; gap:8px;">
-        <button type="button" id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Scroll Menu">☰</button>
+      <div class="container">
         <ul id="primaryNavList" class="nav-scroll">
           <li><a href="#">Home</a></li>
           <li><button type="button" data-select-category="exotic-fruits">Exotic Fruits</button></li>
@@ -90,8 +91,8 @@
           <li><button type="button" data-select-category="vegetables">Papaya &amp; Vegetables</button></li>
           <li><button type="button" data-select-category="fertilizer">Fertilizer &amp; Humic</button></li>
           <li><button type="button" data-select-category="bulbs">Saffron &amp; Bulbs</button></li>
-          <li><a href="#guidesSection">Video Playlists</a></li>
-          <li><a href="#footerLocation">Contact Farm</a></li>
+          <li><a href="#guidesSection">Video Guides</a></li>
+          <li><a href="#footerLocation">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -109,15 +110,15 @@
               <span class="hero-pill">দহগ্রাম-আঙ্গরপোতা, পাটগ্রাম, লালমনিরহাট • ১১.৫K+ ইউটিউব পরিবার</span>
               <h1>বিজ্ঞান ভিত্তিক আধুনিক কৃষি ও দুর্লভ চারার বিশ্বস্ত ঠিকানা</h1>
               <p>
-                আমাদের প্রতিটি ইউটিউব প্লেলিস্টই এক একটি পরীক্ষিত কৃষি পণ্য ও চাষাবাদ গাইড। সরাসরি খামার থেকে সংগ্রহ করুন স্টেভিয়া, জি-৯ কলা, অ্যাভোকাডো, সৌদি খেজুর, জিরা ও কালো আদা।
+                সরাসরি আমাদের নার্সারি ও খামার থেকে পরীক্ষিত মানের স্টেভিয়া, জি-৯ টিস্যু কালচার কলা, অ্যাভোকাডো, সৌদি খেজুর, জিরা ও কালো আদার চারা ও বীজ সংগ্রহ করুন।
               </p>
               <div class="hero-cta-group">
-                <a href="#showcaseSection" class="btn-primary">সব পণ্য ও প্লেলিস্ট দেখুন</a>
+                <a href="#showcaseSection" class="btn-primary">সব পণ্য দেখুন</a>
                 <a href="https://www.youtube.com/@dahagram_agro_farm" target="_blank" rel="noopener" class="btn-glass">▶ @dahagram_agro_farm</a>
               </div>
             </div>
             <div class="hero-card-preview">
-              <h3>জনপ্রিয় প্লেলিস্ট ও পণ্য</h3>
+              <h3>জনপ্রিয় চারা ও ফসল</h3>
               <ul>
                 <li>🌿 স্টেভিয়া (চিনির বিকল্প) — ৯টি ভিডিও</li>
                 <li>🍌 জি-৯ টিস্যু কালচার কলা — ১৬টি ভিডিও</li>
@@ -135,7 +136,7 @@
               <span class="hero-pill">DAHAGRAM AGRO FIRM AND NURSARY • ভেষজ ও ছাদবাগান</span>
               <h1>সুস্থ ও চিনিমুক্ত জীবনের জন্য স্টেভিয়া ও ভেষজ বাগান</h1>
               <p>
-                ডায়াবেটিস সচেতনতা ও প্রাকৃতিক ভেষজ চাষাবাদে আমাদের বিশেষ কালেকশন: স্টেভিয়া, ইনসুলিন গাছ, করোসল, রোজমেরী এবং অ্যালোভেরা।
+                ডায়াবেটিস সচেতনতা ও প্রাকৃতিক ভেষজ চাষাবাদে আমাদের বিশেষ কালেকশন: স্টেভিয়া, ইনসুলিন গাছ, করোসল, রোজমেরী এবং বারমাসি সজিনা।
               </p>
               <div class="hero-cta-group">
                 <button type="button" class="btn-primary" data-select-category="medicinal">ভেষজ চারা দেখুন</button>
@@ -189,7 +190,7 @@
     <section class="section-block">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Popular <span>Categories &amp; Playlists</span></h2>
+          <h2 class="section-title">Popular <span>Categories</span></h2>
           <a href="#showcaseSection" class="view-all-link">Explore All →</a>
         </div>
         <div id="popularCategoriesGrid" class="categories-grid"></div>
@@ -217,14 +218,14 @@
           <div class="promo-card">
             <div>
               <h3>বিদেশী ফল ও কলম চারা</h3>
-              <p>অ্যাভোকাডো, রাম্বুটান, আপেল (HRMN99) ও আঙ্গুর।</p>
+              <p>অ্যাভোকাডো, রাম্বুটান, আপেল (HRMN99) ও কালো আঙ্গুর।</p>
             </div>
             <button type="button" class="promo-btn" data-select-category="exotic-fruits">ORDER NOW</button>
           </div>
           <div class="promo-card">
             <div>
               <h3>উচ্চমূল্যের মসলা ও বীজ</h3>
-              <p>বাংলাদেশে জিরা চাষ, কালো আদা ও জাফরান বাল্ব।</p>
+              <p>বাংলাদেশে জিরা চাষ, কালো আদা, সরিষা ও শিম বীজ।</p>
             </div>
             <button type="button" class="promo-btn" data-select-category="spices-seeds">ORDER NOW</button>
           </div>
@@ -245,12 +246,12 @@
       </div>
     </section>
 
-    <!-- Section 5: Tabbed Product & Playlist Showcase -->
+    <!-- Section 5: Tabbed Product & Video Showcase -->
     <section id="showcaseSection" class="section-block">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Playlist <span>Products &amp; Agro Store</span></h2>
-          <span style="font-size:13px; color:var(--text-muted);">প্রতিটি পণ্যে ক্লিক করে প্লেলিস্টের ভিডিও দেখুন ও অর্ডার করুন</span>
+          <h2 class="section-title">Featured <span>Plants &amp; Agro Store</span></h2>
+          <span style="font-size:13px; color:var(--text-muted);">পণ্যের ছবিতে ক্লিক করে বিস্তারিত ও চাষাবাদ ভিডিও দেখুন</span>
         </div>
         <div id="showcaseTabsBar" class="tabs-bar"></div>
         <div id="showcaseProductsGrid" class="product-grid-4"></div>
@@ -283,9 +284,19 @@
             <div>
               <span class="hero-pill">Commercial Farming</span>
               <h3>বাণিজ্যিক কৃষি ও টিস্যু কালচার প্রজেক্ট</h3>
-              <p>তরুণ কৃষি উদ্যোক্তাদের জন্য লাভজনক ফসল: জি-৯ কলা, সৌদি খেজুর, রক্ত চন্দন, ওডিসি-৩ সজিনা, টপ লেডি পেঁপে এবং হিউমিক অ্যাসিড।</p>
+              <p>তরুণ কৃষি উদ্যোক্তাদের জন্য উচ্চফলনশীল ও লাভজনক ফসলের চারা এবং সার্বিক পরিচর্যা সহায়তা।</p>
             </div>
-            <button type="button" class="btn-primary" data-select-category="tissue-culture">সব বাণিজ্যিক চারা →</button>
+            <ul class="split-poster-list">
+              <li>✅ ল্যাব-পরীক্ষিত রোগমুক্ত টিস্যু কালচার</li>
+              <li>✅ জমি নির্বাচন ও রোপণ পদ্ধতি পরামর্শ</li>
+              <li>✅ পাইকারি অর্ডারে বিশেষ মূল্য ছাড়</li>
+              <li>✅ সারাদেশে নিরাপদ কুরিয়ার ডেলিভারি</li>
+            </ul>
+            <div class="split-poster-hotline">
+              <span>কৃষি পরামর্শ ও পাইকারি বুকিং:</span>
+              <strong>📞 +880 1765-235517</strong>
+            </div>
+            <button type="button" class="btn-primary" style="justify-content:center;" data-select-category="tissue-culture">সব বাণিজ্যিক চারা →</button>
           </aside>
           <div id="commercialSplitGrid" class="product-grid-3"></div>
         </div>
@@ -354,11 +365,11 @@
       </div>
     </section>
 
-    <!-- Section 10: Video Playlists & Farming Guides -->
+    <!-- Section 10: Video Guides -->
     <section id="guidesSection" class="section-block">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">FROM OUR <span>YOUTUBE PLAYLISTS</span></h2>
+          <h2 class="section-title">FROM OUR <span>YOUTUBE CHANNEL</span></h2>
           <a href="https://www.youtube.com/@dahagram_agro_farm/videos" target="_blank" rel="noopener" class="view-all-link">View All Videos &amp; Guides →</a>
         </div>
         <div id="farmingGuidesGrid" class="blog-grid"></div>
@@ -372,11 +383,11 @@
     <section class="newsletter-bar">
       <div class="container newsletter-inner">
         <div>
-          <strong style="font-size:17px;">📩 Sign up for New Agro Products &amp; Farming Videos</strong>
+          <strong style="font-size:17px;">📩 নতুন চারা ও কৃষি ভিডিওর আপডেট পেতে যুক্ত থাকুন</strong>
           <div id="newsletterStatus" style="font-size:13px; color:var(--brand-green-dark); font-weight:600;"></div>
         </div>
         <form id="newsletterForm" class="newsletter-form">
-          <input type="email" required placeholder="আপনার ইমেইল লিখুন (Enter your email)" />
+          <input type="email" required placeholder="আপনার ইমেইল লিখুন..." />
           <button type="submit">Subscribe</button>
         </form>
       </div>
@@ -396,19 +407,19 @@
         <div class="footer-col">
           <h4>Product Lines</h4>
           <ul>
-            <li><a href="#showcaseSection">Exotic Fruit Saplings</a></li>
-            <li><a href="#showcaseSection">Stevia &amp; Insulin Plants</a></li>
-            <li><a href="#showcaseSection">G-9 Tissue Culture Banana</a></li>
-            <li><a href="#showcaseSection">Cumin &amp; Black Ginger</a></li>
+            <li><button type="button" data-select-category="exotic-fruits">Exotic Fruit Saplings</button></li>
+            <li><button type="button" data-select-category="medicinal">Stevia &amp; Insulin Plants</button></li>
+            <li><button type="button" data-select-category="tissue-culture">G-9 Tissue Culture Banana</button></li>
+            <li><button type="button" data-select-category="spices-seeds">Cumin &amp; Black Ginger</button></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Future Agro Store</h4>
+          <h4>Agro Inputs</h4>
           <ul>
-            <li><a href="#showcaseSection">Hybrid Vegetable Seeds</a></li>
-            <li><a href="#showcaseSection">Fertilizers &amp; Humic Acid</a></li>
-            <li><a href="#showcaseSection">Grafting &amp; Garden Tools</a></li>
-            <li><a href="#showcaseSection">Organic Potting Mix</a></li>
+            <li><button type="button" data-select-category="vegetables">Papaya &amp; Moringa Seeds</button></li>
+            <li><button type="button" data-select-category="fertilizer">Fertilizers &amp; Humic Acid</button></li>
+            <li><button type="button" data-select-category="timber">Red &amp; White Sandalwood</button></li>
+            <li><button type="button" data-select-category="bulbs">Saffron &amp; Flower Bulbs</button></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -433,12 +444,34 @@
     <section class="footer-bottom">
       <div class="container footer-bottom-inner">
         <span>© 2026 DAHAGRAM AGRO FIRM AND NURSARY — বিজ্ঞান ভিত্তিক কৃষি, বয়ে আনবে সমৃদ্ধি</span>
-        <span>Extensible Playlist-to-Product Architecture</span>
+        <button type="button" id="openAdminModalBtn" style="font-size:12px; color:var(--text-muted); text-decoration:underline;">Manage Catalog</button>
       </div>
     </section>
   </footer>
 
-  <!-- QUICK VIEW & YOUTUBE PLAYLIST MODAL -->
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobileNavDrawer" class="drawer-backdrop drawer-backdrop--left">
+    <div class="drawer-panel" style="max-width:310px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-color); padding-bottom:12px;">
+        <strong style="font-size:15px;">🌿 Categories &amp; Menu</strong>
+        <button type="button" id="closeMobileNavBtn" class="btn-outline-sm">Close ×</button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><button type="button" data-select-category="exotic-fruits"><span>🥑 Exotic Fruits</span><span>→</span></button></li>
+        <li><button type="button" data-select-category="medicinal"><span>🌿 Medicinal &amp; Herbs</span><span>→</span></button></li>
+        <li><button type="button" data-select-category="tissue-culture"><span>🍌 Tissue Culture</span><span>→</span></button></li>
+        <li><button type="button" data-select-category="spices-seeds"><span>🌶️ Spices &amp; Seeds</span><span>→</span></button></li>
+        <li><button type="button" data-select-category="timber"><span>🌳 Sandalwood &amp; Timber</span><span>→</span></button></li>
+        <li><button type="button" data-select-category="vegetables"><span>🥬 Papaya &amp; Vegetables</span><span>→</span></button></li>
+        <li><button type="button" data-select-category="fertilizer"><span>🧪 Fertilizer &amp; Humic</span><span>→</span></button></li>
+        <li><button type="button" data-select-category="bulbs"><span>🌷 Saffron &amp; Bulbs</span><span>→</span></button></li>
+        <li><a href="https://www.youtube.com/@dahagram_agro_farm" target="_blank" rel="noopener"><span>▶ YouTube Channel</span><span>↗</span></a></li>
+        <li><a href="https://wa.me/8801765235517" target="_blank" rel="noopener"><span>💬 WhatsApp: 01765-235517</span><span>↗</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- QUICK VIEW MODAL -->
   <div id="quickViewModal" class="modal-backdrop">
     <div class="modal-box">
       <button type="button" id="closeQuickViewBtn" class="modal-close" aria-label="Close">×</button>
@@ -453,8 +486,8 @@
         <h3 style="font-size:18px;">🛒 Your Agro Cart</h3>
         <button type="button" id="closeCartBtn" class="btn-outline-sm">Close ×</button>
       </div>
-      <div id="cartItemsList" style="flex:1; overflow-y:auto;"></div>
-      <div style="border-top:1px solid var(--border-color); padding-top:14px; margin-top:12px;">
+      <div id="cartItemsList" style="overflow-y:auto; max-height:38vh; margin-bottom:14px;"></div>
+      <div style="border-top:1px solid var(--border-color); padding-top:14px;">
         <div style="display:flex; justify-content:space-between; font-size:16px; font-weight:800; margin-bottom:14px;">
           <span>Total (Cash on Delivery):</span>
           <span id="cartTotalAmount">৳0</span>
@@ -480,13 +513,13 @@
     </div>
   </div>
 
-  <!-- FUTURE-READY: ADD PRODUCT / YOUTUBE PLAYLIST MODAL -->
+  <!-- MANAGE CATALOG MODAL -->
   <div id="adminProductModal" class="modal-backdrop">
     <div class="modal-box">
       <button type="button" id="closeAdminModalBtn" class="modal-close" aria-label="Close">×</button>
-      <h2 style="font-size:20px; margin-bottom:6px;">+ Add Future Agricultural Product / Playlist</h2>
+      <h2 style="font-size:20px; margin-bottom:6px;">+ Add Agricultural Product</h2>
       <p style="font-size:13px; color:var(--text-muted); margin-bottom:14px;">
-        Test adding new products or YouTube playlists live. It saves to your browser immediately and generates the JSON entry for <code>data/catalog.js</code>.
+        Add a new plant, seed, or agricultural item to preview it live in this browser.
       </p>
       <form id="addProductForm">
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
@@ -525,21 +558,19 @@
             <input id="newProdOldPrice" type="number" value="300" />
           </div>
           <div class="form-field">
-            <label for="newProdPlaylist">YouTube Playlist URL or ID</label>
-            <input id="newProdPlaylist" type="text" placeholder="https://www.youtube.com/playlist?list=..." />
+            <label for="newProdPlaylist">YouTube Video / Search URL</label>
+            <input id="newProdPlaylist" type="url" placeholder="https://www.youtube.com/@dahagram_agro_farm/..." />
           </div>
           <div class="form-field">
             <label for="newProdVideos">Video Count</label>
             <input id="newProdVideos" type="number" value="1" />
           </div>
-        </div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
           <div class="form-field">
-            <label for="newProdImage">Product Photo URL (optional)</label>
+            <label for="newProdImage">Product Photo URL</label>
             <input id="newProdImage" type="url" placeholder="https://5.imimg.com/..." />
           </div>
           <div class="form-field">
-            <label for="newProdEmoji">Fallback Icon / Emoji</label>
+            <label for="newProdEmoji">Fallback Icon</label>
             <input id="newProdEmoji" type="text" value="🌱" />
           </div>
         </div>
@@ -547,12 +578,14 @@
           <label for="newProdDesc">Description</label>
           <textarea id="newProdDesc" rows="2" placeholder="Short product &amp; farming details..."></textarea>
         </div>
-        <button type="submit" class="btn-cart" style="width:100%;">Add to Live Storefront &amp; Generate JSON</button>
+        <button type="submit" class="btn-cart" style="width:100%;">Add to Storefront</button>
       </form>
-      <div class="form-field" style="margin-top:14px;">
-        <label for="newProdJsonPreview">Generated JSON for <code>data/catalog.js</code>:</label>
-        <textarea id="newProdJsonPreview" rows="5" readonly placeholder="Submit the form above to generate the catalog JSON entry..."></textarea>
-      </div>
+      <details style="margin-top:12px; font-size:12.5px; color:var(--text-muted);">
+        <summary style="cursor:pointer; font-weight:700;">Export JSON for catalog.js</summary>
+        <div class="form-field" style="margin-top:8px;">
+          <textarea id="newProdJsonPreview" rows="4" readonly placeholder="Submit the form above to generate the JSON object..."></textarea>
+        </div>
+      </details>
     </div>
   </div>
 

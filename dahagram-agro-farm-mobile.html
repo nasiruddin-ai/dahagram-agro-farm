@@ -9,19 +9,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <style>
 :root {
-  --brand-green: #38a124;
-  --brand-green-dark: #257317;
-  --brand-green-light: #eaf7e6;
-  --brand-sage: #dcebe3;
+  --brand-green: #2f9a20;
+  --brand-green-dark: #1f6f14;
+  --brand-green-light: #eaf7e7;
+  --brand-sage: #dcece2;
   --accent-amber: #f59e0b;
   --danger-red: #e11d48;
-  --text-dark: #1f2937;
+  --text-dark: #111827;
   --text-muted: #6b7280;
   --border-color: #e5e7eb;
-  --bg-light: #f8faf7;
+  --bg-light: #f7faf6;
   --white: #ffffff;
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-sm: 0 2px 8px rgba(17, 24, 39, 0.05);
+  --shadow-md: 0 10px 28px rgba(17, 24, 39, 0.09);
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
@@ -79,29 +79,33 @@ img {
 
 .header-top {
   border-bottom: 1px solid var(--border-color);
-  font-size: 13px;
+  font-size: 12.5px;
   color: var(--text-muted);
-  padding: 8px 0;
+  padding: 7px 0;
 }
 
 .header-top-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 12px;
 }
 
 .header-top-left,
 .header-top-right {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 14px;
+  flex-shrink: 0;
 }
 
 .header-top-center {
   font-weight: 600;
   color: var(--brand-green-dark);
   text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .header-top a:hover {
@@ -109,14 +113,36 @@ img {
 }
 
 .header-middle {
-  padding: 14px 0;
+  padding: 12px 0;
 }
 
 .header-wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 16px;
+}
+
+.header-left-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.mobile-drawer-btn {
+  display: none;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  background: var(--bg-light);
+  color: var(--text-dark);
+  font-size: 20px;
+  line-height: 1;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .brand-logo {
@@ -127,22 +153,25 @@ img {
 }
 
 .brand-logo-badge {
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--brand-green), var(--brand-green-dark));
   color: var(--white);
   display: grid;
   place-items: center;
   font-weight: 800;
-  font-size: 18px;
+  font-size: 16px;
+  flex-shrink: 0;
 }
 
 .brand-logo-text strong {
   display: block;
-  font-size: 18px;
+  font-size: 15px;
+  font-weight: 800;
   color: var(--text-dark);
-  line-height: 1.15;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
 }
 
 .brand-logo-text span {
@@ -152,8 +181,9 @@ img {
 }
 
 .search-form {
-  flex: 1;
-  max-width: 560px;
+  flex: 1 1 280px;
+  min-width: 180px;
+  max-width: 480px;
   display: flex;
   align-items: center;
   border: 2px solid var(--brand-green);
@@ -163,44 +193,48 @@ img {
 }
 
 .search-form input {
-  flex: 1;
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 100%;
   border: none;
   outline: none;
-  padding: 10px 18px;
-  font-size: 14px;
+  padding: 9px 16px;
+  font-size: 13.5px;
   font-family: inherit;
 }
 
 .search-form button {
-  background: var(--brand-green-light);
-  color: var(--brand-green-dark);
-  padding: 10px 20px;
+  flex-shrink: 0;
+  background: var(--brand-green);
+  color: var(--white);
+  padding: 9px 18px;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 13.5px;
   transition: background 0.2s;
 }
 
 .search-form button:hover {
-  background: var(--brand-green);
-  color: var(--white);
+  background: var(--brand-green-dark);
 }
 
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
+  flex-shrink: 0;
 }
 
 .action-btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  font-weight: 600;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 700;
   color: var(--text-dark);
-  padding: 8px 12px;
+  padding: 8px 10px;
   border-radius: var(--radius-sm);
   transition: background 0.2s;
+  white-space: nowrap;
 }
 
 .action-btn:hover {
@@ -211,7 +245,7 @@ img {
   background: var(--brand-green);
   color: var(--white);
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 800;
   min-width: 20px;
   height: 20px;
   border-radius: 999px;
@@ -227,6 +261,7 @@ img {
   border-radius: var(--radius-sm);
   font-size: 13px;
   font-weight: 700;
+  transition: all 0.2s;
 }
 
 .btn-outline-sm:hover {
@@ -247,7 +282,8 @@ img {
 .nav-scroll {
   display: flex;
   align-items: center;
-  gap: 6px;
+  justify-content: space-between;
+  gap: 2px;
   overflow-x: auto;
   scrollbar-width: none;
   padding: 0;
@@ -262,8 +298,8 @@ img {
 .nav-scroll button {
   display: block;
   white-space: nowrap;
-  padding: 12px 14px;
-  font-size: 13.5px;
+  padding: 11px 11px;
+  font-size: 13px;
   font-weight: 700;
   color: var(--white);
   transition: background 0.2s;
@@ -273,13 +309,6 @@ img {
 .nav-scroll button:hover,
 .nav-scroll button.active {
   background: var(--brand-green-dark);
-}
-
-.mobile-menu-toggle {
-  display: none;
-  color: var(--white);
-  font-size: 22px;
-  padding: 8px;
 }
 
 /* ==================== HERO SLIDER ==================== */
@@ -295,11 +324,9 @@ img {
 
 .hero-slide {
   display: none;
-  min-height: 360px;
-  padding: 48px 0;
+  min-height: 350px;
+  padding: 44px 0 52px;
   color: var(--white);
-  background-size: cover;
-  background-position: center;
 }
 
 .hero-slide.active {
@@ -338,14 +365,14 @@ img {
 }
 
 .hero-slide h1 {
-  font-size: clamp(26px, 3.4vw, 42px);
-  line-height: 1.2;
+  font-size: clamp(25px, 3.2vw, 40px);
+  line-height: 1.22;
   margin-bottom: 12px;
 }
 
 .hero-slide p {
-  font-size: 15.5px;
-  opacity: 0.92;
+  font-size: 15px;
+  opacity: 0.94;
   margin-bottom: 22px;
   max-width: 580px;
 }
@@ -360,7 +387,7 @@ img {
   background: var(--accent-amber);
   color: #111827;
   font-weight: 800;
-  padding: 12px 24px;
+  padding: 12px 22px;
   border-radius: var(--radius-sm);
   font-size: 14px;
   display: inline-flex;
@@ -379,7 +406,7 @@ img {
   color: var(--white);
   border: 1px solid rgba(255, 255, 255, 0.4);
   font-weight: 700;
-  padding: 12px 22px;
+  padding: 12px 20px;
   border-radius: var(--radius-sm);
   font-size: 14px;
 }
@@ -500,14 +527,14 @@ img {
 }
 
 .category-icon {
-  width: 56px;
-  height: 56px;
+  width: 54px;
+  height: 54px;
   margin: 0 auto 10px;
   border-radius: 50%;
   background: var(--brand-green-light);
   display: grid;
   place-items: center;
-  font-size: 26px;
+  font-size: 25px;
 }
 
 .category-card h4 {
@@ -539,7 +566,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 175px;
+  min-height: 170px;
 }
 
 .promo-card h3 {
@@ -567,10 +594,10 @@ img {
 
 /* ==================== COD STRIP ==================== */
 .cod-banner {
-  background: linear-gradient(90deg, #1c5e19, #38a124);
+  background: linear-gradient(90deg, #1c5e19, #2f9a20);
   color: var(--white);
   border-radius: var(--radius-md);
-  padding: 18px 28px;
+  padding: 18px 26px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -590,15 +617,23 @@ img {
 /* ==================== TABS & PRODUCT GRID ==================== */
 .tabs-bar {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: 4px;
   margin-bottom: 20px;
 }
 
+.tabs-bar::-webkit-scrollbar {
+  display: none;
+}
+
 .tab-btn {
-  padding: 8px 16px;
+  white-space: nowrap;
+  padding: 8px 15px;
   border-radius: 999px;
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 700;
   background: var(--white);
   border: 1px solid var(--border-color);
@@ -629,7 +664,7 @@ img {
   background: var(--white);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  padding: 14px;
+  padding: 13px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -669,40 +704,42 @@ img {
 }
 
 .product-thumb {
-  height: 195px;
+  aspect-ratio: 1 / 1;
+  width: 100%;
   border-radius: var(--radius-sm);
-  background: linear-gradient(135deg, #f3faf1, #e1f3dd);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background: #f9fbf9;
+  border: 1px solid #f1f5f9;
   position: relative;
   margin-bottom: 12px;
   overflow: hidden;
-  text-align: center;
+  cursor: pointer;
 }
 
 .product-thumb img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   transition: transform 0.3s ease;
 }
 
 .product-card:hover .product-thumb img {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .product-thumb-emoji {
-  font-size: 46px;
-  margin-bottom: 4px;
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 48px;
 }
 
 .product-thumb-code {
   position: absolute;
   bottom: 8px;
   left: 8px;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   color: var(--text-dark);
   font-size: 11px;
   font-weight: 700;
@@ -715,26 +752,25 @@ img {
   position: absolute;
   bottom: 8px;
   right: 8px;
-  background: var(--white);
-  color: var(--text-dark);
-  border: 1px solid var(--border-color);
+  background: rgba(17, 24, 39, 0.86);
+  color: var(--white);
   border-radius: 999px;
   padding: 5px 10px;
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 700;
   box-shadow: var(--shadow-sm);
+  transition: background 0.2s;
 }
 
 .quick-view-btn:hover {
   background: var(--brand-green);
-  color: var(--white);
 }
 
 .product-cat {
   font-size: 11.5px;
   color: var(--text-muted);
   font-weight: 600;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 
 .product-title {
@@ -753,6 +789,9 @@ img {
   font-size: 11.5px;
   color: var(--text-muted);
   margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .product-price-row {
@@ -788,6 +827,7 @@ img {
   padding: 9px 12px;
   border-radius: var(--radius-sm);
   transition: background 0.2s;
+  text-align: center;
 }
 
 .btn-cart:hover {
@@ -798,15 +838,16 @@ img {
   background: #fee2e2;
   color: #b91c1c;
   font-weight: 700;
-  font-size: 12px;
-  padding: 9px 10px;
+  font-size: 13px;
+  width: 36px;
   border-radius: var(--radius-sm);
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
-.btn-yt:hover {
+.btn-yt:hover,
+.btn-yt.wished {
   background: #dc2626;
   color: var(--white);
 }
@@ -825,11 +866,11 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 160px;
+  min-height: 165px;
 }
 
 .half-banner--left {
-  background: linear-gradient(120deg, #1b4d1b, #38a124);
+  background: linear-gradient(120deg, #1b4d1b, #2f9a20);
 }
 
 .half-banner--right {
@@ -849,30 +890,55 @@ img {
 
 .split-category-layout {
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 295px 1fr;
   gap: 20px;
-  align-items: stretch;
+  align-items: start;
 }
 
 .split-poster {
-  background: linear-gradient(160deg, #164e15, #2e8b22);
+  position: sticky;
+  top: 64px;
+  background: linear-gradient(160deg, #144913, #277d1c);
   color: var(--white);
   border-radius: var(--radius-md);
-  padding: 26px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  padding: 24px 20px;
+  display: grid;
+  gap: 18px;
 }
 
 .split-poster h3 {
-  font-size: 22px;
+  font-size: 21px;
   line-height: 1.25;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .split-poster p {
   font-size: 13.5px;
-  opacity: 0.9;
+  opacity: 0.92;
+}
+
+.split-poster-list {
+  list-style: none;
+  display: grid;
+  gap: 9px;
+  font-size: 13px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+}
+
+.split-poster-hotline {
+  background: rgba(0, 0, 0, 0.22);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  font-size: 13px;
+}
+
+.split-poster-hotline strong {
+  display: block;
+  font-size: 15px;
+  color: #fde68a;
 }
 
 /* ==================== SERVICE HIGHLIGHTS ==================== */
@@ -925,18 +991,18 @@ img {
 }
 
 .blog-thumb {
-  height: 185px;
-  background: linear-gradient(135deg, #d7f2d2, #bce5b6);
-  display: grid;
-  place-items: center;
-  font-size: 42px;
+  position: relative;
+  height: 215px;
+  background: #eef6ec;
   overflow: hidden;
+  display: block;
 }
 
 .blog-thumb img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .blog-body {
@@ -964,6 +1030,57 @@ img {
   font-size: 13.5px;
 }
 
+/* ==================== QUICK VIEW MODAL ==================== */
+.qv-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.qv-photo {
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  background: #f9fbf9;
+}
+
+.qv-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.qv-video-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  margin: 14px 0;
+  transition: background 0.2s;
+}
+
+.qv-video-banner:hover {
+  background: #fee2e2;
+}
+
+.qv-play-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #dc2626;
+  color: var(--white);
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
 /* ==================== FOOTER ==================== */
 .newsletter-bar {
   background: var(--brand-sage);
@@ -981,27 +1098,30 @@ img {
 
 .newsletter-form {
   display: flex;
-  max-width: 460px;
+  max-width: 440px;
   width: 100%;
   border-radius: var(--radius-sm);
   overflow: hidden;
   background: var(--white);
+  border: 1px solid #cbd5e1;
 }
 
 .newsletter-form input {
   flex: 1;
+  min-width: 0;
   border: none;
   outline: none;
   padding: 11px 14px;
-  font-size: 14px;
+  font-size: 13.5px;
 }
 
 .newsletter-form button {
-  background: #1f2937;
+  flex-shrink: 0;
+  background: #111827;
   color: var(--white);
-  padding: 11px 20px;
+  padding: 11px 18px;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 13.5px;
 }
 
 .footer-mid {
@@ -1045,6 +1165,7 @@ img {
 .footer-bottom-inner {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   gap: 10px;
 }
@@ -1053,7 +1174,7 @@ img {
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(17, 24, 39, 0.6);
   display: none;
   align-items: center;
   justify-content: center;
@@ -1068,7 +1189,7 @@ img {
 .modal-box {
   background: var(--white);
   border-radius: var(--radius-lg);
-  max-width: 720px;
+  max-width: 680px;
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
@@ -1081,21 +1202,29 @@ img {
   position: absolute;
   top: 14px;
   right: 14px;
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   background: #f3f4f6;
   font-size: 18px;
   font-weight: 700;
 }
 
+.modal-close:hover {
+  background: #e5e7eb;
+}
+
 .drawer-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(17, 24, 39, 0.55);
   display: none;
   justify-content: flex-end;
   z-index: 1000;
+}
+
+.drawer-backdrop--left {
+  justify-content: flex-start;
 }
 
 .drawer-backdrop.open {
@@ -1105,12 +1234,39 @@ img {
 .drawer-panel {
   background: var(--white);
   width: 100%;
-  max-width: 420px;
+  max-width: 400px;
   height: 100%;
   display: flex;
   flex-direction: column;
   padding: 20px;
   overflow-y: auto;
+}
+
+.mobile-nav-list {
+  list-style: none;
+  display: grid;
+  gap: 4px;
+  margin-top: 14px;
+}
+
+.mobile-nav-list a,
+.mobile-nav-list button {
+  width: 100%;
+  text-align: left;
+  padding: 11px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-nav-list a:hover,
+.mobile-nav-list button:hover {
+  background: var(--brand-green-light);
+  color: var(--brand-green-dark);
 }
 
 .form-field {
@@ -1135,6 +1291,18 @@ img {
 }
 
 /* ==================== RESPONSIVE ==================== */
+@media (max-width: 1120px) {
+  .header-top-center {
+    display: none;
+  }
+  .action-label-desktop {
+    display: none;
+  }
+  .brand-logo-text strong {
+    font-size: 13.5px;
+  }
+}
+
 @media (max-width: 1024px) {
   .categories-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -1146,6 +1314,9 @@ img {
   .split-category-layout {
     grid-template-columns: 1fr;
   }
+  .split-poster {
+    position: static;
+  }
   .services-row {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1155,12 +1326,45 @@ img {
 }
 
 @media (max-width: 768px) {
-  .header-top,
-  .header-middle {
+  .header-top {
     display: none;
   }
-  .mobile-menu-toggle {
-    display: inline-block;
+  .mobile-drawer-btn {
+    display: inline-flex;
+  }
+  .header-wrap {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .header-left-group {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .brand-logo {
+    min-width: 0;
+  }
+  .brand-logo-badge {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+  .brand-logo-text strong {
+    font-size: 12.5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 175px;
+  }
+  .brand-logo-text span {
+    font-size: 11px;
+  }
+  .header-whatsapp-btn {
+    display: none;
+  }
+  .search-form {
+    order: 3;
+    flex: 1 1 100%;
+    max-width: 100%;
   }
   .hero-grid {
     grid-template-columns: 1fr;
@@ -1178,10 +1382,15 @@ img {
   .services-row {
     grid-template-columns: repeat(2, 1fr);
   }
+  .qv-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 520px) {
-  .categories-grid,
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .promo-grid-4,
   .product-grid-4,
   .product-grid-3,
@@ -1201,19 +1410,19 @@ img {
     <div class="modal-box" style="max-width:480px; text-align:center; border:2px solid var(--brand-green);">
       <button type="button" id="closePromoBtn" class="modal-close" aria-label="Close">×</button>
       <span class="badge-playlist" style="margin-bottom:10px; display:inline-block;">DAHAGRAM AGRO FIRM AND NURSARY • সরাসরি খামার থেকে</span>
-      <h2 style="font-size:22px; margin-bottom:8px;">ইউটিউব প্লেলিস্ট থেকেই অর্ডার করুন আপনার পছন্দের চারা ও কৃষি পণ্য!</h2>
+      <h2 style="font-size:22px; margin-bottom:8px;">ইউটিউব ভিডিও দেখেই অর্ডার করুন আপনার পছন্দের চারা ও কৃষি পণ্য!</h2>
       <p style="font-size:14px; color:var(--text-muted); margin-bottom:18px;">
         স্টেভিয়া, ইনসুলিন গাছ, জি-৯ কলার টিস্যু কালচার, রক্ত চন্দন, জাফরান ও বিদেশী ফলের চারা — সারা বাংলাদেশে ক্যাশ অন ডেলিভারি।
       </p>
       <a href="#showcaseSection" class="btn-primary" onclick="document.getElementById('promoModal').classList.remove('open')">
-        পণ্য ও প্লেলিস্ট দেখুন →
+        পণ্যসমূহ দেখুন →
       </a>
     </div>
   </div>
 
-  <!-- 1. 3-TIER HEADER -->
+  <!-- 1. 3-TIER HEADER (Fully Responsive on Desktop, Tablet & Mobile) -->
   <header class="header-area">
-    <!-- Tier 1: Top Utility Bar -->
+    <!-- Tier 1: Top Utility Bar (Desktop) -->
     <div class="header-top">
       <div class="container header-top-inner">
         <div class="header-top-left">
@@ -1224,38 +1433,40 @@ img {
           🌿 বিজ্ঞান ভিত্তিক কৃষি, বয়ে আনবে সমৃদ্ধি — সারা বাংলাদেশে কুরিয়ার ডেলিভারি
         </div>
         <div class="header-top-right">
-          <a href="https://www.youtube.com/@dahagram_agro_farm" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://www.youtube.com/@dahagram_agro_farm" target="_blank" rel="noopener">▶ YouTube</a>
           <a href="https://www.facebook.com/YakubAli434964" target="_blank" rel="noopener">Facebook</a>
-          <button type="button" id="openAdminModalBtn" class="btn-outline-sm">+ Add Product / Playlist</button>
         </div>
       </div>
     </div>
 
-    <!-- Tier 2: Logo, Search & Actions -->
+    <!-- Tier 2: Logo, Search & Actions (Visible on ALL Screen Sizes) -->
     <div class="header-middle">
       <div class="container header-wrap">
-        <a href="#" class="brand-logo">
-          <div class="brand-logo-badge">DA</div>
-          <div class="brand-logo-text">
-            <strong>DAHAGRAM AGRO FIRM AND NURSARY</strong>
-            <span>দহগ্রাম এগ্রো ফার্ম অ্যান্ড নার্সারি</span>
-          </div>
-        </a>
+        <div class="header-left-group">
+          <button type="button" id="mobileMenuToggle" class="mobile-drawer-btn" aria-label="Open Navigation Menu">☰</button>
+          <a href="#" class="brand-logo">
+            <div class="brand-logo-badge">DA</div>
+            <div class="brand-logo-text">
+              <strong>DAHAGRAM AGRO FIRM AND NURSARY</strong>
+              <span>দহগ্রাম এগ্রো ফার্ম অ্যান্ড নার্সারি</span>
+            </div>
+          </a>
+        </div>
 
         <form id="globalSearchForm" class="search-form" role="search">
-          <input id="globalSearchInput" type="search" placeholder="চারা, বীজ, সার বা প্লেলিস্ট খুঁজুন (যেমন: Stevia, G9, Cumin)..." />
+          <input id="globalSearchInput" type="search" placeholder="চারা, বীজ বা সার খুঁজুন (Stevia, G9, Cumin)..." />
           <button type="submit">Search</button>
         </form>
 
         <div class="header-actions">
-          <a href="https://wa.me/8801765235517" target="_blank" rel="noopener" class="action-btn">
-            💬 WhatsApp
+          <a href="https://wa.me/8801765235517" target="_blank" rel="noopener" class="action-btn header-whatsapp-btn">
+            💬 <span class="action-label-desktop">WhatsApp</span>
           </a>
-          <button type="button" class="action-btn" onclick="document.getElementById('showcaseSection').scrollIntoView({behavior:'smooth'})">
-            ♡ Wishlist <span class="badge-count" data-wishlist-count>0</span>
+          <button type="button" id="openWishlistBtn" class="action-btn" aria-label="View Saved Wishlist">
+            ♡ <span class="action-label-desktop">Wishlist</span> <span class="badge-count" data-wishlist-count>0</span>
           </button>
-          <button type="button" id="openCartBtn" class="action-btn">
-            🛒 Cart <span class="badge-count" data-cart-count>0</span>
+          <button type="button" id="openCartBtn" class="action-btn" aria-label="Open Shopping Cart">
+            🛒 <span class="action-label-desktop">Cart</span> <span class="badge-count" data-cart-count>0</span>
           </button>
         </div>
       </div>
@@ -1263,8 +1474,7 @@ img {
 
     <!-- Tier 3: Sticky Green Category Navigation -->
     <nav class="header-bottom" aria-label="Primary Categories">
-      <div class="container" style="display:flex; align-items:center; gap:8px;">
-        <button type="button" id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Scroll Menu">☰</button>
+      <div class="container">
         <ul id="primaryNavList" class="nav-scroll">
           <li><a href="#">Home</a></li>
           <li><button type="button" data-select-category="exotic-fruits">Exotic Fruits</button></li>
@@ -1275,8 +1485,8 @@ img {
           <li><button type="button" data-select-category="vegetables">Papaya &amp; Vegetables</button></li>
           <li><button type="button" data-select-category="fertilizer">Fertilizer &amp; Humic</button></li>
           <li><button type="button" data-select-category="bulbs">Saffron &amp; Bulbs</button></li>
-          <li><a href="#guidesSection">Video Playlists</a></li>
-          <li><a href="#footerLocation">Contact Farm</a></li>
+          <li><a href="#guidesSection">Video Guides</a></li>
+          <li><a href="#footerLocation">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -1294,15 +1504,15 @@ img {
               <span class="hero-pill">দহগ্রাম-আঙ্গরপোতা, পাটগ্রাম, লালমনিরহাট • ১১.৫K+ ইউটিউব পরিবার</span>
               <h1>বিজ্ঞান ভিত্তিক আধুনিক কৃষি ও দুর্লভ চারার বিশ্বস্ত ঠিকানা</h1>
               <p>
-                আমাদের প্রতিটি ইউটিউব প্লেলিস্টই এক একটি পরীক্ষিত কৃষি পণ্য ও চাষাবাদ গাইড। সরাসরি খামার থেকে সংগ্রহ করুন স্টেভিয়া, জি-৯ কলা, অ্যাভোকাডো, সৌদি খেজুর, জিরা ও কালো আদা।
+                সরাসরি আমাদের নার্সারি ও খামার থেকে পরীক্ষিত মানের স্টেভিয়া, জি-৯ টিস্যু কালচার কলা, অ্যাভোকাডো, সৌদি খেজুর, জিরা ও কালো আদার চারা ও বীজ সংগ্রহ করুন।
               </p>
               <div class="hero-cta-group">
-                <a href="#showcaseSection" class="btn-primary">সব পণ্য ও প্লেলিস্ট দেখুন</a>
+                <a href="#showcaseSection" class="btn-primary">সব পণ্য দেখুন</a>
                 <a href="https://www.youtube.com/@dahagram_agro_farm" target="_blank" rel="noopener" class="btn-glass">▶ @dahagram_agro_farm</a>
               </div>
             </div>
             <div class="hero-card-preview">
-              <h3>জনপ্রিয় প্লেলিস্ট ও পণ্য</h3>
+              <h3>জনপ্রিয় চারা ও ফসল</h3>
               <ul>
                 <li>🌿 স্টেভিয়া (চিনির বিকল্প) — ৯টি ভিডিও</li>
                 <li>🍌 জি-৯ টিস্যু কালচার কলা — ১৬টি ভিডিও</li>
@@ -1320,7 +1530,7 @@ img {
               <span class="hero-pill">DAHAGRAM AGRO FIRM AND NURSARY • ভেষজ ও ছাদবাগান</span>
               <h1>সুস্থ ও চিনিমুক্ত জীবনের জন্য স্টেভিয়া ও ভেষজ বাগান</h1>
               <p>
-                ডায়াবেটিস সচেতনতা ও প্রাকৃতিক ভেষজ চাষাবাদে আমাদের বিশেষ কালেকশন: স্টেভিয়া, ইনসুলিন গাছ, করোসল, রোজমেরী এবং অ্যালোভেরা।
+                ডায়াবেটিস সচেতনতা ও প্রাকৃতিক ভেষজ চাষাবাদে আমাদের বিশেষ কালেকশন: স্টেভিয়া, ইনসুলিন গাছ, করোসল, রোজমেরী এবং বারমাসি সজিনা।
               </p>
               <div class="hero-cta-group">
                 <button type="button" class="btn-primary" data-select-category="medicinal">ভেষজ চারা দেখুন</button>
@@ -1374,7 +1584,7 @@ img {
     <section class="section-block">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Popular <span>Categories &amp; Playlists</span></h2>
+          <h2 class="section-title">Popular <span>Categories</span></h2>
           <a href="#showcaseSection" class="view-all-link">Explore All →</a>
         </div>
         <div id="popularCategoriesGrid" class="categories-grid"></div>
@@ -1402,14 +1612,14 @@ img {
           <div class="promo-card">
             <div>
               <h3>বিদেশী ফল ও কলম চারা</h3>
-              <p>অ্যাভোকাডো, রাম্বুটান, আপেল (HRMN99) ও আঙ্গুর।</p>
+              <p>অ্যাভোকাডো, রাম্বুটান, আপেল (HRMN99) ও কালো আঙ্গুর।</p>
             </div>
             <button type="button" class="promo-btn" data-select-category="exotic-fruits">ORDER NOW</button>
           </div>
           <div class="promo-card">
             <div>
               <h3>উচ্চমূল্যের মসলা ও বীজ</h3>
-              <p>বাংলাদেশে জিরা চাষ, কালো আদা ও জাফরান বাল্ব।</p>
+              <p>বাংলাদেশে জিরা চাষ, কালো আদা, সরিষা ও শিম বীজ।</p>
             </div>
             <button type="button" class="promo-btn" data-select-category="spices-seeds">ORDER NOW</button>
           </div>
@@ -1430,12 +1640,12 @@ img {
       </div>
     </section>
 
-    <!-- Section 5: Tabbed Product & Playlist Showcase -->
+    <!-- Section 5: Tabbed Product & Video Showcase -->
     <section id="showcaseSection" class="section-block">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Playlist <span>Products &amp; Agro Store</span></h2>
-          <span style="font-size:13px; color:var(--text-muted);">প্রতিটি পণ্যে ক্লিক করে প্লেলিস্টের ভিডিও দেখুন ও অর্ডার করুন</span>
+          <h2 class="section-title">Featured <span>Plants &amp; Agro Store</span></h2>
+          <span style="font-size:13px; color:var(--text-muted);">পণ্যের ছবিতে ক্লিক করে বিস্তারিত ও চাষাবাদ ভিডিও দেখুন</span>
         </div>
         <div id="showcaseTabsBar" class="tabs-bar"></div>
         <div id="showcaseProductsGrid" class="product-grid-4"></div>
@@ -1468,9 +1678,19 @@ img {
             <div>
               <span class="hero-pill">Commercial Farming</span>
               <h3>বাণিজ্যিক কৃষি ও টিস্যু কালচার প্রজেক্ট</h3>
-              <p>তরুণ কৃষি উদ্যোক্তাদের জন্য লাভজনক ফসল: জি-৯ কলা, সৌদি খেজুর, রক্ত চন্দন, ওডিসি-৩ সজিনা, টপ লেডি পেঁপে এবং হিউমিক অ্যাসিড।</p>
+              <p>তরুণ কৃষি উদ্যোক্তাদের জন্য উচ্চফলনশীল ও লাভজনক ফসলের চারা এবং সার্বিক পরিচর্যা সহায়তা।</p>
             </div>
-            <button type="button" class="btn-primary" data-select-category="tissue-culture">সব বাণিজ্যিক চারা →</button>
+            <ul class="split-poster-list">
+              <li>✅ ল্যাব-পরীক্ষিত রোগমুক্ত টিস্যু কালচার</li>
+              <li>✅ জমি নির্বাচন ও রোপণ পদ্ধতি পরামর্শ</li>
+              <li>✅ পাইকারি অর্ডারে বিশেষ মূল্য ছাড়</li>
+              <li>✅ সারাদেশে নিরাপদ কুরিয়ার ডেলিভারি</li>
+            </ul>
+            <div class="split-poster-hotline">
+              <span>কৃষি পরামর্শ ও পাইকারি বুকিং:</span>
+              <strong>📞 +880 1765-235517</strong>
+            </div>
+            <button type="button" class="btn-primary" style="justify-content:center;" data-select-category="tissue-culture">সব বাণিজ্যিক চারা →</button>
           </aside>
           <div id="commercialSplitGrid" class="product-grid-3"></div>
         </div>
@@ -1539,11 +1759,11 @@ img {
       </div>
     </section>
 
-    <!-- Section 10: Video Playlists & Farming Guides -->
+    <!-- Section 10: Video Guides -->
     <section id="guidesSection" class="section-block">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">FROM OUR <span>YOUTUBE PLAYLISTS</span></h2>
+          <h2 class="section-title">FROM OUR <span>YOUTUBE CHANNEL</span></h2>
           <a href="https://www.youtube.com/@dahagram_agro_farm/videos" target="_blank" rel="noopener" class="view-all-link">View All Videos &amp; Guides →</a>
         </div>
         <div id="farmingGuidesGrid" class="blog-grid"></div>
@@ -1557,11 +1777,11 @@ img {
     <section class="newsletter-bar">
       <div class="container newsletter-inner">
         <div>
-          <strong style="font-size:17px;">📩 Sign up for New Agro Products &amp; Farming Videos</strong>
+          <strong style="font-size:17px;">📩 নতুন চারা ও কৃষি ভিডিওর আপডেট পেতে যুক্ত থাকুন</strong>
           <div id="newsletterStatus" style="font-size:13px; color:var(--brand-green-dark); font-weight:600;"></div>
         </div>
         <form id="newsletterForm" class="newsletter-form">
-          <input type="email" required placeholder="আপনার ইমেইল লিখুন (Enter your email)" />
+          <input type="email" required placeholder="আপনার ইমেইল লিখুন..." />
           <button type="submit">Subscribe</button>
         </form>
       </div>
@@ -1581,19 +1801,19 @@ img {
         <div class="footer-col">
           <h4>Product Lines</h4>
           <ul>
-            <li><a href="#showcaseSection">Exotic Fruit Saplings</a></li>
-            <li><a href="#showcaseSection">Stevia &amp; Insulin Plants</a></li>
-            <li><a href="#showcaseSection">G-9 Tissue Culture Banana</a></li>
-            <li><a href="#showcaseSection">Cumin &amp; Black Ginger</a></li>
+            <li><button type="button" data-select-category="exotic-fruits">Exotic Fruit Saplings</button></li>
+            <li><button type="button" data-select-category="medicinal">Stevia &amp; Insulin Plants</button></li>
+            <li><button type="button" data-select-category="tissue-culture">G-9 Tissue Culture Banana</button></li>
+            <li><button type="button" data-select-category="spices-seeds">Cumin &amp; Black Ginger</button></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Future Agro Store</h4>
+          <h4>Agro Inputs</h4>
           <ul>
-            <li><a href="#showcaseSection">Hybrid Vegetable Seeds</a></li>
-            <li><a href="#showcaseSection">Fertilizers &amp; Humic Acid</a></li>
-            <li><a href="#showcaseSection">Grafting &amp; Garden Tools</a></li>
-            <li><a href="#showcaseSection">Organic Potting Mix</a></li>
+            <li><button type="button" data-select-category="vegetables">Papaya &amp; Moringa Seeds</button></li>
+            <li><button type="button" data-select-category="fertilizer">Fertilizers &amp; Humic Acid</button></li>
+            <li><button type="button" data-select-category="timber">Red &amp; White Sandalwood</button></li>
+            <li><button type="button" data-select-category="bulbs">Saffron &amp; Flower Bulbs</button></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -1618,12 +1838,34 @@ img {
     <section class="footer-bottom">
       <div class="container footer-bottom-inner">
         <span>© 2026 DAHAGRAM AGRO FIRM AND NURSARY — বিজ্ঞান ভিত্তিক কৃষি, বয়ে আনবে সমৃদ্ধি</span>
-        <span>Extensible Playlist-to-Product Architecture</span>
+        <button type="button" id="openAdminModalBtn" style="font-size:12px; color:var(--text-muted); text-decoration:underline;">Manage Catalog</button>
       </div>
     </section>
   </footer>
 
-  <!-- QUICK VIEW & YOUTUBE PLAYLIST MODAL -->
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobileNavDrawer" class="drawer-backdrop drawer-backdrop--left">
+    <div class="drawer-panel" style="max-width:310px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-color); padding-bottom:12px;">
+        <strong style="font-size:15px;">🌿 Categories &amp; Menu</strong>
+        <button type="button" id="closeMobileNavBtn" class="btn-outline-sm">Close ×</button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><button type="button" data-select-category="exotic-fruits"><span>🥑 Exotic Fruits</span><span>→</span></button></li>
+        <li><button type="button" data-select-category="medicinal"><span>🌿 Medicinal &amp; Herbs</span><span>→</span></button></li>
+        <li><button type="button" data-select-category="tissue-culture"><span>🍌 Tissue Culture</span><span>→</span></button></li>
+        <li><button type="button" data-select-category="spices-seeds"><span>🌶️ Spices &amp; Seeds</span><span>→</span></button></li>
+        <li><button type="button" data-select-category="timber"><span>🌳 Sandalwood &amp; Timber</span><span>→</span></button></li>
+        <li><button type="button" data-select-category="vegetables"><span>🥬 Papaya &amp; Vegetables</span><span>→</span></button></li>
+        <li><button type="button" data-select-category="fertilizer"><span>🧪 Fertilizer &amp; Humic</span><span>→</span></button></li>
+        <li><button type="button" data-select-category="bulbs"><span>🌷 Saffron &amp; Bulbs</span><span>→</span></button></li>
+        <li><a href="https://www.youtube.com/@dahagram_agro_farm" target="_blank" rel="noopener"><span>▶ YouTube Channel</span><span>↗</span></a></li>
+        <li><a href="https://wa.me/8801765235517" target="_blank" rel="noopener"><span>💬 WhatsApp: 01765-235517</span><span>↗</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- QUICK VIEW MODAL -->
   <div id="quickViewModal" class="modal-backdrop">
     <div class="modal-box">
       <button type="button" id="closeQuickViewBtn" class="modal-close" aria-label="Close">×</button>
@@ -1638,8 +1880,8 @@ img {
         <h3 style="font-size:18px;">🛒 Your Agro Cart</h3>
         <button type="button" id="closeCartBtn" class="btn-outline-sm">Close ×</button>
       </div>
-      <div id="cartItemsList" style="flex:1; overflow-y:auto;"></div>
-      <div style="border-top:1px solid var(--border-color); padding-top:14px; margin-top:12px;">
+      <div id="cartItemsList" style="overflow-y:auto; max-height:38vh; margin-bottom:14px;"></div>
+      <div style="border-top:1px solid var(--border-color); padding-top:14px;">
         <div style="display:flex; justify-content:space-between; font-size:16px; font-weight:800; margin-bottom:14px;">
           <span>Total (Cash on Delivery):</span>
           <span id="cartTotalAmount">৳0</span>
@@ -1665,13 +1907,13 @@ img {
     </div>
   </div>
 
-  <!-- FUTURE-READY: ADD PRODUCT / YOUTUBE PLAYLIST MODAL -->
+  <!-- MANAGE CATALOG MODAL -->
   <div id="adminProductModal" class="modal-backdrop">
     <div class="modal-box">
       <button type="button" id="closeAdminModalBtn" class="modal-close" aria-label="Close">×</button>
-      <h2 style="font-size:20px; margin-bottom:6px;">+ Add Future Agricultural Product / Playlist</h2>
+      <h2 style="font-size:20px; margin-bottom:6px;">+ Add Agricultural Product</h2>
       <p style="font-size:13px; color:var(--text-muted); margin-bottom:14px;">
-        Test adding new products or YouTube playlists live. It saves to your browser immediately and generates the JSON entry for <code>data/catalog.js</code>.
+        Add a new plant, seed, or agricultural item to preview it live in this browser.
       </p>
       <form id="addProductForm">
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
@@ -1710,21 +1952,19 @@ img {
             <input id="newProdOldPrice" type="number" value="300" />
           </div>
           <div class="form-field">
-            <label for="newProdPlaylist">YouTube Playlist URL or ID</label>
-            <input id="newProdPlaylist" type="text" placeholder="https://www.youtube.com/playlist?list=..." />
+            <label for="newProdPlaylist">YouTube Video / Search URL</label>
+            <input id="newProdPlaylist" type="url" placeholder="https://www.youtube.com/@dahagram_agro_farm/..." />
           </div>
           <div class="form-field">
             <label for="newProdVideos">Video Count</label>
             <input id="newProdVideos" type="number" value="1" />
           </div>
-        </div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
           <div class="form-field">
-            <label for="newProdImage">Product Photo URL (optional)</label>
+            <label for="newProdImage">Product Photo URL</label>
             <input id="newProdImage" type="url" placeholder="https://5.imimg.com/..." />
           </div>
           <div class="form-field">
-            <label for="newProdEmoji">Fallback Icon / Emoji</label>
+            <label for="newProdEmoji">Fallback Icon</label>
             <input id="newProdEmoji" type="text" value="🌱" />
           </div>
         </div>
@@ -1732,24 +1972,20 @@ img {
           <label for="newProdDesc">Description</label>
           <textarea id="newProdDesc" rows="2" placeholder="Short product &amp; farming details..."></textarea>
         </div>
-        <button type="submit" class="btn-cart" style="width:100%;">Add to Live Storefront &amp; Generate JSON</button>
+        <button type="submit" class="btn-cart" style="width:100%;">Add to Storefront</button>
       </form>
-      <div class="form-field" style="margin-top:14px;">
-        <label for="newProdJsonPreview">Generated JSON for <code>data/catalog.js</code>:</label>
-        <textarea id="newProdJsonPreview" rows="5" readonly placeholder="Submit the form above to generate the catalog JSON entry..."></textarea>
-      </div>
+      <details style="margin-top:12px; font-size:12.5px; color:var(--text-muted);">
+        <summary style="cursor:pointer; font-weight:700;">Export JSON for catalog.js</summary>
+        <div class="form-field" style="margin-top:8px;">
+          <textarea id="newProdJsonPreview" rows="4" readonly placeholder="Submit the form above to generate the JSON object..."></textarea>
+        </div>
+      </details>
     </div>
   </div>
 
   <script>
 /**
- * DAHAGRAM AGRO FIRM AND NURSARY — Extensible Product & YouTube Playlist Catalog
- *
- * Developer Note:
- * Every YouTube playlist or future agricultural product (seeds, fertilizers,
- * tools, nursery saplings, pesticides, etc.) is defined here as a standard object.
- * Add a new object to `CATALOG_DATA.products` (or use the built-in "+ Add Product / Playlist"
- * manager in the UI) and the storefront updates automatically.
+ * DAHAGRAM AGRO FIRM AND NURSARY — Product & YouTube Video Catalog
  */
 
 window.CATALOG_DATA = {
@@ -1777,7 +2013,7 @@ window.CATALOG_DATA = {
     { id: 'fertilizer', name: 'Fertilizer & Humic', bnName: 'সার ও হিউমিক', icon: '🧪' },
     { id: 'grafting', name: 'Grafting & Nursery', bnName: 'কলম ও নার্সারি', icon: '🌱' },
     { id: 'agro-tools', name: 'Garden Tools', bnName: 'বাগান সরঞ্জাম', icon: '✂️' },
-    { id: 'potting-mix', name: 'Soil & Potting Mix', bnName: 'মাটি ও পটিং মিক্স', icon: '🪴' },
+    { id: 'potting-mix', name: 'Soil & Potting Mix', bnName: 'মাটি ও পটিং মিক্স', icon: '🌻' },
     { id: 'combo', name: 'Farm Combo Packs', bnName: 'সাশ্রয়ী কম্বো', icon: '📦' },
   ],
 
@@ -1794,8 +2030,7 @@ window.CATALOG_DATA = {
       unit: 'Per Sapling',
       emoji: '🌿',
       image: 'https://5.imimg.com/data5/SELLER/Default/2023/8/334311356/AA/FV/CH/59556000/stevia-medicinal-plant-1000x1000.jpg',
-      playlistId: 'PLN2c1hNNV8rhmh3St-sphp5eTA8dsZdK9',
-      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rhmh3St-sphp5eTA8dsZdK9',
+      playlistUrl: 'https://www.youtube.com/@dahagram_agro_farm/search?query=Stevia',
       videoCount: 9,
       featuredCommercial: false,
       description: 'Natural sugar-free Stevia (মিষ্টি তুলসি) live saplings & dried leaves for diabetic-friendly living and commercial cultivation.',
@@ -1812,8 +2047,7 @@ window.CATALOG_DATA = {
       unit: 'Per Sapling',
       emoji: '🍃',
       image: 'https://5.imimg.com/data5/SELLER/Default/2024/12/476302751/OZ/MO/PX/40893092/puspita-nursery-insulin-leaf-plant-herbal-remedy-for-diabetes-1000x1000.jpg',
-      playlistId: 'PLN2c1hNNV8rj727Ybg7wVLQEGs_7tGyLN',
-      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rj727Ybg7wVLQEGs_7tGyLN',
+      playlistUrl: 'https://www.youtube.com/@dahagram_agro_farm/search?query=Insulin',
       videoCount: 11,
       featuredCommercial: false,
       description: 'Healthy rooted Insulin Plant saplings grown in Dahagram nursery, ideal for rooftop & homestead medicinal gardens.',
@@ -1830,8 +2064,7 @@ window.CATALOG_DATA = {
       unit: 'Per Plantlet',
       emoji: '🍌',
       image: 'https://5.imimg.com/data5/SELLER/Default/2026/3/591730271/RS/DZ/DS/16365438/tissue-culture-plants-g9-banana-1000x1000.jpeg',
-      playlistId: 'PLN2c1hNNV8riZjVraHw1U1ot-nv7WP0rx',
-      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8riZjVraHw1U1ot-nv7WP0rx',
+      playlistUrl: 'https://www.youtube.com/@dahagram_agro_farm/search?query=G9%20Banana',
       videoCount: 16,
       featuredCommercial: true,
       description: 'High-yield disease-free Grand Naine (G-9) tissue culture banana plantlets with full commercial farming support.',
@@ -1848,8 +2081,7 @@ window.CATALOG_DATA = {
       unit: 'Per Sapling',
       emoji: '🥑',
       image: 'https://5.imimg.com/data5/SELLER/Default/2021/9/VP/TP/QW/110424049/avocado-grafted-plant-1000x1000.jpeg',
-      playlistId: 'PLN2c1hNNV8rgSMwLq_pLUCTgmeaha3dqZ',
-      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rgSMwLq_pLUCTgmeaha3dqZ',
+      playlistUrl: 'https://www.youtube.com/@dahagram_agro_farm/search?query=Avocado',
       videoCount: 4,
       featuredCommercial: false,
       description: 'Climate-adapted grafted and healthy seed-grown Avocado saplings ready for Bangladesh soil.',
@@ -1866,8 +2098,7 @@ window.CATALOG_DATA = {
       unit: 'Per Sapling',
       emoji: '🍓',
       image: 'https://5.imimg.com/data5/SELLER/Default/2024/2/390619917/UD/NI/CK/91637823/rambutan-grafted-plant-1000x1000.jpg',
-      playlistId: 'PLN2c1hNNV8rgDGnqa1_DjJqcEo6JVj8m9',
-      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rgDGnqa1_DjJqcEo6JVj8m9',
+      playlistUrl: 'https://www.youtube.com/@dahagram_agro_farm/search?query=Rambutan',
       videoCount: 6,
       featuredCommercial: false,
       description: 'Sweet exotic Rambutan saplings with proven fruiting track record in northern Bangladesh.',
@@ -1884,8 +2115,7 @@ window.CATALOG_DATA = {
       unit: 'Per Sapling',
       emoji: '🍎',
       image: 'https://5.imimg.com/data5/SELLER/Default/2024/9/451671368/TY/LE/IG/151548506/hm99-apple-plants-1000x1000.jpg',
-      playlistId: 'PLN2c1hNNV8rjwdHpsMhHC92JClTvjSBZb',
-      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rjwdHpsMhHC92JClTvjSBZb',
+      playlistUrl: 'https://www.youtube.com/@dahagram_agro_farm/search?query=Apple',
       videoCount: 2,
       featuredCommercial: false,
       description: 'Low-chill hot-climate Apple varieties (HRMN99, Anna, Dorset Golden) suited for Bangladesh.',
@@ -1902,8 +2132,7 @@ window.CATALOG_DATA = {
       unit: 'Per Offshoot',
       emoji: '🌴',
       image: 'https://5.imimg.com/data5/SELLER/Default/2026/3/591828394/FU/BT/LY/16365438/barhee-dates-tissue-culture-plants-1000x1000.jpg',
-      playlistId: 'PLN2c1hNNV8riVanlfVoAilftu-RmK_nkg',
-      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8riVanlfVoAilftu-RmK_nkg',
+      playlistUrl: 'https://www.youtube.com/@dahagram_agro_farm/search?query=Date%20Palm',
       videoCount: 3,
       featuredCommercial: true,
       description: 'Authentic Saudi Arabian Date Palm offshoots & tissue culture plants sourced for commercial orchards.',
@@ -1911,7 +2140,7 @@ window.CATALOG_DATA = {
     {
       id: 'daf-grapes-08',
       sku: 'DAF-FRT-008',
-      title: 'Sweet Seedless Grapes (Super Sonaka)',
+      title: 'Sweet Black Seedless Grapes (Super Sonaka)',
       bnTitle: 'মিষ্টি কালো ও লাল আঙ্গুরের চারা',
       category: 'exotic-fruits',
       categoryLabel: 'Exotic Fruits',
@@ -1919,12 +2148,11 @@ window.CATALOG_DATA = {
       oldPrice: 390,
       unit: 'Per Vine',
       emoji: '🍇',
-      image: 'https://5.imimg.com/data5/SELLER/Default/2022/12/RX/DM/XP/164273021/green-grapes-plant-1000x1000.jpg',
-      playlistId: 'PLN2c1hNNV8riFtkY5IO2Pp2Nu1cgYH3sq',
-      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8riFtkY5IO2Pp2Nu1cgYH3sq',
+      image: 'https://5.imimg.com/data5/SELLER/Default/2025/5/509643333/CI/CV/QH/75191751/a-grade-fresh-black-grapes-1000x1000.jpg',
+      playlistUrl: 'https://www.youtube.com/@dahagram_agro_farm/search?query=Grapes',
       videoCount: 4,
       featuredCommercial: false,
-      description: 'Sweet black, red, and Super Sonaka long seedless grape vines for rooftop & trellis farming.',
+      description: 'Sweet black, red, and Super Sonaka seedless grape vines for rooftop & trellis farming.',
     },
     {
       id: 'daf-corossol-09',
@@ -1938,8 +2166,7 @@ window.CATALOG_DATA = {
       unit: 'Per Sapling',
       emoji: '🍈',
       image: 'https://5.imimg.com/data5/IOS/Default/2023/8/332150656/DH/BD/EH/63677441/product-jpeg-1000x1000.png',
-      playlistId: 'PLN2c1hNNV8rhIdN-g4vtjiO46Q_Uyukf8',
-      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rhIdN-g4vtjiO46Q_Uyukf8',
+      playlistUrl: 'https://www.youtube.com/@dahagram_agro_farm/videos',
       videoCount: 2,
       featuredCommercial: false,
       description: 'Antioxidant-rich Corossol (Soursop) saplings propagated carefully at DAHAGRAM AGRO FIRM AND NURSARY.',
@@ -1956,8 +2183,7 @@ window.CATALOG_DATA = {
       unit: 'Per Pot',
       emoji: '🌱',
       image: 'https://5.imimg.com/data5/SELLER/Default/2021/2/DP/FL/NQ/7539265/natural-rosemary-plant-1000x1000.jpg',
-      playlistId: 'PLN2c1hNNV8rhQnA_2wcvEs9WcRD204aZM',
-      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rhQnA_2wcvEs9WcRD204aZM',
+      playlistUrl: 'https://www.youtube.com/@dahagram_agro_farm/videos',
       videoCount: 2,
       featuredCommercial: false,
       description: 'Aromatic Mediterranean Rosemary herb plants ideal for balcony pots, tea, and culinary use.',
@@ -1974,9 +2200,8 @@ window.CATALOG_DATA = {
       unit: '100g Pack',
       emoji: '🌾',
       image: 'https://5.imimg.com/data5/SELLER/Default/2026/2/580906694/RE/HH/QW/243865944/cumin-seed-jeera-1000x1000.jpg',
-      playlistId: 'PLN2c1hNNV8rhe6Ft52VY9Kr29-R28mPXd',
-      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rhe6Ft52VY9Kr29-R28mPXd',
-      videoCount: 2,
+      playlistUrl: 'https://www.youtube.com/@dahagram_agro_farm/search?query=Cumin',
+      videoCount: 3,
       featuredCommercial: false,
       description: 'Tested high-germination Cumin seeds with complete winter cultivation guidance for Bangladesh.',
     },
@@ -1990,10 +2215,9 @@ window.CATALOG_DATA = {
       price: 490,
       oldPrice: 600,
       unit: '250g Rhizome',
-      emoji: '🫚',
+      emoji: '🌿',
       image: 'https://5.imimg.com/data5/SELLER/Default/2026/1/575724781/BR/LZ/DA/250095665/black-ginger-1000x1000.jpg',
-      playlistId: 'PLN2c1hNNV8rhGWWE2kGjXiI7T9yA9yWRW',
-      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rhGWWE2kGjXiI7T9yA9yWRW',
+      playlistUrl: 'https://www.youtube.com/@dahagram_agro_farm/search?query=ginger',
       videoCount: 1,
       featuredCommercial: false,
       description: 'High-value medicinal Black Ginger (কালো আদা) planting rhizomes for organic spice cultivation.',
@@ -2010,8 +2234,7 @@ window.CATALOG_DATA = {
       unit: 'Per Sapling',
       emoji: '🌳',
       image: 'https://5.imimg.com/data5/SELLER/Default/2024/9/451664006/GS/VC/CQ/151548506/red-sandalwood-plant-1000x1000.jpg',
-      playlistId: 'PLN2c1hNNV8rivqNCvtsKgVWbGTHjxnI8Z',
-      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rivqNCvtsKgVWbGTHjxnI8Z',
+      playlistUrl: 'https://www.youtube.com/@dahagram_agro_farm/search?query=Sandalwood',
       videoCount: 2,
       featuredCommercial: true,
       description: 'Long-term high-value Red Sandalwood (রক্ত চন্দন) and White Sandalwood saplings with host plant advice.',
@@ -2025,11 +2248,10 @@ window.CATALOG_DATA = {
       categoryLabel: 'Papaya & Vegetables',
       price: 160,
       oldPrice: 200,
-      unit: '50 Seeds / Sapling',
-      emoji: '🫛',
+      unit: '50 Seeds',
+      emoji: '🌱',
       image: 'https://5.imimg.com/data5/IOS/Default/2026/7/630145245/MG/RW/ZE/18960835/product-jpeg-1000x1000.jpeg',
-      playlistId: 'PLN2c1hNNV8rieaw3EYZu74MEWjmf7TnkP',
-      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rieaw3EYZu74MEWjmf7TnkP',
+      playlistUrl: 'https://www.youtube.com/@dahagram_agro_farm/search?query=Moringa',
       videoCount: 3,
       featuredCommercial: true,
       description: 'Fast-fruiting Indian ODC-3 perennial Moringa variety producing drumsticks within 6–8 months.',
@@ -2046,11 +2268,10 @@ window.CATALOG_DATA = {
       unit: 'Per Seedling',
       emoji: '🥭',
       image: 'https://5.imimg.com/data5/SELLER/Default/2025/8/535884782/DU/AZ/YV/1692904/red-lady-papaya-plant-1000x1000.jpg',
-      playlistId: 'PLA2mECJvbjY0',
-      playlistUrl: 'https://www.youtube.com/playlist?list=PLA2mECJvbjY0',
+      playlistUrl: 'https://www.youtube.com/@dahagram_agro_farm/videos',
       videoCount: 7,
       featuredCommercial: true,
-      description: 'Commercial Top Lady papaya seedlings with full pest-control & land preparation playlist.',
+      description: 'Commercial Top Lady papaya seedlings with full pest-control & land preparation guidance.',
     },
     {
       id: 'daf-saffron-16',
@@ -2061,12 +2282,11 @@ window.CATALOG_DATA = {
       categoryLabel: 'Saffron & Flower Bulbs',
       price: 650,
       oldPrice: 800,
-      unit: 'Pack of 5 Bulbs',
+      unit: 'Pack of 5',
       emoji: '🌷',
       image: 'https://5.imimg.com/data5/SELLER/Default/2022/1/TF/GU/IA/23818588/natural-saffron-bulbs-seed-1000x1000.jpg',
-      playlistId: 'PLN2c1hNNV8rjIJassonuEcGvOPRoEgkxR',
-      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rjIJassonuEcGvOPRoEgkxR',
-      videoCount: 32,
+      playlistUrl: 'https://www.youtube.com/@dahagram_agro_farm/search?query=Saffron',
+      videoCount: 2,
       featuredCommercial: false,
       description: 'Imported Kashmiri Saffron corms and Tulip/Lilium/Daffodil winter flower bulbs.',
     },
@@ -2082,8 +2302,7 @@ window.CATALOG_DATA = {
       unit: '500g Pack',
       emoji: '🧪',
       image: 'https://5.imimg.com/data5/SELLER/Default/2023/5/310534076/EM/AV/UY/8407666/potassium-humate-shiny-flakes-98-humic-acid-and-fulvic-acid-1000x1000.jpg',
-      playlistId: 'PLN2c1hNNV8rgtaxpaWVRyUMgzX2ViCUxc',
-      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rgtaxpaWVRyUMgzX2ViCUxc',
+      playlistUrl: 'https://www.youtube.com/@dahagram_agro_farm/videos',
       videoCount: 3,
       featuredCommercial: true,
       description: 'Soluble Humic Acid soil conditioner to boost root growth, nutrient uptake, and crop yield.',
@@ -2097,14 +2316,30 @@ window.CATALOG_DATA = {
       categoryLabel: 'Spices & Seeds',
       price: 120,
       oldPrice: 150,
-      unit: '50g Pack',
-      emoji: '🫘',
-      image: 'https://5.imimg.com/data5/SELLER/Default/2024/8/441030034/GF/FD/DM/142206794/kasari-long-research-seeds-1000x1000.jpg',
-      playlistId: 'PLN2c1hNNV8ridvMVq6KWwGxjlSTnA-gfw',
-      playlistUrl: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8ridvMVq6KWwGxjlSTnA-gfw',
+      unit: '50g Seeds',
+      emoji: '🌱',
+      image: 'https://5.imimg.com/data5/SELLER/Default/2025/9/542922850/BJ/XO/JX/30464432/kidney-beans-rajma-1000x1000.jpeg',
+      playlistUrl: 'https://www.youtube.com/@dahagram_agro_farm/search?query=Sarpan',
       videoCount: 1,
       featuredCommercial: false,
-      description: 'Kerala Dolichos-16 bush bean seeds that grow without bamboo trellises (মাচাবিহীন শিম).',
+      description: 'Dolichos-16 dwarf bush bean planting seeds that grow abundantly without bamboo trellises (মাচাবিহীন শিম).',
+    },
+    {
+      id: 'daf-mustard-19',
+      sku: 'DAF-SPC-019',
+      title: 'High-Yield Black Mustard Seeds',
+      bnTitle: 'উচ্চফলনশীল কালো সরিষা বীজ',
+      category: 'spices-seeds',
+      categoryLabel: 'Spices & Seeds',
+      price: 140,
+      oldPrice: 175,
+      unit: '500g Pack',
+      emoji: '🌾',
+      image: 'https://5.imimg.com/data5/SELLER/Default/2023/12/372817936/JD/SI/WA/23621877/black-mustard-seeds-1000x1000.jpg',
+      playlistUrl: 'https://www.youtube.com/@dahagram_agro_farm/videos',
+      videoCount: 2,
+      featuredCommercial: false,
+      description: 'High-oil, short-duration winter mustard seeds selected for high yield across northern Bangladesh.',
     },
   ],
 
@@ -2112,26 +2347,26 @@ window.CATALOG_DATA = {
     {
       title: 'Stevia Cultivation & Zero-Calorie Sugar Alternative in Bangladesh',
       bnTitle: 'চিনির বিকল্প স্টিভিয়া চাষ ও ব্যবহার পদ্ধতি',
-      meta: 'Playlist • 9 Videos • DAHAGRAM AGRO FIRM AND NURSARY',
+      meta: 'Video Series • DAHAGRAM AGRO FIRM AND NURSARY',
       emoji: '🌿',
       image: 'https://5.imimg.com/data5/SELLER/Default/2023/8/334311356/AA/FV/CH/59556000/stevia-medicinal-plant-1000x1000.jpg',
-      url: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rhmh3St-sphp5eTA8dsZdK9',
+      url: 'https://www.youtube.com/@dahagram_agro_farm/search?query=Stevia',
     },
     {
       title: 'G-9 Tissue Culture Banana Farming: Land Prep to Harvest',
       bnTitle: 'জি-৯ টিস্যু কালচার কলা চাষে লাভজনক কৃষি',
-      meta: 'Playlist • 16 Videos • Commercial Farming',
+      meta: 'Commercial Farming • 16+ Field Videos',
       emoji: '🍌',
       image: 'https://5.imimg.com/data5/SELLER/Default/2026/3/591730271/RS/DZ/DS/16365438/tissue-culture-plants-g9-banana-1000x1000.jpeg',
-      url: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8riZjVraHw1U1ot-nv7WP0rx',
+      url: 'https://www.youtube.com/@dahagram_agro_farm/search?query=G9%20Banana',
     },
     {
-      title: 'Properties of Humic Acid & Proper Potash Fertilizer Usage',
-      bnTitle: 'হিউমিক অ্যাসিড ও পটাশ সার ব্যবহারের সঠিক নিয়ম',
-      meta: 'Playlist • Soil & Nutrient Care',
-      emoji: '🧪',
-      image: 'https://5.imimg.com/data5/SELLER/Default/2023/5/310534076/EM/AV/UY/8407666/potassium-humate-shiny-flakes-98-humic-acid-and-fulvic-acid-1000x1000.jpg',
-      url: 'https://www.youtube.com/playlist?list=PLN2c1hNNV8rgtaxpaWVRyUMgzX2ViCUxc',
+      title: 'Cumin, Black Ginger & High-Value Spice Farming in Bangladesh',
+      bnTitle: 'বাংলাদেশে জিরা ও কালো আদা চাষের বাস্তব গাইড',
+      meta: 'High-Value Spices • Field Guide',
+      emoji: '🌾',
+      image: 'https://5.imimg.com/data5/SELLER/Default/2026/2/580906694/RE/HH/QW/243865944/cumin-seed-jeera-1000x1000.jpg',
+      url: 'https://www.youtube.com/@dahagram_agro_farm/search?query=Cumin',
     },
   ],
 };
@@ -2172,6 +2407,11 @@ window.CATALOG_DATA = {
     });
   }
 
+  function formatVideoBadge(count) {
+    if (!count) return 'Agro Product';
+    return count === 1 ? '1 Video' : `${count} Videos`;
+  }
+
   function renderProductCard(product) {
     const discount =
       product.oldPrice && product.oldPrice > product.price
@@ -2184,12 +2424,12 @@ window.CATALOG_DATA = {
         <div>
           <div class="product-badge-row">
             ${discount > 0 ? `<span class="badge-discount">- ${formatBDT(discount)}</span>` : '<span></span>'}
-            <span class="badge-playlist">${product.videoCount ? `${product.videoCount} Videos` : 'Agro Product'}</span>
+            <span class="badge-playlist">${formatVideoBadge(product.videoCount)}</span>
           </div>
-          <div class="product-thumb">
+          <div class="product-thumb" data-quick-view="${product.id}">
             ${
               product.image
-                ? `<img src="${product.image}" alt="${product.title}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" /><span class="product-thumb-emoji" style="display:none;">${product.emoji || '🌱'}</span>`
+                ? `<img src="${product.image}" alt="${product.title}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" /><span class="product-thumb-emoji" style="display:none;">${product.emoji || '🌱'}</span>`
                 : `<span class="product-thumb-emoji">${product.emoji || '🌱'}</span>`
             }
             <span class="product-thumb-code">${product.unit || 'Unit'}</span>
@@ -2208,7 +2448,7 @@ window.CATALOG_DATA = {
           </div>
           <div class="product-actions">
             <button type="button" class="btn-cart" data-add-cart="${product.id}">Add To Cart</button>
-            <button type="button" class="btn-yt" title="Save to Wishlist" data-toggle-wish="${product.id}">
+            <button type="button" class="btn-yt ${isWished ? 'wished' : ''}" title="Save to Wishlist" data-toggle-wish="${product.id}">
               ${isWished ? '♥' : '♡'}
             </button>
           </div>
@@ -2237,8 +2477,9 @@ window.CATALOG_DATA = {
     const tabsBar = document.getElementById('showcaseTabsBar');
     if (!tabsBar) return;
     const tabs = [
-      { id: 'all', name: 'All Playlists & Products' },
-      ...baseData.categories.slice(0, 7),
+      { id: 'all', name: 'All Products' },
+      ...baseData.categories.slice(0, 8),
+      { id: 'wishlist', name: `♥ Saved (${wishlist.length})` },
     ];
     tabsBar.innerHTML = tabs
       .map(
@@ -2257,7 +2498,12 @@ window.CATALOG_DATA = {
 
     const q = searchQuery.trim().toLowerCase();
     const filtered = getAllProducts().filter((p) => {
-      const matchesTab = activeTab === 'all' || p.category === activeTab;
+      const matchesTab =
+        activeTab === 'all'
+          ? true
+          : activeTab === 'wishlist'
+          ? wishlist.includes(p.id)
+          : p.category === activeTab;
       const matchesQuery =
         !q ||
         p.title.toLowerCase().includes(q) ||
@@ -2268,10 +2514,14 @@ window.CATALOG_DATA = {
     });
 
     if (filtered.length === 0) {
+      const emptyMsg =
+        activeTab === 'wishlist'
+          ? 'Your wishlist is empty. Tap the ♡ icon on any plant or seed card to save it here.'
+          : 'No matching plants or agricultural products found.';
       container.innerHTML = `
         <div style="grid-column: 1 / -1; background: #fff; padding: 36px; text-align: center; border-radius: 12px; border: 1px dashed #cbd5e1;">
-          <p style="font-weight: 700; margin-bottom: 8px;">No matching plants or products found.</p>
-          <button type="button" class="btn-outline-sm" id="resetFilterBtn">Reset Filters</button>
+          <p style="font-weight: 700; margin-bottom: 10px;">${emptyMsg}</p>
+          <button type="button" class="btn-outline-sm" id="resetFilterBtn">Show All Products</button>
         </div>
       `;
       document.getElementById('resetFilterBtn')?.addEventListener('click', () => {
@@ -2310,13 +2560,13 @@ window.CATALOG_DATA = {
         (g) => `
       <article class="blog-card">
         <div class="blog-thumb">
-          ${g.image ? `<img src="${g.image}" alt="${g.title}" loading="lazy" />` : g.emoji}
+          ${g.image ? `<img src="${g.image}" alt="${g.title}" loading="lazy" />` : `<div style="display:grid;place-items:center;height:100%;font-size:42px;">${g.emoji}</div>`}
         </div>
         <div class="blog-body">
           <div class="blog-meta">${g.meta}</div>
           <h4>${g.bnTitle}</h4>
           <p style="font-size: 13px; color: var(--text-muted);">${g.title}</p>
-          <a href="${g.url}" target="_blank" rel="noopener">Watch Playlist on YouTube →</a>
+          <a href="${g.url}" target="_blank" rel="noopener">Watch Videos on YouTube →</a>
         </div>
       </article>
     `
@@ -2330,49 +2580,54 @@ window.CATALOG_DATA = {
 
     const modal = document.getElementById('quickViewModal');
     const body = document.getElementById('quickViewBody');
-    const embedHtml = product.playlistId
-      ? `<div style="margin: 14px 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--border-color);">
-           <iframe width="100%" height="260"
-             src="https://www.youtube.com/embed/videoseries?list=${encodeURIComponent(product.playlistId)}"
-             title="${product.title}"
-             frameborder="0"
-             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-             allowfullscreen></iframe>
-         </div>`
-      : '';
+    const videoLink = product.playlistUrl || baseData.farm.youtubeMain;
 
     body.innerHTML = `
-      <div style="display:flex; gap:14px; align-items:center; margin-bottom:10px;">
-        ${
-          product.image
-            ? `<img src="${product.image}" alt="${product.title}" style="width:72px;height:72px;object-fit:cover;border-radius:10px;border:1px solid var(--border-color);flex-shrink:0;" />`
-            : `<span style="font-size:36px;">${product.emoji || '🌱'}</span>`
-        }
-        <div>
-          <span class="badge-playlist">${product.categoryLabel}</span>
-          <h2 style="font-size:20px; margin-top:4px;">${product.bnTitle || product.title}</h2>
-          <p style="font-size:13px; color:var(--text-muted);">${product.title} • SKU: ${product.sku}</p>
+      <div class="qv-grid">
+        <div class="qv-photo">
+          ${
+            product.image
+              ? `<img src="${product.image}" alt="${product.title}" />`
+              : `<div style="display:grid;place-items:center;height:100%;font-size:64px;">${product.emoji || '🌱'}</div>`
+          }
         </div>
-      </div>
-      <p style="font-size:14px; color:var(--text-dark); margin-bottom:10px;">${product.description || ''}</p>
-      <div class="product-price-row">
-        <span class="price-now">${formatBDT(product.price)}</span>
-        ${product.oldPrice ? `<span class="price-old">${formatBDT(product.oldPrice)}</span>` : ''}
-        <span style="font-size:12.5px; color:var(--text-muted);">(${product.unit || 'Unit'})</span>
-      </div>
-      ${embedHtml}
-      <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:14px;">
-        <button type="button" class="btn-cart" style="flex:1;" data-add-cart="${product.id}">
-          Add To Cart — ${formatBDT(product.price)}
-        </button>
-        ${
-          product.playlistUrl
-            ? `<a href="${product.playlistUrl}" target="_blank" rel="noopener" class="btn-outline-sm" style="display:inline-flex;align-items:center;">Open YouTube Playlist ↗</a>`
-            : ''
-        }
+        <div>
+          <span class="badge-playlist">${product.categoryLabel} • ${formatVideoBadge(product.videoCount)}</span>
+          <h2 style="font-size:20px; margin-top:8px; line-height:1.3;">${product.bnTitle || product.title}</h2>
+          <p style="font-size:13px; color:var(--text-muted); margin-bottom:10px;">${product.title} • SKU: ${product.sku}</p>
+          <p style="font-size:14px; color:var(--text-dark); margin-bottom:12px;">${product.description || ''}</p>
+          <div class="product-price-row">
+            <span class="price-now" style="font-size:22px;">${formatBDT(product.price)}</span>
+            ${product.oldPrice ? `<span class="price-old">${formatBDT(product.oldPrice)}</span>` : ''}
+            <span style="font-size:12.5px; color:var(--text-muted);">(${product.unit || 'Unit'})</span>
+          </div>
+          <a href="${videoLink}" target="_blank" rel="noopener" class="qv-video-banner">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <span class="qv-play-circle">▶</span>
+              <div>
+                <strong style="display:block; font-size:13.5px; color:#991b1b;">Watch Cultivation &amp; Care Videos</strong>
+                <span style="font-size:12px; color:#b91c1c;">@dahagram_agro_farm on YouTube ↗</span>
+              </div>
+            </div>
+          </a>
+          <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:14px;">
+            <button type="button" class="btn-cart" style="flex:1; padding:12px 16px; font-size:14px;" data-add-cart="${product.id}">
+              Add To Cart — ${formatBDT(product.price)}
+            </button>
+            <a href="https://wa.me/${baseData.farm.whatsapp}?text=${encodeURIComponent(`আমি এই পণ্যটি নিতে চাই: ${product.bnTitle || product.title} (${formatBDT(product.price)})`)}" target="_blank" rel="noopener" class="btn-outline-sm" style="display:inline-flex;align-items:center;">
+              WhatsApp Inquiry
+            </a>
+          </div>
+        </div>
       </div>
     `;
     modal.classList.add('open');
+  }
+
+  function closeAllOverlays() {
+    document.querySelectorAll('.modal-backdrop.open, .drawer-backdrop.open').forEach((el) => {
+      el.classList.remove('open');
+    });
   }
 
   function addToCart(productId) {
@@ -2385,6 +2640,7 @@ window.CATALOG_DATA = {
       cart.push({ id: product.id, qty: 1 });
     }
     saveState();
+    document.getElementById('quickViewModal')?.classList.remove('open');
     renderCartDrawer();
     openCartDrawer();
   }
@@ -2396,6 +2652,7 @@ window.CATALOG_DATA = {
       wishlist.push(productId);
     }
     saveState();
+    renderTabs();
     renderAllProductViews();
   }
 
@@ -2408,7 +2665,7 @@ window.CATALOG_DATA = {
     let total = 0;
 
     if (cart.length === 0) {
-      listEl.innerHTML = `<p style="color:var(--text-muted); font-size:14px; padding:20px 0;">Your cart is empty. Add saplings, seeds, or agro inputs to order.</p>`;
+      listEl.innerHTML = `<p style="color:var(--text-muted); font-size:14px; padding:18px 0;">Your cart is empty. Add saplings, seeds, or agro inputs to place a Cash-on-Delivery order.</p>`;
       totalEl.textContent = formatBDT(0);
       return;
     }
@@ -2420,14 +2677,17 @@ window.CATALOG_DATA = {
         total += p.price * item.qty;
         return `
         <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; padding:10px 0; border-bottom:1px solid var(--border-color);">
-          <div>
-            <strong style="font-size:13.5px; display:block;">${p.emoji || '🌱'} ${p.bnTitle || p.title}</strong>
-            <span style="font-size:12px; color:var(--text-muted);">${formatBDT(p.price)} × ${item.qty}</span>
+          <div style="display:flex; align-items:center; gap:10px; min-width:0;">
+            ${p.image ? `<img src="${p.image}" alt="" style="width:42px;height:42px;border-radius:6px;object-fit:cover;flex-shrink:0;" />` : ''}
+            <div style="min-width:0;">
+              <strong style="font-size:13px; display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${p.bnTitle || p.title}</strong>
+              <span style="font-size:12px; color:var(--text-muted);">${formatBDT(p.price)} × ${item.qty}</span>
+            </div>
           </div>
-          <div style="display:flex; align-items:center; gap:6px;">
-            <button type="button" class="btn-outline-sm" data-cart-dec="${p.id}">-</button>
-            <span style="font-size:13px; font-weight:700;">${item.qty}</span>
-            <button type="button" class="btn-outline-sm" data-cart-inc="${p.id}">+</button>
+          <div style="display:flex; align-items:center; gap:6px; flex-shrink:0;">
+            <button type="button" class="btn-outline-sm" style="padding:4px 9px;" data-cart-dec="${p.id}">-</button>
+            <span style="font-size:13px; font-weight:700; min-width:16px; text-align:center;">${item.qty}</span>
+            <button type="button" class="btn-outline-sm" style="padding:4px 9px;" data-cart-inc="${p.id}">+</button>
           </div>
         </div>
       `;
@@ -2470,6 +2730,15 @@ window.CATALOG_DATA = {
 
   function initEvents() {
     document.body.addEventListener('click', (e) => {
+      // Close when clicking directly on backdrop
+      if (
+        e.target.classList.contains('modal-backdrop') ||
+        e.target.classList.contains('drawer-backdrop')
+      ) {
+        e.target.classList.remove('open');
+        return;
+      }
+
       const tabBtn = e.target.closest('[data-tab]');
       if (tabBtn) {
         activeTab = tabBtn.dataset.tab;
@@ -2481,15 +2750,16 @@ window.CATALOG_DATA = {
       const catCard = e.target.closest('[data-select-category]');
       if (catCard) {
         activeTab = catCard.dataset.selectCategory;
+        document.getElementById('mobileNavDrawer')?.classList.remove('open');
         renderTabs();
         renderShowcaseProducts();
         document.getElementById('showcaseSection')?.scrollIntoView({ behavior: 'smooth' });
         return;
       }
 
-      const quickBtn = e.target.closest('[data-quick-view]');
-      if (quickBtn) {
-        openQuickView(quickBtn.dataset.quickView);
+      const wishBtn = e.target.closest('[data-toggle-wish]');
+      if (wishBtn) {
+        toggleWishlist(wishBtn.dataset.toggleWish);
         return;
       }
 
@@ -2499,9 +2769,9 @@ window.CATALOG_DATA = {
         return;
       }
 
-      const wishBtn = e.target.closest('[data-toggle-wish]');
-      if (wishBtn) {
-        toggleWishlist(wishBtn.dataset.toggleWish);
+      const quickBtn = e.target.closest('[data-quick-view]');
+      if (quickBtn) {
+        openQuickView(quickBtn.dataset.quickView);
         return;
       }
 
@@ -2525,6 +2795,19 @@ window.CATALOG_DATA = {
         }
         return;
       }
+    });
+
+    // Escape key closes modals & drawers
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeAllOverlays();
+    });
+
+    // Header Wishlist Button -> Filter to Saved Wishlist tab
+    document.getElementById('openWishlistBtn')?.addEventListener('click', () => {
+      activeTab = 'wishlist';
+      renderTabs();
+      renderShowcaseProducts();
+      document.getElementById('showcaseSection')?.scrollIntoView({ behavior: 'smooth' });
     });
 
     // Global Search
@@ -2551,10 +2834,12 @@ window.CATALOG_DATA = {
       document.getElementById('promoModal')?.classList.remove('open');
     });
 
-    // Mobile Nav Toggle
+    // Mobile Nav Drawer
     document.getElementById('mobileMenuToggle')?.addEventListener('click', () => {
-      const nav = document.getElementById('primaryNavList');
-      nav?.scrollIntoView({ behavior: 'smooth', inline: 'start' });
+      document.getElementById('mobileNavDrawer')?.classList.add('open');
+    });
+    document.getElementById('closeMobileNavBtn')?.addEventListener('click', () => {
+      document.getElementById('mobileNavDrawer')?.classList.remove('open');
     });
 
     // Checkout -> WhatsApp Order
@@ -2589,7 +2874,7 @@ window.CATALOG_DATA = {
       e.target.reset();
     });
 
-    // Future Product / Playlist Manager Modal
+    // Catalog Manager Modal (accessible from subtle footer link)
     const adminModal = document.getElementById('adminProductModal');
     document.getElementById('openAdminModalBtn')?.addEventListener('click', () => {
       adminModal?.classList.add('open');
@@ -2602,12 +2887,6 @@ window.CATALOG_DATA = {
       const catId = document.getElementById('newProdCat').value;
       const catObj = baseData.categories.find((c) => c.id === catId);
       const playlistRaw = document.getElementById('newProdPlaylist').value.trim();
-      let playlistId = '';
-      if (playlistRaw.includes('list=')) {
-        playlistId = new URLSearchParams(playlistRaw.split('?')[1]).get('list') || '';
-      } else {
-        playlistId = playlistRaw;
-      }
 
       const newProduct = {
         id: `custom-${Date.now()}`,
@@ -2621,8 +2900,7 @@ window.CATALOG_DATA = {
         unit: document.getElementById('newProdUnit').value.trim() || 'Per Unit',
         emoji: document.getElementById('newProdEmoji').value.trim() || '🌱',
         image: (document.getElementById('newProdImage')?.value || '').trim(),
-        playlistId,
-        playlistUrl: playlistId ? `https://www.youtube.com/playlist?list=${playlistId}` : baseData.farm.youtubeMain,
+        playlistUrl: playlistRaw || baseData.farm.youtubeMain,
         videoCount: Number(document.getElementById('newProdVideos').value) || 0,
         featuredCommercial: false,
         description: document.getElementById('newProdDesc').value.trim(),
